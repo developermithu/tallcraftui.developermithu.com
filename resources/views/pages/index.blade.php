@@ -7,6 +7,6 @@ new #[Layout('components.layouts.home')] #[Title('Tallcraftui - Tallstack Compon
     //
 }; ?>
 
-<div class="bg-gray-100 text-4xl min-h-screen">
+<div>
     <h1 class="text-6xl font-bold text-teal-400"> home</h1>
 </div>

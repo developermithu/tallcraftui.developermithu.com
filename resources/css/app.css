@@ -1,3 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    html {
+        @apply scroll-smooth;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply text-slate-900 dark:text-white;
+    }
+
+    h1 {
+        @apply text-[32px] leading-10;
+    }
+
+    h2 {
+        @apply text-2xl;
+    }
+
+    h3 {
+        @apply text-xl leading-8;
+    }
+}
+
+@layer components {
+    .custom-scrollbar {
+        scrollbar-width: none;
+        /* Firefox */
+        transition: scrollbar-color 0.3s, scrollbar-width 0.3s;
+        /* Smooth transition for scrollbar appearance */
+    }
+
+    /* WebKit Browsers */
+    .custom-scrollbar::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: transparent;
+        border-radius: 4px;
+        transition: background 0.3s;
+        /* Smooth transition for thumb color */
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+        transition: background 0.3s;
+        /* Smooth transition for track color */
+    }
+
+    .custom-scrollbar:hover::-webkit-scrollbar-thumb {
+        background: rgba(100, 100, 100, 0.4);
+    }
+
+    .custom-scrollbar:hover::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0);
+    }
+
+    /* Firefox */
+    .custom-scrollbar:hover {
+        scrollbar-width: thin;
+        scrollbar-color: rgba(100, 100, 100, 0.4) rgba(0, 0, 0, 0);
+        /* Thumb and track color */
+    }
+}
