@@ -6,11 +6,13 @@ import forms from "@tailwindcss/forms";
 export default {
     darkMode: "class",
     content: [
-        "./resources/**/*.blade.php",
-        "./resources/**/*.js",
-        "./app/Livewire/**/**/*.php",
-        "./app/View/Components/**/**/*.php",
-    ],
+		"./resources/**/*.blade.php",
+		 "./resources/**/*.js",
+		 "./app/Livewire/**/**/*.php",
+		 "./app/View/Components/**/**/*.php",
+		 "./vendor/developermithu/tallcraftui/src/View/Components/**/*.php",
+		
+	],
     theme: {
         container: {
             center: true,
