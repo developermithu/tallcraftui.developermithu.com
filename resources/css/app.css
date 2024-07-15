@@ -5,10 +5,6 @@
 @tailwind utilities;
 
 @layer base {
-    html {
-        @apply scroll-smooth;
-    }
-
     h1,
     h2,
     h3,
@@ -72,4 +68,39 @@
         scrollbar-color: rgba(100, 100, 100, 0.4) rgba(0, 0, 0, 0);
         /* Thumb and track color */
     }
+}
+
+
+/*
+ Margin and rounding are personal preferences,
+ overflow-x-auto is recommended.
+*/
+pre {
+    @apply my-4 overflow-x-auto rounded;
+}
+
+/*
+Add some vertical padding and expand the width
+to fill its container. The horizontal padding
+comes at the line level so that background
+colors extend edge to edge.
+*/
+pre code.torchlight {
+    @apply block py-4 text-sm rounded min-w-max;
+}
+
+/*
+Horizontal line padding.
+*/
+pre code.torchlight .line {
+    @apply px-4;
+}
+
+/*
+Push the code away from the line numbers and
+summary caret indicators.
+*/
+pre code.torchlight .line-number,
+pre code.torchlight .summary-caret {
+    @apply mr-4;
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="light" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html class="dark" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
     <meta charset="utf-8">
@@ -70,54 +70,7 @@
                             On this page
                         </h2>
 
-                        <ol role="list" class="mt-4 space-y-5 text-sm">
-                            <li>
-                                <h3 class="text-sm leading-6">
-                                    <a class="font-medium text-teal-500" href="#guidline">Guidline</a>
-                                </h3>
-                                <ol role="list" class="pl-5 mt-2 space-y-2 text-slate-500 dark:text-slate-400">
-                                    <li>
-                                        <a class="hover:text-slate-600 dark:hover:text-slate-300" href="#demo">Demo</a>
-                                    </li>
-                                    <li>
-                                        <a class="hover:text-slate-600 dark:hover:text-slate-300"
-                                            href="#natus-aspernatur-iste">Natus aspernatur iste</a>
-                                    </li>
-                                </ol>
-                            </li>
-                            <li>
-                                <h3 class="text-sm leading-6">
-                                    <a class="font-normal text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300"
-                                        href="#quos-porro-ut-molestiae">Quos porro ut molestiae</a>
-                                </h3>
-                                <ol role="list" class="pl-5 mt-2 space-y-2 text-slate-500 dark:text-slate-400">
-                                    <li>
-                                        <a class="hover:text-slate-600 dark:hover:text-slate-300"
-                                            href="#voluptatem-quas-possimus">Voluptatem quas possimus</a>
-                                    </li>
-                                    <li>
-                                        <a class="hover:text-slate-600 dark:hover:text-slate-300" href="#id-vitae-minima">Id
-                                            vitae minima</a>
-                                    </li>
-                                </ol>
-                            </li>
-                            <li>
-                                <h3 class="text-sm leading-6">
-                                    <a class="font-normal text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300"
-                                        href="#vitae-laborum-maiores">Vitae laborum maiores</a>
-                                </h3>
-                                <ol role="list" class="pl-5 mt-2 space-y-2 text-slate-500 dark:text-slate-400">
-                                    <li>
-                                        <a class="hover:text-slate-600 dark:hover:text-slate-300"
-                                            href="#corporis-exercitationem">Corporis exercitationem</a>
-                                    </li>
-                                    <li>
-                                        <a class="hover:text-slate-600 dark:hover:text-slate-300"
-                                            href="#reprehenderit-magni">Reprehenderit magni</a>
-                                    </li>
-                                </ol>
-                            </li>
-                        </ol>
+                        {{ $aside }}
                     </nav>
                 </aside>
             @endisset
