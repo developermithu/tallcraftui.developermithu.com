@@ -9,7 +9,7 @@ new #[Layout('components.layouts.app')] #[Title('Tallcraftui - Input components'
 
 <div>
     @slot('content')
-        <x-header title="Input" subtitle="From Components" />
+        <x-heading title="Input" subtitle="From Components" />
 
         <x-code-block title="Basic usage">
             @verbatim('docs')
@@ -71,22 +71,12 @@ new #[Layout('components.layouts.app')] #[Title('Tallcraftui - Input components'
     @endslot
 
     @slot('aside')
-        <ol role="list" class="mt-4 space-y-2 text-sm">
-            <li>
-                <a class="hover:text-slate-600 dark:hover:text-slate-300" href="#basic-usage"> Basic usage </a>
-            </li>
-            <li>
-                <a class="hover:text-slate-600 dark:hover:text-slate-300" href="#icon">Icon</a>
-            </li>
-            <li>
-                <a class="hover:text-slate-600 dark:hover:text-slate-300" href="#preffix-suffix"> preffix-suffix </a>
-            </li>
-            <li>
-                <a class="hover:text-slate-600 dark:hover:text-slate-300" href="#prepend-append"> prepend-append </a>
-            </li>
-            <li>
-                <a class="hover:text-slate-600 dark:hover:text-slate-300" href="#inline"> inline </a>
-            </li>
-        </ol>
+        <x-on-this-page>
+            <x-on-this-page.item title="Basic usage" />
+            <x-on-this-page.item title="Icon" />
+            <x-on-this-page.item title="Preffix suffix" />
+            <x-on-this-page.item title="Prepend append" />
+            <x-on-this-page.item title="Inline" />
+        </x-on-this-page>
     @endslot
 </div>

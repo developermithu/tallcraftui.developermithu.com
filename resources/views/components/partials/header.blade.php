@@ -17,7 +17,8 @@
         </a>
     </div>
     
-    <div class="mr-6 -my-5 sm:mr-8 md:mr-0">
+    {{-- Search --}}
+    {{-- <div class="mr-6 -my-5 sm:mr-8 md:mr-0">
         <button type="button"
             class="group flex h-6 w-6 items-center justify-center sm:justify-start md:h-auto md:w-80 md:flex-none md:rounded-lg md:py-2.5 md:pl-4 md:pr-3.5 md:text-sm md:ring-1 md:ring-slate-200 md:hover:ring-slate-300 lg:w-96 dark:md:bg-slate-800/75 dark:md:ring-inset dark:md:ring-white/5 dark:md:hover:bg-slate-700/40 dark:md:hover:ring-slate-500">
             <svg aria-hidden="true" viewBox="0 0 20 20"
@@ -29,7 +30,7 @@
                 docs</span><kbd class="hidden ml-auto font-medium text-slate-400 md:block dark:text-slate-500"><kbd
                     class="font-sans">Ctrl </kbd><kbd class="font-sans">K</kbd></kbd>
         </button>
-    </div>
+    </div> --}}
 
     <div class="relative flex justify-end gap-6 basis-0 sm:gap-8 md:flex-grow">
         <div class="relative z-10" data-headlessui-state="">

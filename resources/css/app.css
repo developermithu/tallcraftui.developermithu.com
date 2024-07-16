@@ -70,6 +70,13 @@
     }
 }
 
+code {
+    color: #ffbf54;
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-size: 14px;
+    background: #292d3e;
+}
 
 /*
  Margin and rounding are personal preferences,

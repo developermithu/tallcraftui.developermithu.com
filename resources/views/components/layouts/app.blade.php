@@ -63,16 +63,7 @@
             </main>
 
             @isset($aside)
-                <aside
-                    class="hidden xl:sticky xl:top-[4.75rem] xl:-mr-6 xl:block xl:h-[calc(100vh-4.75rem)] xl:flex-none xl:overflow-y-auto xl:py-16 xl:pr-6">
-                    <nav class="w-56">
-                        <h2 id="on-this-page-title" class="text-sm font-medium leading-6 ">
-                            On this page
-                        </h2>
-
-                        {{ $aside }}
-                    </nav>
-                </aside>
+                {{ $aside }}
             @endisset
         </div>
     </div>

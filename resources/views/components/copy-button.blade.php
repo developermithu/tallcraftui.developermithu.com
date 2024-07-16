@@ -19,10 +19,10 @@
             console.error('Clipboard API not available');
         }
     }
-}" class="absolute z-50 top-5 right-5">
+}" class="absolute z-50 top-3 right-4">
     <div class="flex gap-1.5">
-        <span class="hidden text-teal-500 copied">Copied!</span>
-        <x-icon name="clipboard-document-check" class="text-teal-500 !size-6 hidden copiedIcon" />
-        <x-icon @click="copyCode" name="clipboard" class="text-slate-200 !size-6 cursor-pointer icon" />
+        <span class="hidden text-sm text-teal-500 copied">Copied!</span>
+        <x-icon name="clipboard-document-check" class="text-teal-500 !size-5 hidden copiedIcon" />
+        <x-icon @click="copyCode" name="clipboard" class="text-slate-200 !size-5 cursor-pointer icon" />
     </div>
 </div>
