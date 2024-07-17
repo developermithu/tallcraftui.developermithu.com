@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f387ea7335f9095734d55b9d806ea828",
+    "content-hash": "b33268d586611effc35618ee8ebb9576",
     "packages": [
         {
             "name": "blade-ui-kit/blade-heroicons",
@@ -287,20 +287,23 @@
         },
         {
             "name": "developermithu/tallcraftui",
-            "version": "v0.9",
+            "version": "v1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/developermithu/tallcraftui.git",
-                "reference": "e7249edd14b8b941569d15b52f1342e49f189c36"
+                "reference": "1622257e1807bd5f5e2ddf7aef9be497657cb4bc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/developermithu/tallcraftui/zipball/e7249edd14b8b941569d15b52f1342e49f189c36",
-                "reference": "e7249edd14b8b941569d15b52f1342e49f189c36",
+                "url": "https://api.github.com/repos/developermithu/tallcraftui/zipball/1622257e1807bd5f5e2ddf7aef9be497657cb4bc",
+                "reference": "1622257e1807bd5f5e2ddf7aef9be497657cb4bc",
                 "shasum": ""
             },
             "require": {
                 "blade-ui-kit/blade-heroicons": "^2.1"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.16"
             },
             "type": "library",
             "extra": {
@@ -322,15 +325,25 @@
             "authors": [
                 {
                     "name": "developermithu",
-                    "email": "developermithu@gmail.com"
+                    "email": "developermithu@gmail.com",
+                    "homepage": "https://developermithu.com"
                 }
             ],
-            "description": "TallCraftUI is a comprehensive and elegant Laravel package designed for building user-friendly interfaces with the TALL stack.",
+            "description": "TallCraftUI is a versatile and customizable UI package designed for the TALL stack.",
+            "keywords": [
+                "blade ui components",
+                "laravel",
+                "laravel livewire ui components",
+                "livewire",
+                "tallcraftui",
+                "tallstack",
+                "tallstack ui components"
+            ],
             "support": {
                 "issues": "https://github.com/developermithu/tallcraftui/issues",
-                "source": "https://github.com/developermithu/tallcraftui/tree/v0.9"
+                "source": "https://github.com/developermithu/tallcraftui/tree/v1.0"
             },
-            "time": "2024-07-12T04:39:23+00:00"
+            "time": "2024-07-17T09:13:47+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
