@@ -27,14 +27,15 @@ new #[Layout('components.layouts.home')] #[Title('Tallcraftui - Tallstack Compon
                     TallCraftUI is a versatile and customizable UI package designed for the TALL
                     stack (<span class="font-semibold ">Tailwindcss, Alpine.js, Laravel, Livewire</span>).
                 </p>
-                <div class="flex flex-wrap items-center justify-center gap-6 mt-10">
-                    <div>
-                        <code class="px-4 py-3">composer <span class="text-[#33c494]">require
-                                developermithu/tallcraftui</span></code>
-                    </div>
+                <div class="flex flex-wrap items-center justify-center mt-10 gap-y-3 gap-x-6">
+                    <x-code language="bash" no-copy>
+                        @verbatim
+                            composer require developermithu/tallcraftui
+                        @endverbatim
+                    </x-code>
 
                     <a wire:navigate href="{{ route('docs.installation') }}"
-                        class="px-6 py-1.5 text-white font-medium rounded bg-gradient-to-r from-teal-500 to-indigo-500 hover:opacity-95">Get
+                        class="px-7 py-2.5 text-white max-w-[375px] w-full sm:w-fit font-medium rounded bg-gradient-to-r from-teal-500 to-indigo-500 hover:opacity-95">Get
                         started</a>
                 </div>
             </div>

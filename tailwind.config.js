@@ -6,13 +6,12 @@ import forms from "@tailwindcss/forms";
 export default {
     darkMode: "class",
     content: [
-		"./resources/**/*.blade.php",
-		 "./resources/**/*.js",
-		 "./app/Livewire/**/**/*.php",
-		 "./app/View/Components/**/**/*.php",
-		 "./vendor/developermithu/tallcraftui/src/View/Components/**/*.php",
-		
-	],
+        "./resources/**/*.blade.php",
+        "./resources/**/*.js",
+        "./app/Livewire/**/**/*.php",
+        "./app/View/Components/**/**/*.php",
+        "./vendor/developermithu/tallcraftui/src/View/Components/**/*.php",
+    ],
     theme: {
         container: {
             center: true,
@@ -28,6 +27,16 @@ export default {
         extend: {
             fontFamily: {
                 lato: ["Lato", ...defaultTheme.fontFamily.sans],
+            },
+
+            colors: {
+                primary: "#6d28d9",
+                secondary: "#a21caf",
+                tertiary: "#00BBC9",
+                danger: "#b91c1c",
+                warning: "#a16207",
+                success: "#15803d",
+                info: "#1d4ed8",
             },
         },
     },

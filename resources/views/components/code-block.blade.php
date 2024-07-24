@@ -33,7 +33,7 @@
         @endif
 
         <div x-show="visible" x-cloak class="relative">
-            <pre><x-torchlight-code language="{{ $language }}" class="space-y-4 code">
+            <pre><x-torchlight-code language="{{ $language }}" class="code">
                 {!! $code !!}
             </x-torchlight-code></pre>
 
