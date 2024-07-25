@@ -19,6 +19,9 @@
                 <x-sidebar-menu title="UI Components">
                     <x-sidebar-menu.item title="alert" :href="route('docs.components.alert')" />
                     <x-sidebar-menu.item title="button" :href="route('docs.components.button')" />
+                    <x-sidebar-menu.item title="breadcrumb" :href="route('docs.components.breadcrumb')" />
+                    <x-sidebar-menu.item title="dropdown" :href="route('docs.components.dropdown')" />
+                    <x-sidebar-menu.item title="modal" :href="route('docs.components.modal')" />
                     <x-sidebar-menu.item title="icon" :href="route('docs.components.icon')" />
                 </x-sidebar-menu>
 

@@ -3,7 +3,10 @@
 use Livewire\Volt\Component;
 use Livewire\Attributes\{Layout, Title};
 
-new #[Layout('components.layouts.app')] #[Title('Tallcraftui - Installation')] class extends Component {
+new 
+#[Layout('components.layouts.app')] 
+#[Title('Installation - Tallcraftui')] 
+class extends Component {
     //
 }; ?>
 
@@ -19,25 +22,24 @@ new #[Layout('components.layouts.app')] #[Title('Tallcraftui - Installation')] c
             </h2>
 
             <ul class="pl-4 space-y-1 text-teal-500 list-disc">
-                <li><a href="#">Laravel 11</a></li>
-                <li><a href="#">Livewire 3</a></li>
-                <li><a href="#">Alpine.js 3</a></li>
-                <li><a href="#">Tailwindcss 3</a></li>
+                <li><a href="https://laravel.com/docs/11.x" target="_blank">Laravel 11</a></li>
+                <li><a href="https://livewire.laravel.com" target="_blank">Livewire 3</a></li>
+                <li><a href="https://alpinejs.dev" target="_blank">Alpine.js 3</a></li>
+                <li><a href="https://tailwindcss.com" target="_blank">Tailwindcss 3</a></li>
             </ul>
         </div>
 
         <x-code-block title="Installation" language="bash" no-render>
             @verbatim('docs')
                 composer require developermithu/tallcraftui
-                
                 php artisan install:tallcraftui
             @endverbatim
         </x-code-block>
         
         <p>Modify <code>tailwind.config.js</code> </p>
 
-        <x-code-block language="js" no-render>
-            @verbatim('docs')
+        <x-code language="js">
+            @verbatim
                 export default {
                     theme: {
                         extend: { 
@@ -56,23 +58,23 @@ new #[Layout('components.layouts.app')] #[Title('Tallcraftui - Installation')] c
                     },
                 };            
             @endverbatim
-        </x-code-block>
+        </x-code>
         
         <p>Then start the development server:</p>
 
-        <x-code-block language="bash" no-render>
-            @verbatim('docs')
+        <x-code language="bash">
+            @verbatim
                 pnpm dev # or `npm run dev`
             @endverbatim
-        </x-code-block>
+        </x-code>
 
         <p>Now you can use <code>tallcraftui</code> like this:</p>
 
-        <x-code-block no-render>
-            @verbatim('docs')
+        <x-code>
+            @verbatim
                 <x-button label="Button" />
             @endverbatim
-        </x-code-block>
+        </x-code>
 
         <x-code-block no-render title="Publish the configuration file" language="bash">
             @verbatim('docs')
@@ -80,30 +82,30 @@ new #[Layout('components.layouts.app')] #[Title('Tallcraftui - Installation')] c
             @endverbatim
         </x-code-block>
 
-        <x-code-block no-render language="php">
-            @verbatim('docs')
+        <x-code language="php">
+            @verbatim
                 return [
-                /**
-                * Default prefix for all components
-                *
-                * Note: After changing the prefix, clear the view cache
-                * using `php artisan view:clear`
-                *
-                * Examples:
-                * prefix => '' // <x-input />
-                * prefix => 'tall-' // <x-tall-input />
-                *
-                */
-                'prefix' => '',
+                    /**
+                    * Default prefix for all components
+                    *
+                    * Note: After changing the prefix, clear the view cache
+                    * using `php artisan view:clear`
+                    *
+                    * Examples:
+                    * prefix => '' // <x-input />
+                    * prefix => 'tall-' // <x-tall-input />
+                    *
+                    */
+                    'prefix' => '',
                 ];
             @endverbatim
-        </x-code-block>
+        </x-code>
 
         <p>After renaming, ensure you clear the view cache:</p>
 
-        <pre><x-torchlight-code language='bash'>
+        <x-code language='bash'>
             php artisan view:clear
-        </x-torchlight-code></pre>
+        </x-code>
     </x-slot>
 
     @slot('aside')

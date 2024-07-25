@@ -1,4 +1,4 @@
-@props(['title' => '', 'language' => 'blade', 'noRender' => false])
+@props(['title' => '', 'language' => 'blade', 'noRender' => false, 'inline' => false])
 
 @php
     $slug = Str::slug($title);
@@ -27,13 +27,15 @@
 
     <div>
         @if (!$noRender)
-            <div x-show="!visible" x-cloak class="p-5 space-y-4 border rounded-lg dark:border-slate-700 md:p-7">
+            <div x-show="!visible" x-cloak 
+                @class(["p-5 border rounded-lg dark:border-slate-700 md:p-7 flex flex-col flex-wrap gap-4", '!flex-row' => $inline])
+            >
                 <?php echo Blade::render($code); ?>
             </div>
         @endif
 
         <div x-show="visible" x-cloak class="relative">
-            <pre><x-torchlight-code language="{{ $language }}" class="code">
+            <pre><x-torchlight-code language="{{ $language }}" class="space-y-2 code">
                 {!! $code !!}
             </x-torchlight-code></pre>
 

@@ -8,5 +8,5 @@ new #[Layout('components.layouts.app')] #[Title('Tallcraftui - Customizing')] cl
 }; ?>
 
 <div>
-    customizing
+    Coming soon ...
 </div>

@@ -3,21 +3,31 @@
 use Livewire\Volt\Component;
 use Livewire\Attributes\{Layout, Title};
 
-new #[Layout('components.layouts.app')] #[Title('Tallcraftui - Input components')] class extends Component {
+new 
+#[Layout('components.layouts.app')] 
+#[Title('Input components - Tallcraftui')] 
+class extends Component {
     //
 }; ?>
 
 <div>
     @slot('content')
-        <x-heading title="Input" subtitle="From Components" />
+        <x-heading title="Input" subtitle="Form Components" />
 
         <x-code-block title="Basic usage">
             @verbatim('docs')
                 <x-input />
                 <x-input placeholder="Your name" />
                 <x-input label="Name" placeholder="Your name" />
+                <x-input label="Name" placeholder="Your name" hint="Enter your full name" />
+            @endverbatim
+        </x-code-block>
+
+        <x-code-block title="Required field">
+            @verbatim('docs')
                 <x-input label="Name *" placeholder="Your name" />
-                <x-input label="Name *" placeholder="Your name" hint="Enter your full name" />
+                {{-- OR --}}
+                <x-input label="Name" placeholder="Your name" required />
             @endverbatim
         </x-code-block>
 
@@ -68,15 +78,31 @@ new #[Layout('components.layouts.app')] #[Title('Tallcraftui - Input components'
                 <x-input label="Name" placeholder="Your name" inline />
             @endverbatim
         </x-code-block>
+
+        <x-code-block title="Rounded corner">
+            @verbatim('docs')
+                <x-input placeholder="default" />
+                <x-input placeholder="rounded-none" rounded-none />
+                <x-input placeholder="rounded-sm" rounded-sm />
+                <x-input placeholder="rounded-md" rounded-md />
+                <x-input placeholder="rounded-lg" rounded-lg />
+                <x-input placeholder="rounded-xl" rounded-xl />
+                <x-input placeholder="rounded-2xl" rounded-2xl />
+                <x-input placeholder="rounded-3xl" rounded-3xl />
+                <x-input placeholder="rounded-full" rounded-full />
+            @endverbatim
+        </x-code-block>
     @endslot
 
     @slot('aside')
         <x-on-this-page>
             <x-on-this-page.item title="Basic usage" />
+            <x-on-this-page.item title="Required field" />
             <x-on-this-page.item title="Icon" />
             <x-on-this-page.item title="Preffix suffix" />
             <x-on-this-page.item title="Prepend append" />
             <x-on-this-page.item title="Inline" />
+            <x-on-this-page.item title="Rounded corner" />
         </x-on-this-page>
     @endslot
 </div>

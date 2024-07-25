@@ -30,8 +30,8 @@ export default {
             },
 
             colors: {
-                primary: "#6d28d9",
-                secondary: "#a21caf",
+                primary: "#23B9AD",
+                secondary: "#6167EF",
                 tertiary: "#00BBC9",
                 danger: "#b91c1c",
                 warning: "#a16207",

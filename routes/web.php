@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
 
@@ -23,6 +24,15 @@ Route::group(['prefix' => 'docs', 'as' => 'docs.'], function () {
     Route::group(['prefix' => 'components', 'as' => 'components.'], function () {
         Volt::route('/alert', 'docs.components.alert')->name('alert');
         Volt::route('/button', 'docs.components.button')->name('button');
+        Volt::route('/breadcrumb', 'docs.components.breadcrumb')->name('breadcrumb');
+        Volt::route('/dropdown', 'docs.components.dropdown')->name('dropdown');
+        Volt::route('/modal', 'docs.components.modal')->name('modal');
         Volt::route('/icon', 'docs.components.icon')->name('icon');
     });
+});
+
+Route::get('optimize-clear', function () {
+    Artisan::call('optimize:clear');
+
+    return back();
 });
