@@ -8,7 +8,7 @@ new #[Layout('components.layouts.home')] #[Title('Tallcraftui - Tallstack Compon
 }; ?>
 
 <div>
-    <div class="relative px-6 isolate pt-14 lg:px-8">
+    <div class="container relative px-6 isolate pt-14 lg:px-8">
         <div class="max-w-2xl py-12 mx-auto md:py-16 lg:py-28">
             {{-- <div class="hidden sm:mb-8 sm:flex sm:justify-center">
                 <div

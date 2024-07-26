@@ -25,6 +25,10 @@
     h3 {
         @apply text-xl leading-8;
     }
+
+    a {
+        @apply text-teal-500;
+    }
 }
 
 @layer components {

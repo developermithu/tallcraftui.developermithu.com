@@ -11,7 +11,9 @@
 </head>
 
 <body
-    class="flex min-h-full leading-7 bg-no-repeat text-slate-900 font-lato bg-gradient-to-tl from-white via-white to-teal-100/30 dark:bg-slate-900 dark:from-slate-900 dark:via-slate-900 dark:to-teal-600/10 dark:text-slate-400">
+    class="flex min-h-full leading-7 bg-no-repeat text-slate-900 font-lato bg-gradient-to-tl from-white via-white to-teal-100/30 dark:bg-slate-900 dark:from-slate-900 dark:via-slate-900 dark:to-teal-600/10 dark:text-slate-400"
+    x-data="{ sidebarVisible: false }"
+    >
     <div class="container flex flex-col">
         <x-partials.header />
 

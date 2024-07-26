@@ -1,13 +1,16 @@
-<div class="hidden lg:relative lg:block lg:flex-none">
-    <div
-        class="sticky top-[4.75rem] -ml-0.5 h-[calc(100vh-4.75rem)] w-64 overflow-y-auto custom-scrollbar overflow-x-hidden py-16 pl-0.5 pr-8 xl:w-72 xl:pr-16">
+<div 
+    class="lg:relative lg:block lg:flex-none"
+    :class="{ 'fixed inset-0 z-50 h-screen bg-white dark:bg-slate-900 w-fit pl-6 shadow': sidebarVisible, 'hidden': !sidebarVisible }"
+    >
+    <div class="sticky -ml-0.5 h-[calc(100vh-4.75rem)] w-64 overflow-y-auto custom-scrollbar overflow-x-hidden py-16 pl-0.5 pr-8 xl:w-72 xl:pr-16"
+        :class="{ '': sidebarVisible, 'top-[4.75rem]': !sidebarVisible }">
         <nav class="text-base lg:text-sm">
             <ul role="list" class="space-y-9">
                 <x-sidebar-menu title="Getting">
                     <x-sidebar-menu.item title="Installation" :href="route('docs.installation')" />
                     <x-sidebar-menu.item title="Customizing" :href="route('docs.customizing')" />
                 </x-sidebar-menu>
-                
+
                 <x-sidebar-menu title="Form Components">
                     <x-sidebar-menu.item title="input" :href="route('docs.components.input')" />
                     <x-sidebar-menu.item title="textarea" :href="route('docs.components.textarea')" />
@@ -26,7 +29,8 @@
                 </x-sidebar-menu>
 
                 <x-sidebar-menu title="Contributing">
-                    <x-sidebar-menu.item title="how to contribute" href="https://github.com/developermithu/tallcraftui" external />
+                    <x-sidebar-menu.item title="how to contribute" href="https://github.com/developermithu/tallcraftui"
+                        external />
                 </x-sidebar-menu>
             </ul>
         </nav>

@@ -25,6 +25,12 @@
         </div>
     @endif
 
+    @isset($description)
+        <div class="text-gray-500">
+            {{ $description }}
+        </div>
+    @endisset
+
     <div>
         @if (!$noRender)
             <div x-show="!visible" x-cloak 
