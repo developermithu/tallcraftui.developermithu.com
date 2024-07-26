@@ -26,7 +26,7 @@
     @endif
 
     @isset($description)
-        <div class="text-gray-500">
+        <div>
             {{ $description }}
         </div>
     @endisset

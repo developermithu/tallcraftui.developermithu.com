@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="light" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" :class="{ 'dark': isDarkMode }" x-init="initializeTheme()">
 
 <head>
     <meta charset="utf-8">
@@ -8,12 +8,21 @@
     <title>{{ $title ?? config('app.name') }}</title>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+    <script>
+        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+        if (localStorage.getItem('dark-mode') === 'true' || (!('dark-mode' in localStorage) && window.matchMedia(
+                '(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
 </head>
 
 <body
     class="flex min-h-full leading-7 bg-no-repeat text-slate-900 font-lato bg-gradient-to-tl from-white via-white to-teal-100/30 dark:bg-slate-900 dark:from-slate-900 dark:via-slate-900 dark:to-teal-600/10 dark:text-slate-400"
-    x-data="{ sidebarVisible: false }"
-    >
+    x-data="darkModeToggle()">
     <div class="container flex flex-col">
         <x-partials.header />
 
@@ -69,6 +78,36 @@
             @endisset
         </div>
     </div>
+
+    <script>
+        function darkModeToggle() {
+            return {
+                sidebarVisible: false,
+                isDarkMode: false,
+                initializeTheme() {
+                    this.isDarkMode = localStorage.getItem('dark-mode') === 'true' || (!('dark-mode' in localStorage) &&
+                        window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+                    if (this.isDarkMode) {
+                        document.documentElement.classList.add('dark');
+                    } else {
+                        document.documentElement.classList.remove('dark');
+                    }
+                },
+
+                toggleDarkMode() {
+                    this.isDarkMode = !this.isDarkMode;
+                    localStorage.setItem('dark-mode', this.isDarkMode);
+
+                    if (this.isDarkMode) {
+                        document.documentElement.classList.add('dark');
+                    } else {
+                        document.documentElement.classList.remove('dark');
+                    }
+                }
+            }
+        }
+    </script>
 </body>
 
 </html>

@@ -1,7 +1,8 @@
 <header
     class="sticky top-0 z-50 flex flex-wrap items-center justify-between flex-none px-4 py-5 transition duration-500 bg-transparent sm:px-6 lg:px-8 dark:bg-transparent">
     <div class="flex mr-6 lg:hidden">
-        <button x-on:click="sidebarVisible = true" x-on:click.outside="sidebarVisible = false"  type="button" class="relative" aria-label="Open navigation">
+        <button x-on:click="sidebarVisible = true" x-on:click.outside="sidebarVisible = false" type="button"
+            class="relative" aria-label="Open navigation">
             <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"
                 class="w-6 h-6 stroke-slate-500">
                 <path d="M4 7h16M4 12h16M4 17h16"></path>
@@ -33,28 +34,19 @@
         </button>
     </div> --}}
 
-    <div class="relative flex items-center justify-end gap-3 basis-0 md:flex-grow">
+    <div class="relative flex items-center justify-end gap-1 basis-0 md:flex-grow">
         <div class="relative z-10">
             <label class="sr-only">Theme</label>
-            <button
-                class="flex items-center justify-center w-10 h-10 p-1.5 bg-transparent rounded-full hover:bg-gray-100 dark:bg-slate-700 dark:ring-inset dark:ring-white/5"
+            <button @click="toggleDarkMode"
+                class="flex items-center justify-center w-10 h-10 p-1.5 bg-transparent rounded-full hover:bg-gray-100 dark:hover:bg-slate-700 dark:ring-inset dark:ring-white/5"
                 aria-label="Theme">
-                <svg aria-hidden="true" viewBox="0 0 16 16" class="w-5 h-5 dark:hidden fill-teal-400">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M7 1a1 1 0 0 1 2 0v1a1 1 0 1 1-2 0V1Zm4 7a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm2.657-5.657a1 1 0 0 0-1.414 0l-.707.707a1 1 0 0 0 1.414 1.414l.707-.707a1 1 0 0 0 0-1.414Zm-1.415 11.313-.707-.707a1 1 0 0 1 1.415-1.415l.707.708a1 1 0 0 1-1.415 1.414ZM16 7.999a1 1 0 0 0-1-1h-1a1 1 0 1 0 0 2h1a1 1 0 0 0 1-1ZM7 14a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0v-1Zm-2.536-2.464a1 1 0 0 0-1.414 0l-.707.707a1 1 0 0 0 1.414 1.414l.707-.707a1 1 0 0 0 0-1.414Zm0-8.486A1 1 0 0 1 3.05 4.464l-.707-.707a1 1 0 0 1 1.414-1.414l.707.707ZM3 8a1 1 0 0 0-1-1H1a1 1 0 0 0 0 2h1a1 1 0 0 0 1-1Z">
-                    </path>
-                </svg>
-
-                <svg aria-hidden="true" viewBox="0 0 16 16" class="hidden w-5 h-5 dark:block fill-teal-400">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M7.23 3.333C7.757 2.905 7.68 2 7 2a6 6 0 1 0 0 12c.68 0 .758-.905.23-1.332A5.989 5.989 0 0 1 5 8c0-1.885.87-3.568 2.23-4.668ZM12 5a1 1 0 0 1 1 1 1 1 0 0 0 1 1 1 1 0 1 1 0 2 1 1 0 0 0-1 1 1 1 0 1 1-2 0 1 1 0 0 0-1-1 1 1 0 1 1 0-2 1 1 0 0 0 1-1 1 1 0 0 1 1-1Z">
-                    </path>
-                </svg>
+                <x-icon name="sun" class="text-teal-500 dark:!text-teal-500" x-show="!isDarkMode" x-cloak />
+                <x-icon name="moon" class="text-teal-500 dark:!text-teal-500" x-show="isDarkMode" x-cloak />
             </button>
         </div>
 
         <a aria-label="GitHub" href="https://github.com/developermithu/tallcraftui" target="_blank"
-            class="flex items-center justify-center w-10 h-10 p-1.5 bg-transparent rounded-full group hover:bg-gray-100 dark:bg-slate-700 dark:ring-inset dark:ring-white/5">
+            class="flex items-center justify-center w-10 h-10 p-1.5 bg-transparent rounded-full group hover:bg-gray-100 dark:hover:bg-slate-700 dark:ring-inset dark:ring-white/5">
             <svg aria-hidden="true" viewBox="0 0 16 16"
                 class="w-5 h-5 fill-slate-400 group-hover:fill-slate-500 dark:group-hover:fill-slate-300">
                 <path
