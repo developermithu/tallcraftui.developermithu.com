@@ -7,6 +7,10 @@
 
     <title>{{ $title ?? config('app.name') }}</title>
 
+    @isset($metaTags)
+        {{ $metaTags }}
+    @endisset
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <script>

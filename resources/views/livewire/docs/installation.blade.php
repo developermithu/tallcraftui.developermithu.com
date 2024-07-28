@@ -3,16 +3,17 @@
 use Livewire\Volt\Component;
 use Livewire\Attributes\{Layout, Title};
 
-new 
-#[Layout('components.layouts.app')] 
-#[Title('Installation - Tallcraftui')] 
-class extends Component {
+new #[Layout('components.layouts.app')] #[Title('Installation - Tallcraftui')] class extends Component {
     //
 }; ?>
 
 <div>
+    @slot('metaTags')
+        <x-meta-tags title="Installation - Tallcraftui" />
+    @endslot
+
     <x-slot name="content">
-        <x-heading title="Installation" subtitle="Introduction"/>
+        <x-heading title="Installation" subtitle="Introduction" />
 
         <div class="space-y-5">
             <h2 id="requirements" class="pt-5 group">
@@ -35,31 +36,31 @@ class extends Component {
                 php artisan install:tallcraftui
             @endverbatim
         </x-code-block>
-        
+
         <p>Modify <code>tailwind.config.js</code> </p>
 
         <x-code language="js">
             @verbatim
                 export default {
-                    theme: {
-                        extend: { 
-                            // .....
-                            
-                            colors: { 
-                                primary: "#6d28d9",
-                                secondary: "#a21caf",
-                                tertiary: "#00BBC9",
-                                danger: "#b91c1c",
-                                warning: "#a16207",
-                                success: "#15803d",
-                                info: "#1d4ed8",
-                            },
-                        },
-                    },
-                };            
+                theme: {
+                extend: {
+                // .....
+
+                colors: {
+                primary: "#6d28d9",
+                secondary: "#a21caf",
+                tertiary: "#00BBC9",
+                danger: "#b91c1c",
+                warning: "#a16207",
+                success: "#15803d",
+                info: "#1d4ed8",
+                },
+                },
+                },
+                };
             @endverbatim
         </x-code>
-        
+
         <p>Then start the development server:</p>
 
         <x-code language="bash">
@@ -85,18 +86,18 @@ class extends Component {
         <x-code language="php">
             @verbatim
                 return [
-                    /**
-                    * Default prefix for all components
-                    *
-                    * Note: After changing the prefix, clear the view cache
-                    * using `php artisan view:clear`
-                    *
-                    * Examples:
-                    * prefix => '' // <x-input />
-                    * prefix => 'tall-' // <x-tall-input />
-                    *
-                    */
-                    'prefix' => '',
+                /**
+                * Default prefix for all components
+                *
+                * Note: After changing the prefix, clear the view cache
+                * using `php artisan view:clear`
+                *
+                * Examples:
+                * prefix => '' // <x-input />
+                * prefix => 'tall-' // <x-tall-input />
+                *
+                */
+                'prefix' => '',
                 ];
             @endverbatim
         </x-code>

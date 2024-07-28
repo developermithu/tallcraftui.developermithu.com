@@ -7,12 +7,16 @@
 
     <title>{{ $title ?? config('app.name') }}</title>
 
+    @isset($metaTags)
+        {{ $metaTags }}
+    @endisset
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body
     class="min-h-full leading-7 bg-no-repeat text-slate-900 font-lato bg-gradient-to-tl from-white via-white to-teal-100/30 dark:bg-slate-900 dark:from-slate-900 dark:via-slate-900 dark:to-teal-600/10 dark:text-slate-400">
-    
+
     {{-- Header --}}
     <header class="absolute inset-x-0 top-0 z-50">
         <nav class="container flex items-center justify-between pt-6">
