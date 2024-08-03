@@ -24,6 +24,12 @@ export default {
             },
         },
 
+        screens: {
+            xxs: "375px",
+            xs: "475px",
+            ...defaultTheme.screens,
+        },
+
         extend: {
             fontFamily: {
                 lato: ["Lato", ...defaultTheme.fontFamily.sans],

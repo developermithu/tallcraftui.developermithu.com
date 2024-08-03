@@ -15,7 +15,7 @@
 </head>
 
 <body
-    class="min-h-full leading-7 bg-no-repeat text-slate-900 font-lato bg-gradient-to-tl from-white via-white to-teal-100/30 dark:bg-slate-900 dark:from-slate-900 dark:via-slate-900 dark:to-teal-600/10 dark:text-slate-400">
+    class="min-h-full leading-7 font-lato site-gradient">
 
     {{-- Header --}}
     <header class="absolute inset-x-0 top-0 z-50">
@@ -23,9 +23,6 @@
             <div class="flex lg:flex-1">
                 <a wire:navigate href="{{ route('home') }}" class="-m-1.5 p-1.5 flex items-center gap-x-2">
                     <span class="sr-only">Your Company</span>
-                    <img class="w-auto h-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                        alt="">
-
                     <span
                         class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r to-teal-500 from-indigo-500 sm:text-3xl">TallCraftUI</span>
                 </a>

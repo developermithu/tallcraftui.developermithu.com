@@ -31,8 +31,7 @@ Route::group(['prefix' => 'docs', 'as' => 'docs.'], function () {
     });
 });
 
-Route::get('optimize-clear', function () {
+Route::get('clear', function () {
     Artisan::call('optimize:clear');
-
     return back();
 });

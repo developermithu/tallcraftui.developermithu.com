@@ -32,6 +32,10 @@
 }
 
 @layer components {
+    .site-gradient {
+        @apply bg-no-repeat bg-gradient-to-tl text-slate-900 from-white via-white to-teal-100/30 dark:bg-slate-900 dark:from-slate-900 dark:via-slate-900 dark:to-teal-600/10 dark:text-slate-400;
+    }
+
     .custom-scrollbar {
         scrollbar-width: none;
         /* Firefox */
