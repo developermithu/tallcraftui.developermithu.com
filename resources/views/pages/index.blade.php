@@ -83,7 +83,7 @@ new #[Layout('components.layouts.home')] #[Title('TallCraftUI - Laravel UI Compo
                 <form wire:submit="createUser" class="space-y-4">
                     <x-input label='Name *' wire:model="name" placeholder="Name" icon="user" />
                     <x-input label='Email *' wire:model="email" placeholder="Email" suffix="@gmail.com" />
-                    <x-input label='Portfolio *' wire:model="portfolio" preffix="https://" placeholder="example.com" />
+                    <x-input label='Portfolio *' wire:model="portfolio" prefix="https://" placeholder="example.com" />
                     <x-select label='Country' wire:model="country_id" :options="$countries" />
                     <x-checkbox wire:model='terms' label="Accept the terms and conditions *" />
 

@@ -38,9 +38,9 @@ class extends Component {
             @endverbatim
         </x-code-block>
 
-        <x-code-block title="Preffix Suffix">
+        <x-code-block title="Prefix Suffix">
             @verbatim('docs')
-                <x-input label="Website" preffix="https://" placeholder="example.com" />
+                <x-input label="Website" prefix="https://" placeholder="example.com" />
                 <x-input label="Email" suffix="@gmail.com" placeholder="example@gmail.com" />
             @endverbatim
         </x-code-block>
@@ -99,7 +99,7 @@ class extends Component {
             <x-on-this-page.item title="Basic usage" />
             <x-on-this-page.item title="Required field" />
             <x-on-this-page.item title="Icon" />
-            <x-on-this-page.item title="Preffix suffix" />
+            <x-on-this-page.item title="Prefix suffix" />
             <x-on-this-page.item title="Prepend append" />
             <x-on-this-page.item title="Inline" />
             <x-on-this-page.item title="Rounded corner" />
