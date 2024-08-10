@@ -6,18 +6,18 @@ use Livewire\Attributes\{Layout, Title};
 new #[Layout('components.layouts.home')] #[Title('TallCraftUI - Laravel UI Component Library for TALL Stack')] class extends Component {
     public string $name = '';
     public string $email = '';
-    public string $country_id = '';
+    public string $user_id = '';
     public string $portfolio = '';
     public bool $terms;
 
     public function createUser()
     {
         $this->validate([
-            'name' => ['required', 'string'],
+            'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'email', 'unique:users'],
-            'country_id' => ['required', 'string'],
-            'portfolio' => ['required', 'string', 'url'],
-            'terms' => ['required', 'boolean'],
+            'user_id' => ['required', 'integer', 'exists:users,id'],
+            'portfolio' => ['required', 'string', 'url', 'max:255'],
+            'terms' => ['required', 'boolean']
         ]);
 
         dd('fr');
