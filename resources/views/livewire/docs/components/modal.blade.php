@@ -72,6 +72,10 @@ new #[Layout('components.layouts.app')] #[Title('Modal components - Tallcraftui'
 }; ?>
 
 <div>
+    @slot('metaTags')
+        <x-meta-tags title="Modal components - Tallcraftui" description="Modal components - Tallcraftui" />
+    @endslot
+
     <x-heading title="Modal" subtitle="UI Components" />
 
     <x-code-block title="Basic usage" inline>

@@ -11,6 +11,10 @@ class extends Component {
 }; ?>
 
 <div>
+    @slot('metaTags')
+        <x-meta-tags title="Radio components - Tallcraftui" description="Radio components - Tallcraftui" />
+    @endslot
+
     @slot('content')
         <x-heading title="Radio" subtitle="Form Components" />
 

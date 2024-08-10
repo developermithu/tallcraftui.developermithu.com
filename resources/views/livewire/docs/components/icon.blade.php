@@ -11,6 +11,13 @@ class extends Component {
 }; ?>
 
 <div>
+    @slot('metaTags')
+        <x-meta-tags 
+            title="Enhance Your UI with Meaningful Icons in Tallcraftui" 
+            description=" Discover a wide range of icons to improve user experience and visual appeal in your Tallcraftui projects." 
+        />
+    @endslot
+
     @slot('content')
         <x-heading title="Icon" subtitle="UI Components">
             @slot('description')
@@ -37,25 +44,46 @@ class extends Component {
 
         <x-code-block title="Size variants" inline>
             @verbatim('docs')
-                <x-icon name="bell" class="!size-3" />
-                <x-icon name="bell" class="!size-4" />
-                <x-icon name="bell" class="!size-5" />
-                <x-icon name="bell" class="!size-6" />
-                <x-icon name="bell" class="!size-7" />
-                <x-icon name="bell" class="!size-8" />
-                <x-icon name="bell" class="!size-9" />
-                <x-icon name="bell" class="!size-10" />
+                <x-icon name="bell" class="size-3" />
+                <x-icon name="bell" class="size-4" />
+                <x-icon name="bell" class="size-5" />
+                <x-icon name="bell" class="size-6" />
+                <x-icon name="bell" class="size-7" />
+                <x-icon name="bell" class="size-8" />
+                <x-icon name="bell" class="size-9" />
+                <x-icon name="bell" class="size-10" />
             @endverbatim
         </x-code-block>
 
         <x-code-block title="Customize icon" inline>
             @verbatim('docs')
                 <x-icon name="home" class="text-indigo-500" />
-                <x-icon name="pencil-square" class="text-amber-500 !size-5" />
-                <x-icon name="trash" class="text-red-500 !size-6" />
-                <x-icon name="clipboard-document" class="text-green-500 !size-7" />
+                <x-icon name="pencil-square" class="text-amber-500 size-5" />
+                <x-icon name="trash" class="text-red-500 size-6" />
+                <x-icon name="clipboard-document" class="text-green-500 size-7" />
             @endverbatim
         </x-code-block>
+
+        <h2 class="pt-5 pb-2" id="default-settings">Default settings</h2>
+
+        <p>Change icon default settings according your needs <code>config/tallcraftui.php</code> </p>
+            
+        <x-code language="php">
+            @verbatim
+                return [                
+                    /**
+                    * 
+                    * type => Allowed: heroicons
+                    * style => Allowed: outline, solid
+                    *
+                    */
+                   'icons' => [
+                       'type' => 'heroicons',
+                       'style' => 'outline',
+                   ],
+                ];
+            @endverbatim
+        </x-code>
     @endslot
 
     @slot('aside')
@@ -63,6 +91,7 @@ class extends Component {
             <x-on-this-page.item title="Basic usage" />
             <x-on-this-page.item title="Size variants" />
             <x-on-this-page.item title="Customize icon" />
+            <x-on-this-page.item title="Default settings" />
         </x-on-this-page>
     @endslot
 </div>

@@ -11,6 +11,13 @@ class extends Component {
 }; ?>
 
 <div>
+    @slot('metaTags')
+        <x-meta-tags 
+            title="Alert Components: Create Stunning Alerts in Tallcraftui"
+            description="Learn how to build eye-catching and informative alert components with Tallcraftui." 
+        />
+    @endslot
+
     @slot('content')
         <x-heading title="Alert" subtitle="UI Components" />
 

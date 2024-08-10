@@ -77,14 +77,22 @@ new #[Layout('components.layouts.home')] #[Title('TallCraftUI - Laravel UI Compo
             <x-code-block title="Basic form">
                 @verbatim('docs')
                 @php
-                    $countries = App\Models\User::pluck('name', 'id');
+                    $users = collect([
+                        ['id' => 1, 'name' => 'Taylor Otwell'],
+                        ['id' => 2, 'name' => 'Nuno Maduro'],
+                        ['id' => 3, 'name' => 'Caleb Porzio'],
+                        ['id' => 4, 'name' => 'Jeffrey Way'],
+                        ['id' => 5, 'name' => 'Dan Harrin']
+                    ])->pluck('name', 'id');
+                     
+                    // $users = App\Models\User::pluck('name', 'id');
                 @endphp
                 
                 <form wire:submit="createUser" class="space-y-4">
                     <x-input label='Name *' wire:model="name" placeholder="Name" icon="user" />
                     <x-input label='Email *' wire:model="email" placeholder="Email" suffix="@gmail.com" />
                     <x-input label='Portfolio *' wire:model="portfolio" prefix="https://" placeholder="example.com" />
-                    <x-select label='Country' wire:model="country_id" :options="$countries" />
+                    <x-select label='Users' wire:model="user_id" :options="$users" />
                     <x-checkbox wire:model='terms' label="Accept the terms and conditions *" />
 
                     <div class="flex justify-end">

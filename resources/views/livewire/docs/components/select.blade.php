@@ -26,6 +26,10 @@ class extends Component {
 }; ?>
 
 <div>
+    @slot('metaTags')
+        <x-meta-tags title="Select components - Tallcraftui" description="Select components - Tallcraftui" />
+    @endslot
+
     @slot('content')
         <x-heading title="Select" subtitle="Form Components" />
 

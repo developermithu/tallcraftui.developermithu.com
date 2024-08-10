@@ -11,6 +11,10 @@ class extends Component {
 }; ?>
 
 <div>
+    @slot('metaTags')
+        <x-meta-tags title="Textarea components - Tallcraftui" description="Textarea components - Tallcraftui" />
+    @endslot
+
     @slot('content')
         <x-heading title="Textarea" subtitle="Form Components" />
 

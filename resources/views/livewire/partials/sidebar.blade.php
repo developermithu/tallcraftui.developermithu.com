@@ -6,9 +6,9 @@
         :class="{ '': sidebarVisible, 'top-[4.75rem]': !sidebarVisible }">
         <nav class="text-base lg:text-sm">
             <ul role="list" class="space-y-9">
-                <x-sidebar-menu title="Getting">
+                <x-sidebar-menu title="Getting Started">
                     <x-sidebar-menu.item title="Installation" :href="route('docs.installation')" />
-                    <x-sidebar-menu.item title="Customizing" :href="route('docs.customizing')" />
+                    <x-sidebar-menu.item title="Configuration" :href="route('docs.configuration')" />
                 </x-sidebar-menu>
 
                 <x-sidebar-menu title="Form Components">
@@ -16,11 +16,13 @@
                     <x-sidebar-menu.item title="textarea" :href="route('docs.components.textarea')" />
                     <x-sidebar-menu.item title="radio" :href="route('docs.components.radio')" />
                     <x-sidebar-menu.item title="checkbox" :href="route('docs.components.checkbox')" />
+                    <x-sidebar-menu.item title="toggle" :href="route('docs.components.toggle')" new />
                     <x-sidebar-menu.item title="select" :href="route('docs.components.select')" />
                 </x-sidebar-menu>
 
                 <x-sidebar-menu title="UI Components">
                     <x-sidebar-menu.item title="alert" :href="route('docs.components.alert')" />
+                    <x-sidebar-menu.item title="badge" :href="route('docs.components.badge')" new />
                     <x-sidebar-menu.item title="button" :href="route('docs.components.button')" />
                     <x-sidebar-menu.item title="breadcrumb" :href="route('docs.components.breadcrumb')" />
                     <x-sidebar-menu.item title="dropdown" :href="route('docs.components.dropdown')" />

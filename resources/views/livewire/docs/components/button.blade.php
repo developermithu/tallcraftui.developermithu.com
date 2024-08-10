@@ -11,6 +11,13 @@ new #[Layout('components.layouts.app')] #[Title('Button components - Tallcraftui
 }; ?>
 
 <div>
+    @slot('metaTags')
+        <x-meta-tags 
+            title="Button components - Tallcraftui" 
+            description="Explore our button component library to create interactive and visually appealing buttons for your users." 
+        />
+    @endslot
+
     @slot('content')
         <x-heading title="Button" subtitle="UI Components" />
 
@@ -123,11 +130,11 @@ new #[Layout('components.layouts.app')] #[Title('Button components - Tallcraftui
 
         <x-code-block title="Size variants" inline>
             @verbatim('docs')
-                <x-button label="Button" sm />
-                <x-button label="Button" md /> {{-- default --}}
-                <x-button label="Button" lg />
-                <x-button label="Button" xl />
-                <x-button label="Button" 2xl />
+                <div><x-button label="Button" sm /></div>
+                <div><x-button label="Button" md /></div> {{-- default --}}
+                <div><x-button label="Button" lg /></div>
+                <div><x-button label="Button" xl /></div>
+                <div><x-button label="Button" 2xl /></div>
             @endverbatim
         </x-code-block>
 

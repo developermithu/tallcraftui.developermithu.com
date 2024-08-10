@@ -11,6 +11,10 @@ class extends Component {
 }; ?>
 
 <div>
+    @slot('metaTags')
+        <x-meta-tags title="Breadcrumb components - Tallcraftui" description="Breadcrumb components - Tallcraftui" />
+    @endslot
+
     @slot('content')
         <x-heading title="Breadcrumb" subtitle="UI Components" />
 

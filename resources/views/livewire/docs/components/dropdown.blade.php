@@ -8,6 +8,10 @@ new #[Layout('components.layouts.app')] #[Title('Dropdown components - Tallcraft
 }; ?>
 
 <div>
+    @slot('metaTags')
+        <x-meta-tags title="Dropdown components - Tallcraftui" description="Dropdown components - Tallcraftui" />
+    @endslot
+
     @slot('content')
         <x-heading title="Dropdown" subtitle="UI Components" />
 
