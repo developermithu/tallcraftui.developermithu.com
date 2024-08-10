@@ -38,11 +38,6 @@ export default {
             colors: {
                 primary: "#23B9AD",
                 secondary: "#6167EF",
-                tertiary: "#00BBC9",
-                danger: "#b91c1c",
-                warning: "#a16207",
-                success: "#15803d",
-                info: "#1d4ed8",
             },
         },
     },

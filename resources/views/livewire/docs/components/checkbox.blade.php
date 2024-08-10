@@ -34,12 +34,6 @@ class extends Component {
             @verbatim('docs')
                 <x-checkbox label="Primary" checked />
                 <x-checkbox label="Secondary" checked secondary />
-                <x-checkbox label="Tertiary" checked tertiary />
-                <x-checkbox label="Warning" checked warning />
-                <x-checkbox label="Info" checked info />
-                <x-checkbox label="Danger" checked danger />
-                <x-checkbox label="Success" checked success />
-
                 <x-checkbox label="Black" checked black />
                 <x-checkbox label="White" checked white />
                 <x-checkbox label="Slate" checked slate />
@@ -53,8 +47,13 @@ class extends Component {
                 <x-checkbox label="Yellow" checked yellow />
                 <x-checkbox label="Lime" checked lime />
                 <x-checkbox label="Green" checked green />
+                <x-checkbox label="Emerald" checked emerald />
+                <x-checkbox label="Teal" checked teal />
                 <x-checkbox label="Cyan" checked cyan />
                 <x-checkbox label="Sky" checked sky />
+                <x-checkbox label="Blue" checked blue />
+                <x-checkbox label="Indigo" checked Indigo />
+                <x-checkbox label="Violet" checked violet />
                 <x-checkbox label="Purple" checked purple />
                 <x-checkbox label="Fuchsia" checked fuchsia />
                 <x-checkbox label="Pink" checked pink />

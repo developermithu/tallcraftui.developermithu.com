@@ -96,7 +96,7 @@ new #[Layout('components.layouts.app')] #[Title('Modal components - Tallcraftui'
                     </h3>
 
                     <div class="space-x-3">
-                        <x-button label="Close" x-on:click="$dispatch('close')" danger flat />
+                        <x-button label="Close" x-on:click="$dispatch('close')" red flat />
                         <x-button label="Yes, delete" flat />
                     </div>
                 </div>
@@ -315,7 +315,7 @@ new #[Layout('components.layouts.app')] #[Title('Modal components - Tallcraftui'
                         Model content..
 
                         <div class="flex justify-end pt-4">
-                            <x-button label="Close" x-on:click="$dispatch('close')" danger flat />
+                            <x-button label="Close" x-on:click="$dispatch('close')" red flat />
                         </div>
                     </div>
                 </x-modal>
@@ -447,6 +447,30 @@ new #[Layout('components.layouts.app')] #[Title('Modal components - Tallcraftui'
         @endverbatim
     </x-code-block>
 
+    <h2 class="pt-5 pb-2" id="default-settings">Default settings</h2>
+
+    <p>Change modal default settings according your needs <code>config/tallcraftui.php</code> </p>
+        
+    <x-code language="php">
+        @verbatim
+            return [                
+                /**
+                * 
+                * size => Allowed: sm, md, lg, xl, 2xl, 3xl, 4xl, 5xl, 6xl, 7xl, full
+                * blur => Allowed: true, false
+                * position => Allowed: top, bottom, left, right, center
+                *
+                */
+                'modal' => [
+                    'border-radius' => 'rounded-lg',
+                    'size' => 'lg',
+                    'blur' => false,
+                    'position' => 'top',
+                ],
+            ];
+        @endverbatim
+    </x-code>
+
     @slot('aside')
         <x-on-this-page>
             <x-on-this-page.item title="Basic usage" />
@@ -457,6 +481,7 @@ new #[Layout('components.layouts.app')] #[Title('Modal components - Tallcraftui'
             <x-on-this-page.item title="Size variants" />
             <x-on-this-page.item title="Background blur" />
             <x-on-this-page.item title="Rounded corner" />
+            <x-on-this-page.item title="Default settings" />
         </x-on-this-page>
     @endslot
 </div>

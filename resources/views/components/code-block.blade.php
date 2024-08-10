@@ -1,4 +1,4 @@
-@props(['title' => '', 'language' => 'blade', 'noRender' => false, 'inline' => false])
+@props(['title' => '', 'language' => 'blade', 'noRender' => false, 'inline' => false, 'new' => false])
 
 @php
     $slug = Str::slug($title);
@@ -13,11 +13,17 @@
 <div x-data="{ visible: {{ $noRender ? 'true' : 'false' }} }" @class(['space-y-3 code-container', 'pt-5' => $title])>
     @if ($title)
         <div class="flex items-center justify-between">
-            <h2 id="{{ $slug }}" class="group">
-                <a href="#{{ $slug }}"
-                    class="absolute -ml-8 no-underline transition opacity-0 group-hover:opacity-70">#</a>
-                {{ $title }}
-            </h2>
+            <div class="flex items-center gap-2">
+                <h2 id="{{ $slug }}" class="group">
+                    <a href="#{{ $slug }}"
+                        class="absolute -ml-8 no-underline transition opacity-0 group-hover:opacity-70">#</a>
+                    {{ $title }}
+                </h2>
+
+                @if($new)
+                    <x-badge label="New" amber />
+                @endif            
+            </div>
 
             @if (!$noRender)
                 <x-button @click="visible = !visible" icon="code-bracket" flat sm />

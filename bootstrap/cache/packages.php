@@ -20,6 +20,13 @@
       0 => 'Developermithu\\Tallcraftui\\TallCraftUiServiceProvider',
     ),
   ),
+  'gehrisandro/tailwind-merge-laravel' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'TailwindMerge\\Laravel\\TailwindMergeServiceProvider',
+    ),
+  ),
   'laravel/sail' => 
   array (
     'providers' => 

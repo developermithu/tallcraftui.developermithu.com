@@ -34,12 +34,6 @@ class extends Component {
             @verbatim('docs')
                 <x-radio label="Primary" checked />
                 <x-radio label="Secondary" checked secondary />
-                <x-radio label="Tertiary" checked tertiary />
-                <x-radio label="Warning" checked warning />
-                <x-radio label="Info" checked info />
-                <x-radio label="Danger" checked danger />
-                <x-radio label="Success" checked success />
-
                 <x-radio label="Black" checked black />
                 <x-radio label="White" checked white />
                 <x-radio label="Slate" checked slate />
@@ -53,8 +47,13 @@ class extends Component {
                 <x-radio label="Yellow" checked yellow />
                 <x-radio label="Lime" checked lime />
                 <x-radio label="Green" checked green />
+                <x-radio label="Emerald" checked emerald />
+                <x-radio label="Teal" checked teal />
                 <x-radio label="Cyan" checked cyan />
                 <x-radio label="Sky" checked sky />
+                <x-radio label="Blue" checked blue />
+                <x-radio label="Indigo" checked Indigo />
+                <x-radio label="Violet" checked violet />
                 <x-radio label="Purple" checked purple />
                 <x-radio label="Fuchsia" checked fuchsia />
                 <x-radio label="Pink" checked pink />
@@ -65,7 +64,7 @@ class extends Component {
         <x-code-block title="Size variants" inline>
             @verbatim('docs')
                 <x-radio checked sm />
-                <x-radio checked />
+                <x-radio checked md />
                 <x-radio checked lg />
                 <x-radio checked xl />
                 <x-radio checked 2xl />

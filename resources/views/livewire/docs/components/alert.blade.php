@@ -16,13 +16,11 @@ class extends Component {
 
         <x-code-block title="Basic usage">
             @verbatim('docs')
-                <x-alert title="Primary" />
-                <x-alert title="Secondary" secondary />
-                <x-alert title="Tertiary" tertiary />
-                <x-alert title="Warning" warning />
-                <x-alert title="Info" info />
-                <x-alert title="Danger" danger />
-                <x-alert title="Success" success />
+                <x-alert title="Primary" dismissible />
+                <x-alert title="Blue" dismissible blue />
+                <x-alert title="Amber" dismissible amber />
+                <x-alert title="Red" dismissible red />
+                <x-alert title="Green" dismissible success />
             @endverbatim
         </x-code-block>
 
@@ -38,6 +36,12 @@ class extends Component {
             @endverbatim
         </x-code-block>
 
+        <x-code-block title="Custom icon">
+            @verbatim('docs')
+                <x-alert icon="rocket-launch" title="New version has been released." blue dismissible />
+            @endverbatim
+        </x-code-block>
+
         <x-code-block title="Custom slots">
             @verbatim('docs')
                 <x-alert icon="question-mark-circle" danger>
@@ -47,7 +51,6 @@ class extends Component {
                     </x-slot>
         
                     <x-slot name="description">
-                        
                         Description! Lorem, ipsum dolor sit amet consectetur adipisicing Lorem, ipsum..
                     </x-slot>
         
@@ -74,6 +77,8 @@ class extends Component {
 
         <x-code-block title="Color variants">
             @verbatim('docs')
+                <x-alert title="Primary" />
+                <x-alert title="Secondary" secondary />
                 <x-alert title="Black" black />
                 <x-alert title="White" white />
                 <x-alert title="Slate" slate />
@@ -87,8 +92,13 @@ class extends Component {
                 <x-alert title="Yellow" yellow />
                 <x-alert title="Lime" lime />
                 <x-alert title="Green" green />
+                <x-alert title="Emerald" emerald />
+                <x-alert title="Teal" teal />
                 <x-alert title="Cyan" cyan />
                 <x-alert title="Sky" sky />
+                <x-alert title="Blue" blue />
+                <x-alert title="Indigo" Indigo />
+                <x-alert title="Violet" violet />
                 <x-alert title="Purple" purple />
                 <x-alert title="Fuchsia" fuchsia />
                 <x-alert title="Pink" pink />

@@ -21,6 +21,12 @@ class extends Component {
             @endverbatim
         </x-code-block>
 
+        <x-code-block title="Auto resize" new>
+            @verbatim('docs')
+                <x-textarea label="Bio *" auto-resize />
+            @endverbatim
+        </x-code-block>
+
         <x-code-block title="Customize size">
             @verbatim('docs')
                 <x-textarea label="Your bio" rows="1" />
@@ -34,6 +40,7 @@ class extends Component {
     @slot('aside')
         <x-on-this-page>
             <x-on-this-page.item title="Basic usage" />
+            <x-on-this-page.item title="Auto resize" />
             <x-on-this-page.item title="Customize size" />
         </x-on-this-page>
     @endslot
