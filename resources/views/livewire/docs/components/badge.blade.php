@@ -91,7 +91,7 @@ new #[Layout('components.layouts.app')] #[Title('Badge components - Tallcraftui'
             @endverbatim
         </x-code-block>
 
-        <x-code-block title="Badge size">
+        <x-code-block title="Badge size" inline>
             @verbatim('docs')
                 <x-badge label="Badge" sm />
                 <x-badge label="Badge" md />

@@ -72,7 +72,15 @@ new #[Layout('components.layouts.home')] #[Title('TallCraftUI - Laravel UI Compo
             <x-code-block title="Basic form">
                 @verbatim('docs')
                 @php
-                    $users = App\Models\User::pluck('name', 'id');
+                    $users = collect([
+                        ['id' => 1, 'name' => 'Taylor Otwell'],
+                        ['id' => 2, 'name' => 'Nuno Maduro'],
+                        ['id' => 3, 'name' => 'Caleb Porzio'],
+                        ['id' => 4, 'name' => 'Jeffrey Way'],
+                        ['id' => 5, 'name' => 'Dan Harrin']
+                    ])->pluck('name', 'id');
+                     
+                    // $users = App\Models\User::pluck('name', 'id');
                 @endphp
 
                 <form wire:submit="createUser" class="space-y-4">

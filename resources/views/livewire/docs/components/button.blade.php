@@ -134,11 +134,11 @@ new #[Layout('components.layouts.app')] #[Title('Button components - Tallcraftui
 
         <x-code-block title="Size variants" inline>
             @verbatim('docs')
-                <div><x-button label="Button" sm /></div>
-                <div><x-button label="Button" md /></div> {{-- default --}}
-                <div><x-button label="Button" lg /></div>
-                <div><x-button label="Button" xl /></div>
-                <div><x-button label="Button" 2xl /></div>
+                <x-button label="Button" sm />
+                <x-button label="Button" md /> {{-- default --}}
+                <x-button label="Button" lg />
+                <x-button label="Button" xl />
+                <x-button label="Button" 2xl />
             @endverbatim
         </x-code-block>
 
