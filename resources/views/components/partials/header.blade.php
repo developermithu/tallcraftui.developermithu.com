@@ -1,4 +1,4 @@
-<header x-data="{ isSticky: false }" class="sticky top-0 z-[999] px-4 py-5 transition duration-200 sm:px-6 lg:px-8"
+<header x-data="{ isSticky: false }" class="sticky top-0 z-50 px-4 py-5 transition duration-200 sm:px-6 lg:px-8"
     x-on:scroll.window="isSticky = window.scrollY > 60"
     :class="{ 'bg-white dark:bg-slate-900': isSticky, 'bg-transparent': !isSticky }">
     <div class="container flex flex-wrap items-center justify-between">

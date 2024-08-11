@@ -19,7 +19,11 @@ new #[Layout('components.layouts.app')] #[Title('Button components - Tallcraftui
     @endslot
 
     @slot('content')
-        <x-heading title="Button" subtitle="UI Components" />
+        <x-heading title="Button" subtitle="UI Components">
+            @slot('description')
+                You can easily customize any <strong>button</strong> using standard <code>css</code> classes and <strong>icon</strong> using the <code>class:icon</code> attribute.
+            @endslot
+        </x-heading>
 
         <x-code-block title="Basic usage" inline>
             @verbatim('docs')

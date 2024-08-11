@@ -17,18 +17,11 @@ new #[Layout('components.layouts.home')] #[Title('TallCraftUI - Laravel UI Compo
             'email' => ['required', 'email', 'unique:users'],
             'user_id' => ['required', 'integer', 'exists:users,id'],
             'portfolio' => ['required', 'string', 'url', 'max:255'],
-            'terms' => ['required', 'boolean']
+            'terms' => ['required', 'boolean'],
         ]);
 
         dd('fr');
     }
-
-    // public function with()
-    // {
-    //     [
-    //         'countries' => App\Models\User::pluck('name', 'id'),
-    //     ];
-    // }
 }; ?>
 
 <div>
@@ -48,12 +41,14 @@ new #[Layout('components.layouts.home')] #[Title('TallCraftUI - Laravel UI Compo
                 </div>
             </div> --}}
             <div class="text-center">
-                <h1 class="text-2xl font-bold tracking-tight xxs:text-3xl xs:text-4xl text-slate-700 dark:text-slate-100 sm:text-5xl">
+                <h1
+                    class="text-2xl font-bold tracking-tight xxs:text-3xl xs:text-4xl text-slate-700 dark:text-slate-100 sm:text-5xl">
                     Boost your TALL stack development with <span
                         class="text-transparent bg-gradient-to-r from-teal-500 to-indigo-500 bg-clip-text">TallCraftUI</span>
                 </h1>
 
-                <h2 class="mt-6 text-sm leading-normal text-gray-600 xxs:text-base md:leading-8 sm:text-lg dark:text-gray-300">
+                <h2
+                    class="mt-6 text-sm leading-normal text-gray-600 xxs:text-base md:leading-8 sm:text-lg dark:text-gray-300">
                     TallCraftUI is a Laravel UI component library built on TALL stack (<span
                         class="font-semibold ">TailwindCSS, Alpine.js, Laravel, Livewire</span>), featuring over 10+
                     beautifully crafted components.
@@ -73,21 +68,13 @@ new #[Layout('components.layouts.home')] #[Title('TallCraftUI - Laravel UI Compo
             </div>
         </div>
 
-        <div class="max-w-2xl pb-20 m-auto">
+        <div class="max-w-4xl pb-20 m-auto">
             <x-code-block title="Basic form">
                 @verbatim('docs')
                 @php
-                    $users = collect([
-                        ['id' => 1, 'name' => 'Taylor Otwell'],
-                        ['id' => 2, 'name' => 'Nuno Maduro'],
-                        ['id' => 3, 'name' => 'Caleb Porzio'],
-                        ['id' => 4, 'name' => 'Jeffrey Way'],
-                        ['id' => 5, 'name' => 'Dan Harrin']
-                    ])->pluck('name', 'id');
-                     
-                    // $users = App\Models\User::pluck('name', 'id');
+                    $users = App\Models\User::pluck('name', 'id');
                 @endphp
-                
+
                 <form wire:submit="createUser" class="space-y-4">
                     <x-input label='Name *' wire:model="name" placeholder="Name" icon="user" />
                     <x-input label='Email *' wire:model="email" placeholder="Email" suffix="@gmail.com" />
@@ -102,5 +89,32 @@ new #[Layout('components.layouts.home')] #[Title('TallCraftUI - Laravel UI Compo
                 @endverbatim
             </x-code-block>
         </div>
+
+
+        <section class="max-w-4xl pb-20 m-auto">
+            <h2 class="pb-3 text-2xl font-semibold text-center xxs:text-3xl sm:text-4xl">Breeze vs Jetstream vs TallCraftUI
+            </h2>
+
+            <x-code-block title="Breeze" no-render no-copy>
+                @verbatim
+                <x-input-label for="name" :value="__('Name')" />
+                <x-text-input wire:model="name" id="name" class="block w-full mt-1" type="text" name="name" required />
+                <x-input-error :messages="$errors->get('name')" class="mt-2" />
+                @endverbatim
+            </x-code-block>
+
+            <x-code-block title="Jetstream" no-render no-copy>
+                @verbatim
+                <x-label for="name" value="{{ __('Name') }}" />
+                <x-input id="name" class="block w-full mt-1" type="text" name="name" :value="old('name')" required />
+                @endverbatim
+            </x-code-block>
+
+            <x-code-block title="TallCraftUI" no-render no-copy>
+                @verbatim
+                <x-input label="Name *" wire:model="name" />
+                @endverbatim
+            </x-code-block>
+        </section>
     </div>
 </div>

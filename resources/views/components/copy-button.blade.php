@@ -19,7 +19,7 @@
             console.error('Clipboard API not available');
         }
     }
-}" {{ $attributes->class(['absolute z-50 top-3 right-4 hidden sm:block']) }}>
+}" {{ $attributes->class(['absolute z-30 top-3 right-4 hidden sm:block']) }}>
     <div class="flex gap-1.5">
         <span class="hidden text-sm text-teal-500 copied">Copied!</span>
         <x-icon name="clipboard-document-check" class="text-teal-500 !size-5 hidden copiedIcon" />

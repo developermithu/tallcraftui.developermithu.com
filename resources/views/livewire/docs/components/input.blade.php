@@ -96,6 +96,16 @@ class extends Component {
                 <x-input placeholder="rounded-full" rounded-full />
             @endverbatim
         </x-code-block>
+
+        <x-code-block title="Customize input">
+            @slot('description')
+                Apply standard <code>css</code> classes to style <strong>input</strong> fields and use the <code>class:icon</code> attribute for <strong>icon</strong> customization.
+            @endslot
+
+            @verbatim('docs')
+                <x-input label="Name" icon="user" placeholder="Name" class="py-2 text-xs border-primary/60 focus:border-primary" class:icon="size-3.5" />
+            @endverbatim
+        </x-code-block>
     @endslot
 
     @slot('aside')
@@ -107,6 +117,7 @@ class extends Component {
             <x-on-this-page.item title="Prepend append" />
             <x-on-this-page.item title="Inline" />
             <x-on-this-page.item title="Rounded corner" />
+            <x-on-this-page.item title="Customize input" />
         </x-on-this-page>
     @endslot
 </div>

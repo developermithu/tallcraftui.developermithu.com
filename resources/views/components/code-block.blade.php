@@ -1,4 +1,4 @@
-@props(['title' => '', 'language' => 'blade', 'noRender' => false, 'inline' => false, 'new' => false])
+@props(['title' => '', 'language' => 'blade', 'noRender' => false, 'inline' => false, 'new' => false, 'noCopy' => false])
 
 @php
     $slug = Str::slug($title);
@@ -51,7 +51,9 @@
                 {!! $code !!}
             </x-torchlight-code></pre>
 
-            <x-copy-button />
+            @if (!$noCopy)
+                <x-copy-button />
+            @endif
         </div>
     </div>
 </div>

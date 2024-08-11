@@ -13,7 +13,11 @@ new #[Layout('components.layouts.app')] #[Title('Badge components - Tallcraftui'
     @endslot
 
     @slot('content')
-        <x-heading title="Badge" subtitle="UI Components" />
+        <x-heading title="Badge" subtitle="UI Components">
+            @slot('description')
+                You can easily customize any <strong>badge</strong> using standard <code>css</code> classes and <strong>icon</strong> using the <code>class:icon</code> attribute.
+            @endslot
+        </x-heading>
 
         <x-code-block title="Basic usage" inline>
             @verbatim('docs')
