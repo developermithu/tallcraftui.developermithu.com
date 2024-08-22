@@ -89,9 +89,7 @@ new #[Layout('components.layouts.app')] #[Title('Modal components - Tallcraftui'
 
             {{-- Default modal --}}
             <x-modal wire:model="openDefault">
-                <div class="p-5">
-                    Model content..
-                </div>
+                Model content..
             </x-modal>
 
             {{-- Delete modal --}}
@@ -111,22 +109,16 @@ new #[Layout('components.layouts.app')] #[Title('Modal components - Tallcraftui'
             </x-modal>
 
             {{-- Form modal --}}
-            <x-modal wire:model="openFormModal" blur-sm xl>
+            <x-modal wire:model="openFormModal" dismissible xl>
                 <!-- Modal header -->
-                <div class="flex items-center justify-between p-4 border-b rounded-t md:p-5 dark:border-gray-600">
+                <div class="flex items-center justify-between pb-3 border-b rounded-t dark:border-gray-600">
                     <h3 class="text-lg font-semibold text-gray-900 capitalize dark:text-white">
                         {{ __('add new user') }}
                     </h3>
-
-                    <button type="button" x-on:click="$dispatch('close')"
-                        class="inline-flex items-center justify-center w-8 h-8 text-sm text-gray-400 bg-transparent rounded hover:bg-gray-200 hover:text-gray-900 ms-auto dark:hover:bg-gray-600 dark:hover:text-white">
-                        <x-icon name="x-mark" />
-                        <span class="sr-only">Close modal</span>
-                    </button>
                 </div>
 
                 <!-- Modal body -->
-                <form wire:submit="createUser" class="p-4 md:p-5">
+                <form wire:submit="createUser" class="pt-5">
                     <div class="grid grid-cols-2 gap-4 mb-5">
                         <div class="col-span-2 sm:col-span-1">
                             <x-input label="Name *" wire:model="name" />
@@ -167,9 +159,7 @@ new #[Layout('components.layouts.app')] #[Title('Modal components - Tallcraftui'
             <x-button wire:click="$set('openWithLivewire', true)" label="Livewire" />
 
                 <x-modal wire:model="openWithLivewire">
-                    <div class="p-5">
-                        Model content..
-                    </div>
+                    Model content..
                 </x-modal>
         @endverbatim
     </x-code-block>
@@ -183,9 +173,7 @@ new #[Layout('components.layouts.app')] #[Title('Modal components - Tallcraftui'
             <x-button x-on:click="$wire.openWithAlpine = true" label="Alpine" />
 
                 <x-modal wire:model="openWithAlpine">
-                    <div class="p-5">
-                        Model content..
-                    </div>
+                    Model content..
                 </x-modal>
         @endverbatim
     </x-code-block>
@@ -200,33 +188,23 @@ new #[Layout('components.layouts.app')] #[Title('Modal components - Tallcraftui'
 
                 {{-- default --}}
                 <x-modal wire:model="openTop">
-                    <div class="p-5">
-                        Model content..
-                    </div>
+                    Model content..
                 </x-modal>
 
                 <x-modal wire:model="openBottom" bottom>
-                    <div class="p-5">
-                        Model content..
-                    </div>
+                    Model content..
                 </x-modal>
 
                 <x-modal wire:model="openLeft" left>
-                    <div class="p-5">
-                        Model content..
-                    </div>
+                    Model content..
                 </x-modal>
 
                 <x-modal wire:model="openRight" right>
-                    <div class="p-5">
-                        Model content..
-                    </div>
+                    Model content..
                 </x-modal>
 
                 <x-modal wire:model="openCenter" center>
-                    <div class="p-5">
-                        Model content..
-                    </div>
+                    Model content..
                 </x-modal>
         @endverbatim
     </x-code-block>
@@ -246,70 +224,48 @@ new #[Layout('components.layouts.app')] #[Title('Modal components - Tallcraftui'
                 <x-button x-on:click="$wire.openFull = true" label="FULL" />
 
                 <x-modal wire:model="openSm" sm>
-                    <div class="p-5">
-                        Model content..
-                    </div>
+                    Model content..
                 </x-modal>
 
                 <x-modal wire:model="openMd" md>
-                    <div class="p-5">
-                        Model content..
-                    </div>
+                    Model content..
                 </x-modal>
 
                 {{-- default --}}
                 <x-modal wire:model="openLg" lg>
-                    <div class="p-5">
-                        Model content..
-                    </div>
+                    Model content..
                 </x-modal>
 
                 <x-modal wire:model="openXl" xl>
-                    <div class="p-5">
-                        Model content..
-                    </div>
+                    Model content..
                 </x-modal>
 
                 <x-modal wire:model="open2Xl" 2xl>
-                    <div class="p-5">
-                        Model content..
-                    </div>
+                    Model content..
                 </x-modal>
 
                 <x-modal wire:model="open3Xl" 3xl>
-                    <div class="p-5">
-                        Model content..
-                    </div>
+                    Model content..
                 </x-modal>
 
                 <x-modal wire:model="open4Xl" 4xl>
-                    <div class="p-5">
-                        Model content..
-                    </div>
+                    Model content..
                 </x-modal>
                 
                 <x-modal wire:model="open5Xl" 5xl>
-                    <div class="p-5">
-                        Model content..
-                    </div>
+                    Model content..
                 </x-modal>
 
                 <x-modal wire:model="open6Xl" 6xl>
-                    <div class="p-5">
-                        Model content..
-                    </div>
+                    Model content..
                 </x-modal>
 
                 <x-modal wire:model="open7Xl" 7xl>
-                    <div class="p-5">
-                        Model content..
-                    </div>
+                    Model content..
                 </x-modal>
 
-                <x-modal wire:model="openFull" full>
-                    <div class="p-5">
-                        Model content..
-                    </div>
+                <x-modal wire:model="openFull" dismissible full>
+                    Model content..
                 </x-modal>
         @endverbatim
     </x-code-block>
@@ -318,26 +274,18 @@ new #[Layout('components.layouts.app')] #[Title('Modal components - Tallcraftui'
         @verbatim('docs')
             <x-button x-on:click="$wire.openPersistent = true" label="Persistent" />
 
-                <x-modal wire:model="openPersistent" persistent xl>
-                    <div class="p-5">
-                        Model content..
-
-                        <div class="flex justify-end pt-4">
-                            <x-button label="Close" x-on:click="$dispatch('close')" red flat />
-                        </div>
-                    </div>
+                <x-modal wire:model="openPersistent" dismissible persistent>
+                    Model content..
                 </x-modal>
         @endverbatim
     </x-code-block>
 
-    <x-code-block title="Without transition" new>
+    <x-code-block title="Without transition">
         @verbatim('docs')
             <x-button x-on:click="$wire.openNoTransition = true" label="Without transition" />
 
                 <x-modal wire:model="openNoTransition" no-transition>
-                    <div class="p-5">
-                        Model content..
-                    </div>
+                    Model content..
                 </x-modal>
         @endverbatim
     </x-code-block>
@@ -355,51 +303,35 @@ new #[Layout('components.layouts.app')] #[Title('Modal components - Tallcraftui'
 
                 {{-- default --}}
                 <x-modal wire:model="openBlurNone" blur-none>
-                    <div class="p-5">
-                        Model content..
-                    </div>
+                    Model content..
                 </x-modal>
 
                 <x-modal wire:model="openBlur" blur>
-                    <div class="p-5">
-                        Model content..
-                    </div>
+                    Model content..
                 </x-modal>
 
                 <x-modal wire:model="openBlurSm" blur-sm>
-                    <div class="p-5">
-                        Model content..
-                    </div>
+                    Model content..
                 </x-modal>
 
                 <x-modal wire:model="openBlurMd" blur-md>
-                    <div class="p-5">
-                        Model content..
-                    </div>
+                    Model content..
                 </x-modal>
 
                 <x-modal wire:model="openBlurLg" blur-lg>
-                    <div class="p-5">
-                        Model content..
-                    </div>
+                    Model content..
                 </x-modal>
 
                 <x-modal wire:model="openBlurXl" blur-xl>
-                    <div class="p-5">
-                        Model content..
-                    </div>
+                    Model content..
                 </x-modal>
 
                 <x-modal wire:model="openBlur2Xl" blur-2xl>
-                    <div class="p-5">
-                        Model content..
-                    </div>
+                    Model content..
                 </x-modal>
 
                 <x-modal wire:model="openBlur3Xl" blur-3xl>
-                    <div class="p-5">
-                        Model content..
-                    </div>
+                    Model content..
                 </x-modal>
         @endverbatim
     </x-code-block>
@@ -429,40 +361,28 @@ new #[Layout('components.layouts.app')] #[Title('Modal components - Tallcraftui'
                 <x-button x-on:click="$wire.openRoundedXl = true" label="Rounded XL" />
 
                 <x-modal wire:model="openRoundedNone" rounded-none>
-                    <div class="p-5">
-                        Model content..
-                    </div>
+                    Model content..
                 </x-modal>
 
                 <x-modal wire:model="openRounded" rounded>
-                    <div class="p-5">
-                        Model content..
-                    </div>
+                    Model content..
                 </x-modal>
 
                 <x-modal wire:model="openRoundedSm" rounded-sm>
-                    <div class="p-5">
-                        Model content..
-                    </div>
+                    Model content..
                 </x-modal>
 
                 <x-modal wire:model="openRoundedMd" rounded-md>
-                    <div class="p-5">
-                        Model content..
-                    </div>
+                    Model content..
                 </x-modal>
 
                 {{-- default --}}
                 <x-modal wire:model="openRoundedLg" rounded-lg>
-                    <div class="p-5">
-                        Model content..
-                    </div>
+                    Model content..
                 </x-modal>
 
                 <x-modal wire:model="openRoundedXl" rounded-xl>
-                    <div class="p-5">
-                        Model content..
-                    </div>
+                    Model content..
                 </x-modal>
         @endverbatim
     </x-code-block>

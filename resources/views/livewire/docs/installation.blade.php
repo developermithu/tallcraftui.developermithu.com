@@ -105,8 +105,16 @@ new #[Layout('components.layouts.app')] #[Title('Installation - Tallcraftui')] c
                     * 'prefix' => 'tc-'    // <x-tc-input />
                     * 
                     */
-                    'prefix' => '',
+                    'prefix' => env('TALLCRAFTUI_PREFIX', ''),
                 ];            
+            @endverbatim
+        </x-code>
+
+        <p>Add <code>TALLCRAFTUI_PREFIX</code> variable to your <code>.env</code> file:</p>
+
+        <x-code language="env">
+            @verbatim
+                TALLCRAFTUI_PREFIX=""           
             @endverbatim
         </x-code>
 

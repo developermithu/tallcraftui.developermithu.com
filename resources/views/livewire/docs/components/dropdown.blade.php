@@ -23,7 +23,7 @@ new #[Layout('components.layouts.app')] #[Title('Dropdown components - Tallcraft
                     </div>
                 </x-dropdown>
 
-                <x-dropdown>
+                <x-dropdown title="Account settings">
                     @slot('trigger')
                         <x-button icon="user" flat circle />
                     @endslot
@@ -155,7 +155,7 @@ new #[Layout('components.layouts.app')] #[Title('Dropdown components - Tallcraft
             @endverbatim
         </x-code-block>
 
-        <x-code-block title="Without transition" new>
+        <x-code-block title="Without transition">
             @verbatim('docs')
                 <x-dropdown no-transition>
                     @slot('trigger')

@@ -44,7 +44,7 @@ new #[Layout('components.layouts.app')] #[Title('Configurations - Tallcraftui')]
                     * 'prefix' => 'tc-'    // <x-tc-input />
                     * 
                     */
-                    'prefix' => '',
+                    'prefix' => env('TALLCRAFTUI_PREFIX', ''),
                 
                     /**
                     * --------------------------------------------------------------------------
