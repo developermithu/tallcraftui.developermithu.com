@@ -1,4 +1,4 @@
-# TallCraftUI 
+# [TallCraftUI](https://github.com/developermithu/tallcraftui) 
 
 ## Introduction
 
@@ -18,9 +18,17 @@ Move into the directory `cd tallcraftui` and run the following commands:
 composer install
 cp .env.example .env
 php artisan key:generate
-pnpm install 
-pnpm dev
+`npm install` or `pnpm install `
 ```
+
+Start the development server:
+
+```bash
+`npm run dev` or `pnpm dev`
+```
+
+That's it ✅ visit http://tallcraftui.test
+
 
 Be sure to build the frontend assets by running `npm run build` or `pnpm build` before committing.
 
