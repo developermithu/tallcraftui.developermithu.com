@@ -28,8 +28,10 @@ Route::group(['prefix' => 'docs', 'as' => 'docs.'], function () {
         Volt::route('/button', 'docs.components.button')->name('button');
         Volt::route('/breadcrumb', 'docs.components.breadcrumb')->name('breadcrumb');
         Volt::route('/dropdown', 'docs.components.dropdown')->name('dropdown');
+        Volt::route('/menu', 'docs.components.menu')->name('menu');
         Volt::route('/modal', 'docs.components.modal')->name('modal');
         Volt::route('/icon', 'docs.components.icon')->name('icon');
+        Volt::route('/stat', 'docs.components.stat')->name('stat');
     });
 });
 

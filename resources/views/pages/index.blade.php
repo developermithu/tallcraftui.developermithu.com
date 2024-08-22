@@ -27,7 +27,7 @@ new #[Layout('components.layouts.home')] #[Title('TallCraftUI - Laravel UI Compo
 <div>
     @slot('metaTags')
         <x-meta-tags title="TallCraftUI - Laravel UI Component Library for TALL Stack"
-            description="TallCraftUI is a Laravel UI component library built on TALL stack (TailwindCSS, Alpine.js, Laravel, Livewire), featuring over 10+ beautifully crafted components." />
+            description="TallCraftUI is a Laravel UI component library built on TALL stack (TailwindCSS, Alpine.js, Laravel, Livewire), featuring over 15+ beautifully crafted components." />
     @endslot
 
     <div class="container relative px-6 isolate pt-14 lg:px-8">
@@ -50,7 +50,7 @@ new #[Layout('components.layouts.home')] #[Title('TallCraftUI - Laravel UI Compo
                 <h2
                     class="mt-6 text-sm leading-normal text-gray-600 xxs:text-base md:leading-8 sm:text-lg dark:text-gray-300">
                     TallCraftUI is a Laravel UI component library built on TALL stack (<span
-                        class="font-semibold ">TailwindCSS, Alpine.js, Laravel, Livewire</span>), featuring over 10+
+                        class="font-semibold">TailwindCSS, Alpine.js, Laravel, Livewire</span>), featuring over <strong>15+</strong>
                     beautifully crafted components.
                 </h2>
 

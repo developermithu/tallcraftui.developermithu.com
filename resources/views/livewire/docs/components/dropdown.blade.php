@@ -25,26 +25,30 @@ new #[Layout('components.layouts.app')] #[Title('Dropdown components - Tallcraft
 
                 <x-dropdown>
                     @slot('trigger')
-                        <x-button label="Dropdown Menu" />
+                        <x-button icon="user" flat circle />
                     @endslot
 
-                    <x-dropdown-item icon="user" label="Profile" />
-                    <x-dropdown-item icon="arrow-right-end-on-rectangle" label="Logout" />
-                    <x-dropdown-item icon="cog-6-tooth" label="Settings" />
+                    <x-dropdown-item label="Profile" icon="user" />
+                    <x-dropdown-item label="Update password" icon="key" />
+                    <x-dropdown-item label="Settings" icon="cog-6-tooth" />
+
+                    <x-separator />
+                    
+                    <x-dropdown-item label="Sign out" icon="arrow-right-end-on-rectangle" />
                 </x-dropdown>
             @endverbatim
         </x-code-block>
 
-        <x-code-block title="Menu with link" inline>
+        <x-code-block title="Dropdown with link" inline>
             @verbatim('docs')
                 <x-dropdown>
                     @slot('trigger')
-                        <x-button label="Menu with Link" />
+                        <x-button icon="ellipsis-vertical" flat circle />
                     @endslot
 
-                    <x-dropdown-item :href="route('docs.components.input')" icon="user" label="Profile" />
-                    <x-dropdown-item :href="route('docs.components.button')" icon="arrow-right-end-on-rectangle" label="Profile" />
-                    <x-dropdown-item :href="route('docs.components.icon')" icon="cog-6-tooth" label="Settings" />
+                    <x-dropdown-item label="View" link="#" icon="eye" />
+                    <x-dropdown-item label="Edit" link="#" icon="pencil-square" />
+                    <x-dropdown-item label="Delete" link="#" icon="trash" />
                 </x-dropdown>
             @endverbatim
         </x-code-block>
@@ -53,12 +57,12 @@ new #[Layout('components.layouts.app')] #[Title('Dropdown components - Tallcraft
             @verbatim('docs')
                 <x-dropdown persistent>
                     @slot('trigger')
-                        <x-button label="Persistent" />
+                        <x-button icon="ellipsis-vertical" flat circle />
                     @endslot
 
-                    <x-dropdown-item icon="user" label="Profile" />
-                    <x-dropdown-item icon="arrow-right-end-on-rectangle" label="Profile" />
-                    <x-dropdown-item icon="cog-6-tooth" label="Settings" />
+                    <x-dropdown-item label="View" icon="eye" />
+                    <x-dropdown-item label="Edit" icon="pencil-square" />
+                    <x-dropdown-item label="Delete" icon="trash" />
                 </x-dropdown>
             @endverbatim
         </x-code-block>
@@ -151,6 +155,20 @@ new #[Layout('components.layouts.app')] #[Title('Dropdown components - Tallcraft
             @endverbatim
         </x-code-block>
 
+        <x-code-block title="Without transition" new>
+            @verbatim('docs')
+                <x-dropdown no-transition>
+                    @slot('trigger')
+                        <x-button icon="ellipsis-vertical" flat circle />
+                    @endslot
+
+                    <x-dropdown-item label="View" icon="eye" />
+                    <x-dropdown-item label="Edit" icon="pencil-square" />
+                    <x-dropdown-item label="Delete" icon="trash" />
+                </x-dropdown>
+            @endverbatim
+        </x-code-block>
+
         <h2 class="pt-5 pb-2" id="default-settings">Default settings</h2>
 
         <p>Change dropdown default settings according your needs <code>config/tallcraftui.php</code> </p>
@@ -158,17 +176,11 @@ new #[Layout('components.layouts.app')] #[Title('Dropdown components - Tallcraft
         <x-code language="php">
             @verbatim
                 return [                
-                    /**
-                    * 
-                    * border-radius => Allowed: rounded, rounded-sm, rounded-md, rounded-lg, rounded-xl, rounded-2xl, rounded-3xl, rounded-full, rounded-none
-                    * position => Allowed: top, bottom, left, right
-                    * size => Allowed: w-20, w-24, w-28, w-32, w-36, w-40, w-44, w-48, w-52, w-56, w-60, w-64, w-72, w-80, w-96, w-full
-                    *
-                    */
                     'dropdown' => [
-                        'border-radius' => 'rounded',
-                        'position' => 'top',
-                        'size' => 'w-48',
+                        'width' => Width::W48->value,
+                        'shadow' => Shadow::Shadow->value,
+                        'position' => Position::TOP->value,
+                        'border-radius' => BorderRadius::Rounded->value,
                     ],
                 ];
             @endverbatim
@@ -178,10 +190,11 @@ new #[Layout('components.layouts.app')] #[Title('Dropdown components - Tallcraft
     @slot('aside')
         <x-on-this-page>
             <x-on-this-page.item title="Basic usage" />
-            <x-on-this-page.item title="Menu with link" />
+            <x-on-this-page.item title="Dropdown with link" />
             <x-on-this-page.item title="Persistent" />
             <x-on-this-page.item title="Dropdown position" />
             <x-on-this-page.item title="Dropdown size" />
+            <x-on-this-page.item title="Without transition" />
             <x-on-this-page.item title="Default settings" />
         </x-on-this-page>
     @endslot

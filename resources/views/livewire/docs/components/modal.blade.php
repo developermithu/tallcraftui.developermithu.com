@@ -19,6 +19,9 @@ new #[Layout('components.layouts.app')] #[Title('Modal components - Tallcraftui'
     
     // Persistent
     public bool $openPersistent = false;
+    
+    // Without transition
+    public bool $openNoTransition = false;
 
     // Blur
     public bool $openBlurNone = false;
@@ -79,11 +82,12 @@ new #[Layout('components.layouts.app')] #[Title('Modal components - Tallcraftui'
     <x-heading title="Modal" subtitle="UI Components" />
 
     <x-code-block title="Basic usage" inline>
-        @verbatim('docs')           
+        @verbatim('docs')
             <x-button x-on:click="$wire.openDefault = true" label="Default" />
             <x-button x-on:click="$wire.openDeleteModal = true" label="Delete Modal" />
             <x-button x-on:click="$wire.openFormModal = true" label="Form Modal" />
 
+            {{-- Default modal --}}
             <x-modal wire:model="openDefault">
                 <div class="p-5">
                     Model content..
@@ -99,7 +103,7 @@ new #[Layout('components.layouts.app')] #[Title('Modal components - Tallcraftui'
                         {{ __('Are you sure you want to delete this?') }}
                     </h3>
 
-                    <div class="space-x-3">
+                    <div class="flex items-center justify-center gap-3">
                         <x-button label="Close" x-on:click="$dispatch('close')" red flat />
                         <x-button label="Yes, delete" flat />
                     </div>
@@ -113,25 +117,25 @@ new #[Layout('components.layouts.app')] #[Title('Modal components - Tallcraftui'
                     <h3 class="text-lg font-semibold text-gray-900 capitalize dark:text-white">
                         {{ __('add new user') }}
                     </h3>
-        
+
                     <button type="button" x-on:click="$dispatch('close')"
                         class="inline-flex items-center justify-center w-8 h-8 text-sm text-gray-400 bg-transparent rounded hover:bg-gray-200 hover:text-gray-900 ms-auto dark:hover:bg-gray-600 dark:hover:text-white">
                         <x-icon name="x-mark" />
                         <span class="sr-only">Close modal</span>
                     </button>
                 </div>
-        
+
                 <!-- Modal body -->
                 <form wire:submit="createUser" class="p-4 md:p-5">
                     <div class="grid grid-cols-2 gap-4 mb-5">
                         <div class="col-span-2 sm:col-span-1">
                             <x-input label="Name *" wire:model="name" />
                         </div>
-        
+
                         <div class="col-span-2 sm:col-span-1">
                             <x-input label="Email *" wire:model="email" />
                         </div>
-        
+
                         <div class="col-span-2 sm:col-span-1">
                             <x-select label="Select country *" wire:model="country">
                                 <option value="Bangladesh">Bangladesh</option>
@@ -140,12 +144,12 @@ new #[Layout('components.layouts.app')] #[Title('Modal components - Tallcraftui'
                                 <option value="Bhutan">Bhutan</option>
                             </x-select>
                         </div>
-        
+
                         <div class="col-span-2">
                             <x-textarea label="Details" wire:model="details" />
                         </div>
                     </div>
-        
+
                     <div class="flex justify-end">
                         <x-button label="Submit" spinner="createUser" />
                     </div>
@@ -326,6 +330,18 @@ new #[Layout('components.layouts.app')] #[Title('Modal components - Tallcraftui'
         @endverbatim
     </x-code-block>
 
+    <x-code-block title="Without transition" new>
+        @verbatim('docs')
+            <x-button x-on:click="$wire.openNoTransition = true" label="Without transition" />
+
+                <x-modal wire:model="openNoTransition" no-transition>
+                    <div class="p-5">
+                        Model content..
+                    </div>
+                </x-modal>
+        @endverbatim
+    </x-code-block>
+
     <x-code-block title="Background blur" inline>
         @verbatim('docs')
                 <x-button x-on:click="$wire.openBlurNone = true" label="Blur none" /> {{-- default --}}
@@ -338,7 +354,7 @@ new #[Layout('components.layouts.app')] #[Title('Modal components - Tallcraftui'
                 <x-button x-on:click="$wire.openBlur3Xl = true" label="Blur 3XL" />
 
                 {{-- default --}}
-                <x-modal wire:model="openBlurNone">
+                <x-modal wire:model="openBlurNone" blur-none>
                     <div class="p-5">
                         Model content..
                     </div>
@@ -457,21 +473,14 @@ new #[Layout('components.layouts.app')] #[Title('Modal components - Tallcraftui'
         
     <x-code language="php">
         @verbatim
-            return [                
-                /**
-                * 
-                * size => Allowed: sm, md, lg, xl, 2xl, 3xl, 4xl, 5xl, 6xl, 7xl, full
-                * blur => Allowed: true, false
-                * position => Allowed: top, bottom, left, right, center
-                *
-                */
-                'modal' => [
-                    'border-radius' => 'rounded-lg',
-                    'size' => 'lg',
-                    'blur' => false,
-                    'position' => 'top',
-                ],
-            ];
+                return [                
+                    'modal' => [
+                        'size' => Size::LG->value,
+                        'blur' => false, // Allowed: true, false
+                        'position' => Position::TOP->value,
+                        'border-radius' => BorderRadius::RoundedLg->value,
+                    ],
+                ];
         @endverbatim
     </x-code>
 
@@ -482,6 +491,7 @@ new #[Layout('components.layouts.app')] #[Title('Modal components - Tallcraftui'
             <x-on-this-page.item title="Open with Alpine Js" />
             <x-on-this-page.item title="Position" />
             <x-on-this-page.item title="Persistent" />
+            <x-on-this-page.item title="Without transition" />
             <x-on-this-page.item title="Size variants" />
             <x-on-this-page.item title="Background blur" />
             <x-on-this-page.item title="Rounded corner" />

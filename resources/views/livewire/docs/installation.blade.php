@@ -90,20 +90,20 @@ new #[Layout('components.layouts.app')] #[Title('Installation - Tallcraftui')] c
         <x-code language="php">
             @verbatim
                 return [
+
                     /**
-                    * 
-                    * ==================================
-                    * Default prefix for all components
-                    * ==================================
+                    * --------------------------------------------------------------------------
+                    * Default Component Prefix
+                    * --------------------------------------------------------------------------
                     *
-                    * Note: After changing the prefix, clear the view cache
-                    * using `php artisan view:clear`
+                    * The prefix applied to all components. After changing this value, be sure
+                    * to clear the view cache using `php artisan view:clear`.
                     *
                     * Examples:
                     *
-                    * prefix => ''       // <x-input />
-                    * prefix => 'tc-'   // <x-tc-input />
-                    *
+                    * 'prefix' => ''       // <x-input />
+                    * 'prefix' => 'tc-'    // <x-tc-input />
+                    * 
                     */
                     'prefix' => '',
                 ];            
