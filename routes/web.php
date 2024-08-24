@@ -6,6 +6,7 @@ use Livewire\Volt\Volt;
 
 
 Volt::route('/', 'index')->name('home');
+Volt::route('/docs', 'docs.installation')->name('docs');
 
 Route::group(['prefix' => 'docs', 'as' => 'docs.'], function () {
     Volt::route('/installation', 'docs.installation')->name('installation');
