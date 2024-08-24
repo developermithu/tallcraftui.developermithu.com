@@ -3,7 +3,7 @@
 use Livewire\Volt\Component;
 use Livewire\Attributes\{Layout, Title};
 
-new #[Layout('components.layouts.home')] #[Title('TallCraftUI - Laravel UI Component Library for TALL Stack')] class extends Component {
+new #[Layout('components.layouts.home')] #[Title('TallCraftUI - Laravel Blade UI Components Library for TALL Stack')] class extends Component {
     public string $name = '';
     public string $email = '';
     public string $user_id = '';
@@ -26,12 +26,12 @@ new #[Layout('components.layouts.home')] #[Title('TallCraftUI - Laravel UI Compo
 
 <div>
     @slot('metaTags')
-        <x-meta-tags title="TallCraftUI - Laravel UI Component Library for TALL Stack"
-            description="TallCraftUI is a Laravel UI component library built on TALL stack (TailwindCSS, Alpine.js, Laravel, Livewire), featuring over 15+ beautifully crafted components." />
+        <x-meta-tags title="TallCraftUI - Laravel Blade UI Components Library for TALL Stack"
+            description="TallCraftUI is a Laravel blade UI components library for TALL stack, offering 20+ customizable components that seamlessly integrate with Livewire applications." />
     @endslot
 
     <div class="container relative px-6 isolate pt-14 lg:px-8">
-        <div class="max-w-2xl py-12 mx-auto md:py-16 lg:pt-28">
+        <div class="max-w-2xl py-12 mx-auto lg:max-w-3xl md:py-16 lg:pt-28">
             {{-- <div class="hidden sm:mb-8 sm:flex sm:justify-center">
                 <div
                     class="relative px-3 py-1 text-sm leading-6 text-gray-600 rounded-full ring-1 ring-gray-900/10 hover:ring-gray-900/20">
@@ -40,18 +40,20 @@ new #[Layout('components.layouts.home')] #[Title('TallCraftUI - Laravel UI Compo
                             aria-hidden="true"></span>Visit <span aria-hidden="true">&rarr;</span></a>
                 </div>
             </div> --}}
-            <div class="text-center">
+            <div class="text-center"> 
+                {{-- <h1
+                    class="text-2xl font-bold tracking-tight xxs:text-3xl xs:text-4xl text-slate-700 dark:text-slate-100 sm:text-5xl">
+                    Laravel Livewire Blade UI Components for the TALL Stack</h1> --}}
+
                 <h1
                     class="text-2xl font-bold tracking-tight xxs:text-3xl xs:text-4xl text-slate-700 dark:text-slate-100 sm:text-5xl">
-                    Boost your TALL stack development with <span
+                    Boost Your TALL Stack Development with <span
                         class="text-transparent bg-gradient-to-r from-teal-500 to-indigo-500 bg-clip-text">TallCraftUI</span>
                 </h1>
 
                 <h2
                     class="mt-6 text-sm leading-normal text-gray-600 xxs:text-base md:leading-8 sm:text-lg dark:text-gray-300">
-                    TallCraftUI is a Laravel UI component library built on TALL stack (<span
-                        class="font-semibold">TailwindCSS, Alpine.js, Laravel, Livewire</span>), featuring over <strong>15+</strong>
-                    beautifully crafted components.
+                    <strong>TallCraftUI</strong> is a Laravel blade <strong>UI components</strong> library for the TALL Stack (<strong>TailwindCSS, Alpine.js, Laravel, Livewire</strong>), offering  <strong class="border-b-2 pb-0.5 border-primary">20+ beautifully crafted</strong>, customizable <strong>components</strong>.                    
                 </h2>
 
                 <div class="flex flex-wrap items-center justify-center mt-10 gap-y-3 gap-x-6">

@@ -32,6 +32,7 @@ export default {
 
         extend: {
             fontFamily: {
+                inter: ["Inter", ...defaultTheme.fontFamily.sans],
                 lato: ["Lato", ...defaultTheme.fontFamily.sans],
             },
 

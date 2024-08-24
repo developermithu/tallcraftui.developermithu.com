@@ -12,10 +12,10 @@
             </button>
         </div>
 
-        <div class="relative flex items-center flex-grow basis-0">
+        <div class="relative flex items-center flex-grow font-inter basis-0">
             <a aria-label="Home page" href="{{ route('home') }}" wire:navigate>
                 <span
-                    class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r to-teal-500 from-indigo-500 sm:text-3xl">
+                    class="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r to-teal-500 from-indigo-500 sm:text-3xl">
                     TallCraftUI
                 </span>
             </a>
