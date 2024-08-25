@@ -1,4 +1,11 @@
-@props(['title' => '', 'language' => 'blade', 'noRender' => false, 'inline' => false, 'new' => false, 'noCopy' => false])
+@props([
+    'title' => '',
+    'language' => 'blade',
+    'noRender' => false,
+    'inline' => false,
+    'new' => false,
+    'noCopy' => false,
+])
 
 @php
     $slug = Str::slug($title);
@@ -20,9 +27,9 @@
                     {{ $title }}
                 </h2>
 
-                @if($new)
+                @if ($new)
                     <x-badge label="New" amber />
-                @endif            
+                @endif
             </div>
 
             @if (!$noRender)
@@ -39,9 +46,10 @@
 
     <div>
         @if (!$noRender)
-            <div x-show="!visible" x-cloak 
-                @class(["p-5 border rounded-lg dark:border-slate-700 md:p-7 flex flex-col flex-wrap gap-4", '!flex-row items-start' => $inline])
-            >
+            <div x-show="!visible" x-cloak @class([
+                'p-5 border rounded-lg dark:border-slate-700 md:p-7 flex flex-col flex-wrap gap-4',
+                '!flex-row items-start' => $inline,
+            ])>
                 <?php echo Blade::render($code); ?>
             </div>
         @endif
