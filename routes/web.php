@@ -11,6 +11,7 @@ Volt::route('/docs', 'docs.installation')->name('docs');
 Route::group(['prefix' => 'docs', 'as' => 'docs.'], function () {
     Volt::route('/installation', 'docs.installation')->name('installation');
     Volt::route('/configuration', 'docs.configuration')->name('configuration');
+    Volt::route('/how-to-contribute', 'docs.contribution')->name('contribution');
 
     // Form Components
     Route::group(['prefix' => 'components', 'as' => 'components.'], function () {

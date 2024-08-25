@@ -33,8 +33,7 @@
                 </x-sidebar-menu>
 
                 <x-sidebar-menu title="Contributing">
-                    <x-sidebar-menu.item title="how to contribute" href="https://github.com/developermithu/tallcraftui"
-                        external />
+                    <x-sidebar-menu.item title="how to contribute" :href="route('docs.contribution')" />
                 </x-sidebar-menu>
             </ul>
         </nav>
