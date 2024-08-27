@@ -24,11 +24,11 @@
         <div class="relative flex items-center justify-end gap-1 basis-0 md:flex-grow">
             {{-- Algolia Docsearch --}}
             <div id="docsearch"></div>
-            
+
             <div class="relative z-10">
                 <label class="sr-only">Theme</label>
                 <button @click="toggleDarkMode"
-                    class="flex items-center justify-center w-10 h-10 p-1.5 bg-transparent rounded-full hover:bg-gray-100 dark:hover:bg-slate-700 dark:ring-inset dark:ring-white/5"
+                    class="flex items-center justify-center w-6 h-6 p-1 xxs:w-10 xxs:h-10 xxs:p-1.5 bg-transparent rounded-full hover:bg-gray-100 dark:hover:bg-slate-700 dark:ring-inset dark:ring-white/5"
                     aria-label="Theme">
                     <x-icon name="sun" class="text-teal-500 dark:!text-teal-500" x-show="!isDarkMode" x-cloak />
                     <x-icon name="moon" class="text-teal-500 dark:!text-teal-500" x-show="isDarkMode" x-cloak />
@@ -36,7 +36,7 @@
             </div>
 
             <a aria-label="GitHub" href="https://github.com/developermithu/tallcraftui" target="_blank"
-                class="flex items-center justify-center w-10 h-10 p-1.5 bg-transparent rounded-full group hover:bg-gray-100 dark:hover:bg-slate-700 dark:ring-inset dark:ring-white/5">
+                class="flex items-center justify-center w-6 h-6 p-1 xxs:w-10 xxs:h-10 xxs:p-1.5 bg-transparent rounded-full group hover:bg-gray-100 dark:hover:bg-slate-700 dark:ring-inset dark:ring-white/5">
                 <svg aria-hidden="true" viewBox="0 0 16 16"
                     class="w-5 h-5 fill-slate-400 group-hover:fill-slate-500 dark:group-hover:fill-slate-300">
                     <path
