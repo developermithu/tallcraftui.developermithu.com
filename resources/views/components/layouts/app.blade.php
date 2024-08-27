@@ -13,6 +13,9 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
+    {{-- Algolia Docsearch - makes the first query faster --}}
+    <link rel="preconnect" href="https://9UA43QHHYR-dsn.algolia.net" crossorigin />
+
     <script>
         // On page load or when changing themes, best to add inline in `head` to avoid FOUC
         if (localStorage.getItem('dark-mode') === 'true' || (!('dark-mode' in localStorage) && window.matchMedia(
@@ -76,7 +79,8 @@
                     @endisset
 
                     <div class="pt-5 text-sm text-gray-500">
-                        Code highlighting powered by <a href="https://torchlight.dev" target="_blank" class="hover:underline">Torchlight</a>
+                        Code highlighting powered by <a href="https://torchlight.dev" target="_blank"
+                            class="hover:underline">Torchlight</a>
                     </div>
                 </main>
 
@@ -116,6 +120,20 @@
             }
         }
     </script>
+
+    {{-- Algolia Docsearch
+    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+    
+    <script type="text/javascript">
+        docsearch({
+            appId: "9UA43QHHYR",
+            apiKey: "fcff6a9653acd0f0fad14396b514f9ec",
+            indexName: "tallcraftuielopermithu",
+            insights: true,
+            container: "#docSearch",
+            debug: false
+        });
+    </script> --}}
 </body>
 
 </html>

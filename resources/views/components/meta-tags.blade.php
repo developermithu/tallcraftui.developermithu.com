@@ -20,9 +20,6 @@
 <meta name="twitter:description" content="{{ $description ?? 'TallCraftUI offers beautifully crafted UI components for the TALL stack (Tailwind CSS, Alpine.js, Laravel, Livewire).' }}">
 <meta name="twitter:image" content="{{ $image ?? asset('assets/img/tallcraftui-website.png') }}">
 
-
-<link rel="canonical" href="https://tallcraftui.developermithu.com">
-
 {{-- Favicon --}}
 <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/img/apple-touch-icon.png') }}">
 <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/img/favicon-32x32.png') }}">

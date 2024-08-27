@@ -1,0 +1,20 @@
+@import "@docsearch/css/dist/style.css";
+@import "@docsearch/css/dist/_variables.css";
+@import "@docsearch/css/dist/modal.css";
+
+:root {
+    /* --docsearch-container-background: rgba(0, 0, 0, 0.5); */
+    --docsearch-primary-color: #23b9ad;
+}
+
+.DocSearch-Button .DocSearch-Search-Icon {
+    @apply !text-gray-400;
+}
+
+.DocSearch-Input {
+    @apply !bg-transparent;
+}
+
+.DocSearch-Input:focus {
+    @apply !ring-0;
+}
