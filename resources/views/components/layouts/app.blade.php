@@ -121,7 +121,7 @@
         }
     </script>
 
-    {{-- Algolia Docsearch
+    {{-- Algolia Docsearch --}}
     <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
     
     <script type="text/javascript">
@@ -130,10 +130,10 @@
             apiKey: "fcff6a9653acd0f0fad14396b514f9ec",
             indexName: "tallcraftuielopermithu",
             insights: true,
-            container: "#docSearch",
+            container: "#docsearch",
             debug: false
         });
-    </script> --}}
+    </script>
 </body>
 
 </html>
