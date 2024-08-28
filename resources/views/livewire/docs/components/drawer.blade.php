@@ -1,0 +1,187 @@
+<?php
+
+use Livewire\Attributes\{Layout, Title};
+use Livewire\Volt\Component;
+
+new #[Layout('components.layouts.app')] #[Title('Drawer components - Tallcraftui')] class extends Component {
+    public bool $openDefault = false;
+    public bool $openWithLivewire = false;
+    public bool $openWithAlpine = false;
+    
+    // Position
+    public bool $openLeft = false;
+    public bool $openRight = false;
+    public bool $openTop = false;
+    public bool $openBottom = false;
+    
+    // Persistent
+    public bool $openPersistent = false;
+    
+    // Blur background
+    public bool $openBlur = false;
+
+    public string $name;
+    public string $email;
+
+    public function createUser()
+    {
+        $user = $this->validate([
+            'name' => ['required'],
+            'email' => ['required', 'email'],
+        ]);
+
+        dd($user);
+    }
+}; ?>
+
+<div>
+    @slot('metaTags')
+        <x-meta-tags title="Drawer components - Tallcraftui" />
+    @endslot
+
+    <x-heading title="Drawer" subtitle="UI Components">
+        @slot('description')
+        You can trigger the drawer to close from any PHP class by dispatching a close event <code>$this->dispatch('close');</code>.
+        @endslot
+    </x-heading>
+
+    <x-code-block title="Basic usage" inline>
+        @verbatim('docs')           
+            <x-button x-on:click="$wire.openDefault = true" label="Default" />
+
+                <x-drawer wire:model="openDefault" title="Drawer title optional">
+                    Drawer content..
+                </x-drawer>
+        @endverbatim
+    </x-code-block>
+
+    <x-code-block title="Open with Livewire">
+        @slot('description')
+            It will send network request.
+        @endslot
+        
+        @verbatim('docs')           
+            <x-button wire:click="$set('openWithLivewire', true)" label="Livewire" />
+
+                <x-drawer wire:model="openWithLivewire" title="Open with Livewire">
+                    Drawer content..
+                </x-drawer>
+        @endverbatim
+    </x-code-block>
+
+    <x-code-block title="Open with Alpine Js">
+        @slot('description')
+            It will not send any network request.
+        @endslot
+
+        @verbatim('docs')           
+            <x-button x-on:click="$wire.openWithAlpine = true" label="Alpine" />
+
+                <x-drawer wire:model="openWithAlpine" title="Open with Alpine Js">
+                    Drawer content..
+                </x-drawer>
+        @endverbatim
+    </x-code-block>
+
+    <x-code-block title="Position" inline>
+        @verbatim('docs')
+                <x-button x-on:click="$wire.openLeft = true" label="Left" />
+                <x-button x-on:click="$wire.openRight = true" label="Right" /> {{-- default --}}
+                <x-button x-on:click="$wire.openTop = true" label="Top" /> 
+                <x-button x-on:click="$wire.openBottom = true" label="Bottom" />
+
+                <x-drawer wire:model="openTop" title="Position top" top>
+                    Drawer content..
+                </x-drawer>
+
+                <x-drawer wire:model="openBottom" title="Position bottom" bottom>
+                    Drawer content..
+                </x-drawer>
+
+                <x-drawer wire:model="openLeft" title="Position left" left>
+                    Drawer content..
+                </x-drawer>
+
+                {{-- default --}}
+                <x-drawer wire:model="openRight" title="Position right" right>
+                    Drawer content..
+                </x-drawer>
+        @endverbatim
+    </x-code-block>
+
+    <x-code-block title="Persistent">
+        @verbatim('docs')
+            <x-button x-on:click="$wire.openPersistent = true" label="Persistent" />
+
+                <x-drawer wire:model="openPersistent" title="Persistent" persistent>
+                    Drawer content..
+                </x-drawer>
+        @endverbatim
+    </x-code-block>
+
+    <x-code-block title="Background blur" inline>
+        @verbatim('docs')
+                <x-button x-on:click="$wire.openBlur = true" label="Blur" />
+                
+                <x-drawer wire:model="openBlur" title="Background blur" blur>
+                    Drawer content..
+                </x-drawer>
+        @endverbatim
+    </x-code-block>
+
+    <x-code-block title="Size variants" no-render>
+        @verbatim('docs')
+                <x-drawer sm>
+                <x-drawer md>
+                <x-drawer lg>
+                <x-drawer xl>
+                <x-drawer 2xl>
+                <x-drawer 3xl>
+                <x-drawer 4xl>
+                <x-drawer 5xl>
+                <x-drawer 6xl>
+                <x-drawer 7xl>
+                <x-drawer full>
+        @endverbatim
+    </x-code-block>
+
+    <x-code-block title="Disable focus trap" no-render>
+        @slot('description')
+            The <code>focus trap</code> is enabled by default, but you can disable it by including the <code>without-trap-focus</code> attribute.
+        @endslot
+        
+        @verbatim('docs')
+            <x-drawer without-trap-focus />
+        @endverbatim
+    </x-code-block>
+
+    <h2 class="pt-5 pb-2" id="default-settings">Default settings</h2>
+
+    <p>Change drawer default settings according your needs <code>config/tallcraftui.php</code> </p>
+        
+    <x-code language="php">
+        @verbatim
+                return [                
+                    'drawer' => [
+                        'width' => 'lg', // Allowed: sm, md, lg, xl, 2xl, 3xl, 4xl, 5xl, 6xl, 7xl, full
+                        'blur' => false,
+                        'trap-focus' => true,
+                    ],
+                ];
+        @endverbatim
+    </x-code>
+
+    @slot('aside')
+        <x-on-this-page>
+            <x-on-this-page.item title="Basic usage" />
+            <x-on-this-page.item title="Open with Livewire" />
+            <x-on-this-page.item title="Open with Alpine Js" />
+            <x-on-this-page.item title="Position" />
+            <x-on-this-page.item title="Persistent" />
+            <x-on-this-page.item title="Background blur" />
+            <x-on-this-page.item title="Size variants" />
+            <x-on-this-page.item title="Disable focus trap" />
+            <x-on-this-page.item title="Default settings" />
+        </x-on-this-page>
+    @endslot
+</div>

@@ -287,16 +287,16 @@
         },
         {
             "name": "developermithu/tallcraftui",
-            "version": "v1.2.5",
+            "version": "v1.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/developermithu/tallcraftui.git",
-                "reference": "58aca14bb6b433f3a0882d9a93909bea772f1cd3"
+                "reference": "6191371c50dbcc64b4ae7708703c1fca8d99efd1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/developermithu/tallcraftui/zipball/58aca14bb6b433f3a0882d9a93909bea772f1cd3",
-                "reference": "58aca14bb6b433f3a0882d9a93909bea772f1cd3",
+                "url": "https://api.github.com/repos/developermithu/tallcraftui/zipball/6191371c50dbcc64b4ae7708703c1fca8d99efd1",
+                "reference": "6191371c50dbcc64b4ae7708703c1fca8d99efd1",
                 "shasum": ""
             },
             "require": {
@@ -330,21 +330,30 @@
                     "homepage": "https://developermithu.com"
                 }
             ],
-            "description": "TallCraftUI is a versatile and customizable UI package designed for the TALL stack.",
+            "description": "TallCraftUI is a Laravel blade UI components library built on TALL stack",
             "keywords": [
+                "Ui Components",
+                "alpinejs",
+                "blade components",
                 "blade ui components",
                 "laravel",
-                "laravel livewire ui components",
+                "laravel blade ui components",
+                "laravel ui library",
                 "livewire",
+                "livewire 3",
+                "livewire packages",
+                "livewire ui components",
+                "livewire ui library",
+                "tailwindcss",
                 "tallcraftui",
-                "tallstack",
-                "tallstack ui components"
+                "tallstack ui components",
+                "tallstackui"
             ],
             "support": {
                 "issues": "https://github.com/developermithu/tallcraftui/issues",
-                "source": "https://github.com/developermithu/tallcraftui/tree/v1.2.5"
+                "source": "https://github.com/developermithu/tallcraftui/tree/v1.2.6"
             },
-            "time": "2024-08-22T18:30:45+00:00"
+            "time": "2024-08-27T23:29:58+00:00"
         },
         {
             "name": "dflydev/dot-access-data",

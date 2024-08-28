@@ -25,7 +25,7 @@ new #[Layout('components.layouts.app')] #[Title('Dropdown components - Tallcraft
 
                 <x-dropdown title="Account settings">
                     @slot('trigger')
-                        <x-button icon="user" flat circle />
+                        <x-button label="Menu" outline />
                     @endslot
 
                     <x-dropdown-item label="Profile" icon="user" />
@@ -35,6 +35,236 @@ new #[Layout('components.layouts.app')] #[Title('Dropdown components - Tallcraft
                     <x-separator />
                     
                     <x-dropdown-item label="Sign out" icon="arrow-right-end-on-rectangle" />
+                </x-dropdown>
+            @endverbatim
+        </x-code-block>
+
+        <x-code-block title="Dropdown position" inline>
+            @verbatim('docs')
+                <x-dropdown top>
+                    @slot('trigger')
+                        <x-button label="Top" outline />
+                    @endslot
+
+                    <div class="p-5">
+                        Modal content.
+                    </div>
+                </x-dropdown>
+
+                <x-dropdown top-start>
+                    @slot('trigger')
+                        <x-button label="Top start" outline />
+                    @endslot
+
+                    <div class="p-5">
+                        Modal content.
+                    </div>
+                </x-dropdown>
+                
+                <x-dropdown top-end>
+                    @slot('trigger')
+                        <x-button label="Top end" outline />
+                    @endslot
+
+                    <div class="p-5">
+                        Modal content.
+                    </div>
+                </x-dropdown>
+
+                <x-dropdown bottom>
+                    @slot('trigger')
+                        <x-button label="Bottom" outline />
+                    @endslot
+
+                    <div class="p-5">
+                        Modal content.
+                    </div>
+                </x-dropdown>
+
+                <x-dropdown bottom-start>
+                    @slot('trigger')
+                        <x-button label="Bottom start" outline />
+                    @endslot
+
+                    <div class="p-5">
+                        Modal content.
+                    </div>
+                </x-dropdown>
+
+                {{-- Default --}}
+                <x-dropdown bottom-end>
+                    @slot('trigger')
+                        <x-button label="Bottom end" outline />
+                    @endslot
+
+                    <div class="p-5">
+                        Modal content.
+                    </div>
+                </x-dropdown>
+                
+                <x-dropdown left>
+                    @slot('trigger')
+                        <x-button label="Left" outline />
+                    @endslot
+
+                    <div class="p-5">
+                        Modal content.
+                    </div>
+                </x-dropdown>
+                
+                <x-dropdown left-start>
+                    @slot('trigger')
+                        <x-button label="Left start" outline />
+                    @endslot
+
+                    <div class="p-5">
+                        Modal content.
+                    </div>
+                </x-dropdown>
+                
+                <x-dropdown left-end>
+                    @slot('trigger')
+                        <x-button label="Left end" outline />
+                    @endslot
+
+                    <div class="p-5">
+                        Modal content.
+                    </div>
+                </x-dropdown>
+                
+                <x-dropdown right>
+                    @slot('trigger')
+                        <x-button label="Right" outline />
+                    @endslot
+
+                    <div class="p-5">
+                        Modal content.
+                    </div>
+                </x-dropdown>
+                
+                <x-dropdown right-start>
+                    @slot('trigger')
+                        <x-button label="Right start" outline />
+                    @endslot
+
+                    <div class="p-5">
+                        Modal content.
+                    </div>
+                </x-dropdown>
+                
+                <x-dropdown right-end>
+                    @slot('trigger')
+                        <x-button label="Right end" outline />
+                    @endslot
+
+                    <div class="p-5">
+                        Modal content.
+                    </div>
+                </x-dropdown>
+            @endverbatim
+        </x-code-block>
+
+        <x-code-block title="Dropdown animation" inline new>
+            @verbatim('docs')
+
+                {{-- Default --}}
+                <x-dropdown fade>
+                    @slot('trigger')
+                        <x-button label="Fade" outline />
+                    @endslot
+
+                    <div class="p-5">
+                        Modal content.
+                    </div>
+                </x-dropdown>
+
+                <x-dropdown slide>
+                    @slot('trigger')
+                        <x-button label="Slide" outline />
+                    @endslot
+
+                    <div class="p-5">
+                        Modal content.
+                    </div>
+                </x-dropdown>
+                
+                <x-dropdown flip>
+                    @slot('trigger')
+                        <x-button label="Flip" outline />
+                    @endslot
+
+                    <div class="p-5">
+                        Modal content.
+                    </div>
+                </x-dropdown>
+                
+                <x-dropdown rotate>
+                    @slot('trigger')
+                        <x-button label="Rotate" outline />
+                    @endslot
+
+                    <div class="p-5">
+                        Modal content.
+                    </div>
+                </x-dropdown>
+            @endverbatim
+        </x-code-block>
+        
+        <x-code-block title="Dropdown size" inline>
+            @verbatim('docs')
+                <x-dropdown w-36>
+                    @slot('trigger')
+                        <x-button label="w-36" outline />
+                    @endslot
+
+                    <div class="p-5">
+                        Modal content.
+                    </div>
+                </x-dropdown>
+
+                {{-- Default --}}
+                <x-dropdown w-48>
+                    @slot('trigger')
+                        <x-button label="w-48" outline />
+                    @endslot
+
+                    <div class="p-5">
+                        Modal content.
+                    </div>
+                </x-dropdown>
+                
+                <x-dropdown w-64>
+                    @slot('trigger')
+                        <x-button label="w-64" outline />
+                    @endslot
+
+                    <div class="p-5">
+                        Modal content.
+                    </div>
+                </x-dropdown>
+                
+                <x-dropdown w-80>
+                    @slot('trigger')
+                        <x-button label="w-80" outline />
+                    @endslot
+
+                    <div class="p-5">
+                        Modal content.
+                    </div>
+                </x-dropdown>
+            @endverbatim
+        </x-code-block>
+
+        <x-code-block title="Without transition">
+            @verbatim('docs')
+                <x-dropdown no-transition>
+                    @slot('trigger')
+                        <x-button icon="ellipsis-vertical" flat circle />
+                    @endslot
+
+                    <x-dropdown-item label="View" icon="eye" />
+                    <x-dropdown-item label="Edit" icon="pencil-square" />
+                    <x-dropdown-item label="Delete" icon="trash" />
                 </x-dropdown>
             @endverbatim
         </x-code-block>
@@ -66,110 +296,8 @@ new #[Layout('components.layouts.app')] #[Title('Dropdown components - Tallcraft
                 </x-dropdown>
             @endverbatim
         </x-code-block>
-
-        <x-code-block title="Dropdown position" inline>
-            @verbatim('docs')
-                <x-dropdown top>
-                    @slot('trigger')
-                        <x-button label="Top" />
-                    @endslot
-
-                    <div class="p-5">
-                        Modal content.
-                    </div>
-                </x-dropdown>
-
-                <x-dropdown bottom>
-                    @slot('trigger')
-                        <x-button label="Bottom" />
-                    @endslot
-
-                    <div class="p-5">
-                        Modal content.
-                    </div>
-                </x-dropdown>
-                
-                <x-dropdown left>
-                    @slot('trigger')
-                        <x-button label="Left" />
-                    @endslot
-
-                    <div class="p-5">
-                        Modal content.
-                    </div>
-                </x-dropdown>
-                
-                <x-dropdown right>
-                    @slot('trigger')
-                        <x-button label="Right" />
-                    @endslot
-
-                    <div class="p-5">
-                        Modal content.
-                    </div>
-                </x-dropdown>
-            @endverbatim
-        </x-code-block>
         
-        <x-code-block title="Dropdown size" inline>
-            @verbatim('docs')
-                <x-dropdown w-36>
-                    @slot('trigger')
-                        <x-button label="w-36" />
-                    @endslot
-
-                    <div class="p-5">
-                        Modal content.
-                    </div>
-                </x-dropdown>
-
-                <x-dropdown w-48>
-                    @slot('trigger')
-                        <x-button label="w-48" />
-                    @endslot
-
-                    <div class="p-5">
-                        Modal content.
-                    </div>
-                </x-dropdown>
-                
-                <x-dropdown w-64>
-                    @slot('trigger')
-                        <x-button label="w-64" />
-                    @endslot
-
-                    <div class="p-5">
-                        Modal content.
-                    </div>
-                </x-dropdown>
-                
-                <x-dropdown w-80>
-                    @slot('trigger')
-                        <x-button label="w-80" />
-                    @endslot
-
-                    <div class="p-5">
-                        Modal content.
-                    </div>
-                </x-dropdown>
-            @endverbatim
-        </x-code-block>
-
-        <x-code-block title="Without transition">
-            @verbatim('docs')
-                <x-dropdown no-transition>
-                    @slot('trigger')
-                        <x-button icon="ellipsis-vertical" flat circle />
-                    @endslot
-
-                    <x-dropdown-item label="View" icon="eye" />
-                    <x-dropdown-item label="Edit" icon="pencil-square" />
-                    <x-dropdown-item label="Delete" icon="trash" />
-                </x-dropdown>
-            @endverbatim
-        </x-code-block>
-
-        <h2 class="pt-5 pb-2" id="default-settings">Default settings</h2>
+        <h2 class="pt-5 pb-2" id="default-settings">Disable focus trap</h2>
 
         <p>Change dropdown default settings according your needs <code>config/tallcraftui.php</code> </p>
             
@@ -179,7 +307,8 @@ new #[Layout('components.layouts.app')] #[Title('Dropdown components - Tallcraft
                     'dropdown' => [
                         'width' => Width::W48->value,
                         'shadow' => Shadow::Shadow->value,
-                        'position' => Position::TOP->value,
+                        'position' => DropdownPosition::BOTTOM_END->value,
+                        'animation' => DropdownAnimation::FADE->value,
                         'border-radius' => BorderRadius::Rounded->value,
                     ],
                 ];
@@ -190,11 +319,11 @@ new #[Layout('components.layouts.app')] #[Title('Dropdown components - Tallcraft
     @slot('aside')
         <x-on-this-page>
             <x-on-this-page.item title="Basic usage" />
-            <x-on-this-page.item title="Dropdown with link" />
-            <x-on-this-page.item title="Persistent" />
             <x-on-this-page.item title="Dropdown position" />
             <x-on-this-page.item title="Dropdown size" />
             <x-on-this-page.item title="Without transition" />
+            <x-on-this-page.item title="Dropdown with link" />
+            <x-on-this-page.item title="Persistent" />
             <x-on-this-page.item title="Default settings" />
         </x-on-this-page>
     @endslot

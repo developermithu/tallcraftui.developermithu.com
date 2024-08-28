@@ -1,6 +1,8 @@
 <?php
 
 use Developermithu\Tallcraftui\Enums\BorderRadius;
+use Developermithu\Tallcraftui\Enums\DropdownAnimation;
+use Developermithu\Tallcraftui\Enums\DropdownPosition;
 use Developermithu\Tallcraftui\Enums\Position;
 use Developermithu\Tallcraftui\Enums\Shadow;
 use Developermithu\Tallcraftui\Enums\Size;
@@ -20,7 +22,6 @@ return [
      *
      * 'prefix' => ''       // <x-input />
      * 'prefix' => 'tc-'    // <x-tc-input />
-     * 
      */
     'prefix' => env('TALLCRAFTUI_PREFIX', ''),
 
@@ -34,7 +35,6 @@ return [
      *
      * type => Allowed: heroicons
      * style => Allowed: outline, solid
-     * 
      */
     'icons' => [
         'type' => 'heroicons',
@@ -68,13 +68,21 @@ return [
     'dropdown' => [
         'width' => Width::W48->value,
         'shadow' => Shadow::Shadow->value,
-        'position' => Position::TOP->value,
+        'position' => DropdownPosition::BOTTOM_END->value,
+        'animation' => DropdownAnimation::FADE->value,
         'border-radius' => BorderRadius::Rounded->value,
+    ],
+
+    'drawer' => [
+        'width' => 'lg', // Allowed: sm, md, lg, xl, 2xl, 3xl, 4xl, 5xl, 6xl, 7xl, full
+        'blur' => false,
+        'trap-focus' => true,
     ],
 
     'modal' => [
         'size' => Size::LG->value,
         'blur' => false, // Allowed: true, false
+        'trap-focus' => true, // Allowed: true, false
         'position' => Position::TOP->value,
         'border-radius' => BorderRadius::RoundedLg->value,
     ],

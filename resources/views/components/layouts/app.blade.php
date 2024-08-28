@@ -25,6 +25,10 @@
             document.documentElement.classList.remove('dark')
         }
     </script>
+
+    <style>
+        [x-cloak] { display: none !important; }
+    </style>
 </head>
 
 <body class="flex min-h-full leading-7 font-lato site-gradient" x-data="darkModeToggle()">

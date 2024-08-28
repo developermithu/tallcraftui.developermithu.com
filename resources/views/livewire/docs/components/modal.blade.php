@@ -79,7 +79,11 @@ new #[Layout('components.layouts.app')] #[Title('Modal components - Tallcraftui'
         <x-meta-tags title="Modal components - Tallcraftui" description="Modal components - Tallcraftui" />
     @endslot
 
-    <x-heading title="Modal" subtitle="UI Components" />
+    <x-heading title="Modal" subtitle="UI Components">
+        @slot('description')
+        You can trigger the modal to close from any PHP class by dispatching a close event <code>$this->dispatch('close');</code>.
+        @endslot
+    </x-heading>
 
     <x-code-block title="Basic usage" inline>
         @verbatim('docs')
@@ -387,6 +391,16 @@ new #[Layout('components.layouts.app')] #[Title('Modal components - Tallcraftui'
         @endverbatim
     </x-code-block>
 
+    <x-code-block title="Disable focus trap" no-render>
+        @slot('description')
+            The <code>focus trap</code> is enabled by default, but you can disable it by including the <code>without-trap-focus</code> attribute.
+        @endslot
+        
+        @verbatim('docs')
+            <x-modal without-trap-focus />
+        @endverbatim
+    </x-code-block>
+
     <h2 class="pt-5 pb-2" id="default-settings">Default settings</h2>
 
     <p>Change modal default settings according your needs <code>config/tallcraftui.php</code> </p>
@@ -415,6 +429,7 @@ new #[Layout('components.layouts.app')] #[Title('Modal components - Tallcraftui'
             <x-on-this-page.item title="Size variants" />
             <x-on-this-page.item title="Background blur" />
             <x-on-this-page.item title="Rounded corner" />
+            <x-on-this-page.item title="Disable focus trap" />
             <x-on-this-page.item title="Default settings" />
         </x-on-this-page>
     @endslot
