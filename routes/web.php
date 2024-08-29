@@ -43,3 +43,8 @@ Route::get('clear', function () {
     Artisan::call('optimize:clear');
     return back();
 });
+
+Route::get('fresh', function () {
+    Artisan::call('migrate:fresh --seed');
+    return back();
+});

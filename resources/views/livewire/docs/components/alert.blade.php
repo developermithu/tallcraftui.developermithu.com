@@ -33,13 +33,13 @@ class extends Component {
 
         <x-code-block title="Alert description">
             @verbatim('docs')
-                <x-alert description="Lorem, ipsum dolor sit amet consectetur adipisicing." danger />
+                <x-alert description="Lorem, ipsum dolor sit amet consectetur adipisicing." red />
             @endverbatim
         </x-code-block>
 
         <x-code-block title="Alert dismissible">
             @verbatim('docs')
-                <x-alert danger dismissible />
+                <x-alert red dismissible />
             @endverbatim
         </x-code-block>
 
@@ -51,34 +51,20 @@ class extends Component {
 
         <x-code-block title="Custom slots">
             @verbatim('docs')
-                <x-alert icon="question-mark-circle" danger>
+                <x-alert icon="question-mark-circle" red>
                     <x-slot name="title">
                         A new software update is available. See what's new in <strong class="underline cursor-pointer">version
                             3.0.7</strong>
                     </x-slot>
-        
+
                     <x-slot name="description">
                         Description! Lorem, ipsum dolor sit amet consectetur adipisicing Lorem, ipsum..
                     </x-slot>
-        
+
                     <x-slot name="actions">
-                        <x-button @click="visible = false" label="Close" flat sm danger />
+                        <x-button @click="visible = false" label="Close" flat sm red />
                     </x-slot>
                 </x-alert>
-            @endverbatim
-        </x-code-block>
-
-        <x-code-block title="Rounded corner">
-            @verbatim('docs')
-                <x-alert title="Rounded none" rounded-none />
-                <x-alert title="Rounded sm" rounded-sm />
-                <x-alert title="Rounded Default" />
-                <x-alert title="Rounded md" rounded-md />
-                <x-alert title="Rounded lg" rounded-lg />
-                <x-alert title="Rounded xl" rounded-xl />
-                <x-alert title="Rounded 2xl" rounded-2xl />
-                <x-alert title="Rounded 3xl" rounded-3xl />
-                <x-alert title="Rounded full" rounded-full />
             @endverbatim
         </x-code-block>
 
@@ -112,6 +98,20 @@ class extends Component {
                 <x-alert title="Rose" rose />
             @endverbatim
         </x-code-block>
+
+        <x-code-block title="Rounded corner">
+            @verbatim('docs')
+                <x-alert title="Rounded none" rounded-none />
+                <x-alert title="Rounded sm" rounded-sm />
+                <x-alert title="Rounded Default" />
+                <x-alert title="Rounded md" rounded-md />
+                <x-alert title="Rounded lg" rounded-lg />
+                <x-alert title="Rounded xl" rounded-xl />
+                <x-alert title="Rounded 2xl" rounded-2xl />
+                <x-alert title="Rounded 3xl" rounded-3xl />
+                <x-alert title="Rounded full" rounded-full />
+            @endverbatim
+        </x-code-block>
     @endslot
 
     @slot('aside')
@@ -120,8 +120,8 @@ class extends Component {
             <x-on-this-page.item title="Alert description" />
             <x-on-this-page.item title="Alert dismissible" />
             <x-on-this-page.item title="Custom slots" />
-            <x-on-this-page.item title="Rounded corner" />
             <x-on-this-page.item title="Color variants" />
+            <x-on-this-page.item title="Rounded corner" />
         </x-on-this-page>
     @endslot
 </div>

@@ -74,17 +74,13 @@ new #[Layout('components.layouts.home')] #[Title('TallCraftUI - Laravel Blade UI
             <x-code-block title="Basic form">
                 @verbatim('docs')
                 @php
-                    $users = collect([
-                        ['id' => 1, 'name' => 'Taylor Otwell'],
-                        ['id' => 2, 'name' => 'Nuno Maduro'],
-                        ['id' => 3, 'name' => 'Caleb Porzio'],
-                        ['id' => 4, 'name' => 'Jeffrey Way'],
-                        ['id' => 5, 'name' => 'Dan Harrin']
-                    ])->pluck('name', 'id');
-                     
-                    // $users = App\Models\User::pluck('name', 'id');
+                    $users = App\Models\User::pluck('name', 'id');
                 @endphp
 
+                @if ($errors->any())
+                    <x-alert :errors="$errors->all()" red />
+                @endif
+                
                 <form wire:submit="createUser" class="space-y-4">
                     <x-input label='Name *' wire:model="name" placeholder="Name" icon="user" />
                     <x-input label='Email *' wire:model="email" placeholder="Email" suffix="@gmail.com" />
@@ -99,7 +95,6 @@ new #[Layout('components.layouts.home')] #[Title('TallCraftUI - Laravel Blade UI
                 @endverbatim
             </x-code-block>
         </div>
-
 
         <section class="max-w-4xl pb-20 m-auto">
             <h2 class="pb-3 text-2xl font-semibold text-center xxs:text-3xl sm:text-4xl">Breeze vs Jetstream vs TallCraftUI
