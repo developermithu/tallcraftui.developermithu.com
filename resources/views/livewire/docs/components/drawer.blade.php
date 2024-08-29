@@ -2,9 +2,10 @@
 
 use Livewire\Attributes\{Layout, Title};
 use Livewire\Volt\Component;
+use App\Models\User;
 
 new #[Layout('components.layouts.app')] #[Title('Drawer components - Tallcraftui')] class extends Component {
-    public bool $openDefault = false;
+    public bool $showDrawer = false;
     public bool $openWithLivewire = false;
     public bool $openWithAlpine = false;
     
@@ -22,15 +23,23 @@ new #[Layout('components.layouts.app')] #[Title('Drawer components - Tallcraftui
 
     public string $name;
     public string $email;
+    public string $password; 
 
     public function createUser()
     {
-        $user = $this->validate([
-            'name' => ['required'],
-            'email' => ['required', 'email'],
+        $this->validate([
+            'name' => ['required', 'string'], 
+            'email' => ['required', 'email', 'unique:users,email'], 
+            'password' => ['required', 'string', 'min:8'],
         ]);
 
-        dd($user);
+        User::create([
+            'name' => $this->pull('name'),
+            'email' => $this->pull('email'),
+            'password' => $this->pull('password'),
+        ]);
+
+        $this->dispatch('close');
     }
 }; ?>
 
@@ -46,12 +55,45 @@ new #[Layout('components.layouts.app')] #[Title('Drawer components - Tallcraftui
     </x-heading>
 
     <x-code-block title="Basic usage" inline>
-        @verbatim('docs')           
-            <x-button x-on:click="$wire.openDefault = true" label="Default" />
+        @verbatim('docs')
+                @php 
+                    /* 
+                    public string $name;
+                    public string $email;
+                    public string $password; 
 
-                <x-drawer wire:model="openDefault" title="Drawer title optional">
-                    Drawer content..
-                </x-drawer>
+                    public function createUser()
+                    {
+                        $this->validate([
+                            'name' => ['required', 'string'], 
+                            'email' => ['required', 'email', 'unique:users,email'], 
+                            'password' => ['required', 'string', 'min:8'],
+                        ]);
+
+                        User::create([
+                            'name' => $this->pull('name'),
+                            'email' => $this->pull('email'),
+                            'password' => $this->pull('password'),
+                        ]);
+
+                        // Close the drawer
+                        $this->dispatch('close');
+                    } */
+                @endphp 
+            
+            <x-button x-on:click="$wire.showDrawer = true" label="Form" />
+
+            <x-drawer wire:model="showDrawer" title="Create new user" blur>
+                <form wire:submit="createUser" class="space-y-4">
+                    <x-input wire:model="name" label="Name *" />
+                    <x-input wire:model="email" label="Email *" />
+                    <x-input type="password" wire:model="password" label="Password *" />
+        
+                    <div class="flex justify-end w-full gap-5">
+                        <x-button label="Submit" spinner="createUser" class="w-full py-2.5"/>
+                    </div>
+                </form>
+            </x-drawer>
         @endverbatim
     </x-code-block>
 

@@ -74,7 +74,7 @@ new #[Layout('components.layouts.home')] #[Title('TallCraftUI - Laravel Blade UI
             <x-code-block title="Basic form">
                 @verbatim('docs')
                 @php
-                    $users = App\Models\User::pluck('name', 'id');
+                    $users = App\Models\User::pluck('name', 'id')->take(5);
                 @endphp
 
                 @if ($errors->any())
