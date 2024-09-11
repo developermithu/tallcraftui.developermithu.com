@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\Docs\Components\Table;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
@@ -36,6 +37,8 @@ Route::group(['prefix' => 'docs', 'as' => 'docs.'], function () {
         Volt::route('/icon', 'docs.components.icon')->name('icon');
         Volt::route('/separator', 'docs.components.separator')->name('separator');
         Volt::route('/stat', 'docs.components.stat')->name('stat');
+        
+        Route::get('/table', Table::class)->name('table');
     });
 });
 

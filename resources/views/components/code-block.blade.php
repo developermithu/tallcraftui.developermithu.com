@@ -55,7 +55,12 @@
         @endif
 
         <div x-show="visible" x-cloak class="relative">
-            <pre><x-torchlight-code language="{{ $language }}" class="space-y-2 code">
+            <pre><x-torchlight-code language="{{ $language }}" @class([
+                "space-y-2 code",
+                '!space-y-0' => $attributes->get('space-none'),
+                '!space-y-0.5' => $attributes->get('space-0.5'),
+                '!space-y-1' => $attributes->get('space-1'),
+            ])>
                 {!! $code !!}
             </x-torchlight-code></pre>
 

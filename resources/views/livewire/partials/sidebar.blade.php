@@ -26,12 +26,13 @@
                     <x-sidebar-menu.item title="button" :href="route('docs.components.button')" />
                     <x-sidebar-menu.item title="breadcrumb" :href="route('docs.components.breadcrumb')" />
                     <x-sidebar-menu.item title="dropdown" :href="route('docs.components.dropdown')" />
-                    <x-sidebar-menu.item title="drawer" :href="route('docs.components.drawer')" new />
+                    <x-sidebar-menu.item title="drawer" :href="route('docs.components.drawer')" />
                     <x-sidebar-menu.item title="menu" :href="route('docs.components.menu')" />
                     <x-sidebar-menu.item title="modal" :href="route('docs.components.modal')" />
                     <x-sidebar-menu.item title="icon" :href="route('docs.components.icon')" />
                     <x-sidebar-menu.item title="separator" :href="route('docs.components.separator')" />
                     <x-sidebar-menu.item title="stat" :href="route('docs.components.stat')" />
+                    <x-sidebar-menu.item title="table" :href="route('docs.components.table')" new />
                 </x-sidebar-menu>
 
                 <x-sidebar-menu title="Contributing">

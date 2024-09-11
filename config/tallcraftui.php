@@ -91,6 +91,11 @@ return [
         'border-radius' => BorderRadius::RoundedLg->value,
     ],
 
+    'table' => [
+        'shadow' => Shadow::ShadowNone->value,
+        'border-radius' => BorderRadius::RoundedLg->value,
+    ],
+
     'menu' => [
         'width' => Width::W56->value,
         'shadow' => Shadow::Shadow->value,
