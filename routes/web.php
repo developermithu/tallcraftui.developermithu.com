@@ -37,6 +37,7 @@ Route::group(['prefix' => 'docs', 'as' => 'docs.'], function () {
         Volt::route('/icon', 'docs.components.icon')->name('icon');
         Volt::route('/separator', 'docs.components.separator')->name('separator');
         Volt::route('/stat', 'docs.components.stat')->name('stat');
+        Volt::route('/spinner', 'docs.components.spinner')->name('spinner');
         
         Route::get('/table', Table::class)->name('table');
     });

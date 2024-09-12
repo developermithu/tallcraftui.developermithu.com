@@ -32,6 +32,7 @@
                     <x-sidebar-menu.item title="icon" :href="route('docs.components.icon')" />
                     <x-sidebar-menu.item title="separator" :href="route('docs.components.separator')" />
                     <x-sidebar-menu.item title="stat" :href="route('docs.components.stat')" />
+                    <x-sidebar-menu.item title="spinner" :href="route('docs.components.spinner')" new />
                     <x-sidebar-menu.item title="table" :href="route('docs.components.table')" new />
                 </x-sidebar-menu>
 
