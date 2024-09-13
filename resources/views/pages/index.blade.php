@@ -86,7 +86,7 @@ new #[Layout('components.layouts.home')] #[Title('TallCraftUI - Laravel Blade UI
                     <x-input label='Email *' wire:model="email" placeholder="Email" suffix="@gmail.com" />
                     <x-input label='Portfolio *' wire:model="portfolio" prefix="https://" placeholder="example.com" />
                     <x-select label='Users' wire:model="user_id" :options="$users" />
-                    <x-checkbox wire:model='terms' label="Accept the terms and conditions *" />
+                    <x-toggle wire:model='terms' label="Accept the terms and conditions *" />
 
                     <div class="flex justify-end">
                         <x-button label="Submit" spinner="createUser" />

@@ -16,7 +16,7 @@
     </div>
 
     <div x-show="!visibleFullExampleTableCode" x-cloak>
-        <x-table :paginate="$users" :per-page="[5, 10, 20, 50]" searchable>
+        <x-table :paginate="$users" :per-page="[5, 10, 20, 50]" searchable hoverable>
             @slot('heading')
                 <x-th label="Id" sortable :$sortCol :$sortAsc />
                 <x-th label="Name" sortable :$sortCol :$sortAsc />
@@ -103,7 +103,7 @@
                     }
                 @endphp
 
-                <x-table :paginate="$users" :per-page="[5, 10, 20, 50]" searchable>
+                <x-table :paginate="$users" :per-page="[5, 10, 20, 50]" searchable hoverable>
                     <x-slot:heading>
                         <x-th label="Id" sortable :$sortCol :$sortAsc />
                         <x-th label="Name" sortable :$sortCol :$sortAsc />
@@ -253,6 +253,24 @@
         @endverbatim
     </x-code-block>
 
+    <x-code-block title="Hoverable">
+        @verbatim('docs')
+                @php
+                    $users = App\Models\User::take(5)->get();
+                @endphp
+
+                <x-table borderless hoverable>
+                    @foreach ($users as $user)
+                        <x-tr>
+                            <x-td :label="$user->id" />
+                            <x-td :label="$user->name" />
+                            <x-td :label="$user->email" />
+                        </x-tr>
+                    @endforeach
+                </x-table>
+        @endverbatim
+    </x-code-block>
+
     <x-code-block title="Clickable">
         @verbatim('docs')
                 @php
@@ -383,6 +401,7 @@
             <x-on-this-page.item title="Without border" />
             <x-on-this-page.item title="Striped style" />
             <x-on-this-page.item title="Without header" />
+            <x-on-this-page.item title="Hoverable" />
             <x-on-this-page.item title="Clickable" />
             <x-on-this-page.item title="With searching" />
             <x-on-this-page.item title="With pagination" />
