@@ -22,6 +22,8 @@ Route::group(['prefix' => 'docs', 'as' => 'docs.'], function () {
         Volt::route('/checkbox', 'docs.components.checkbox')->name('checkbox');
         Volt::route('/toggle', 'docs.components.toggle')->name('toggle');
         Volt::route('/select', 'docs.components.select')->name('select');
+        Volt::route('/password', 'docs.components.password')->name('password');
+        Volt::route('/color-picker', 'docs.components.color-picker')->name('color-picker');
     });
 
     // UI Components
@@ -38,6 +40,9 @@ Route::group(['prefix' => 'docs', 'as' => 'docs.'], function () {
         Volt::route('/separator', 'docs.components.separator')->name('separator');
         Volt::route('/stat', 'docs.components.stat')->name('stat');
         Volt::route('/spinner', 'docs.components.spinner')->name('spinner');
+        Volt::route('/tab', 'docs.components.tab')->name('tab');
+        Volt::route('/accordion', 'docs.components.accordion')->name('accordion');
+        Volt::route('/card', 'docs.components.card')->name('card');
         
         Route::get('/table', Table::class)->name('table');
     });

@@ -1,0 +1,47 @@
+<?php
+
+use Livewire\Volt\Component;
+use Livewire\Attributes\{Layout, Title};
+
+new 
+#[Layout('components.layouts.app')] 
+#[Title('Color picker components - Tallcraftui')] 
+class extends Component {
+    public ?string $color1 = '';
+    public ?string $color2 = '';
+    public ?string $color3 = '';
+}; ?>
+
+<div>
+    @slot('metaTags')
+        <x-meta-tags title="Color picker components - Tallcraftui" description="Tailwind CSS ALpine js Color Picker Components - Tallcraftui" />
+    @endslot
+
+    <x-heading title="Color picker" subtitle="Form Components" />
+
+    <x-code-block title="Basic usage">
+        @verbatim('docs')
+            <x-color-picker label="Color picker" wire:model="color1" />
+        @endverbatim
+    </x-code-block>
+
+    <x-code-block title="Custom colors">
+        @verbatim('docs')
+            <x-color-picker wire:model="color2" :colors="['#eeeeee', '#dddddd', '#cccccc', '#bbbbbb', '#aaaaaa', '#000000']" />
+        @endverbatim
+    </x-code-block>
+
+    <x-code-block title="Without picker">
+        @verbatim('docs')
+            <x-color-picker wire:model="color3" no-picker />
+        @endverbatim
+    </x-code-block>
+
+    @slot('aside')
+        <x-on-this-page>
+            <x-on-this-page.item title="Basic usage" />
+            <x-on-this-page.item title="Custom colors" />
+            <x-on-this-page.item title="Without picker" />
+        </x-on-this-page>
+    @endslot
+</div>

@@ -12,7 +12,7 @@ class extends Component {
 
 <div>
     @slot('metaTags')
-        <x-meta-tags title="Toggle components - Tallcraftui" description="Toggle components - Tallcraftui" />
+        <x-meta-tags title="Tailwind CSS Toggle Switch components - Tallcraftui" description="Tailwind CSS Toggle Switch components - Tallcraftui" />
     @endslot
 
     @slot('content')

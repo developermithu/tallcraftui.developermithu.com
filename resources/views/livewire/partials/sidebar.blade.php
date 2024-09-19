@@ -13,6 +13,8 @@
 
                 <x-sidebar-menu title="Form Components" >
                     <x-sidebar-menu.item title="input" :href="route('docs.components.input')" />
+                    <x-sidebar-menu.item title="password" :href="route('docs.components.password')" new />
+                    <x-sidebar-menu.item title="color picker" :href="route('docs.components.color-picker')" new />
                     <x-sidebar-menu.item title="textarea" :href="route('docs.components.textarea')" />
                     <x-sidebar-menu.item title="radio" :href="route('docs.components.radio')" />
                     <x-sidebar-menu.item title="checkbox" :href="route('docs.components.checkbox')" />
@@ -21,10 +23,12 @@
                 </x-sidebar-menu>
 
                 <x-sidebar-menu title="UI Components" >
+                    <x-sidebar-menu.item title="accordion" :href="route('docs.components.accordion')" new />
                     <x-sidebar-menu.item title="alert" :href="route('docs.components.alert')" />
                     <x-sidebar-menu.item title="badge" :href="route('docs.components.badge')" />
                     <x-sidebar-menu.item title="button" :href="route('docs.components.button')" />
                     <x-sidebar-menu.item title="breadcrumb" :href="route('docs.components.breadcrumb')" />
+                    <x-sidebar-menu.item title="card" :href="route('docs.components.card')" new />
                     <x-sidebar-menu.item title="dropdown" :href="route('docs.components.dropdown')" />
                     <x-sidebar-menu.item title="drawer" :href="route('docs.components.drawer')" />
                     <x-sidebar-menu.item title="menu" :href="route('docs.components.menu')" />
@@ -32,8 +36,9 @@
                     <x-sidebar-menu.item title="icon" :href="route('docs.components.icon')" />
                     <x-sidebar-menu.item title="separator" :href="route('docs.components.separator')" />
                     <x-sidebar-menu.item title="stat" :href="route('docs.components.stat')" />
-                    <x-sidebar-menu.item title="spinner" :href="route('docs.components.spinner')" new />
-                    <x-sidebar-menu.item title="table" :href="route('docs.components.table')" new />
+                    <x-sidebar-menu.item title="spinner" :href="route('docs.components.spinner')" />
+                    <x-sidebar-menu.item title="tab" :href="route('docs.components.tab')" new />
+                    <x-sidebar-menu.item title="table" :href="route('docs.components.table')" />
                 </x-sidebar-menu>
 
                 <x-sidebar-menu title="Contributing">
