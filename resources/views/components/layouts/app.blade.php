@@ -27,7 +27,9 @@
     </script>
 
     <style>
-        [x-cloak] { display: none !important; }
+        [x-cloak] {
+            display: none !important;
+        }
     </style>
 </head>
 
@@ -127,7 +129,7 @@
 
     {{-- Algolia Docsearch --}}
     <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
-    
+
     <script type="text/javascript">
         docsearch({
             appId: "9UA43QHHYR",
@@ -136,6 +138,23 @@
             insights: true,
             container: "#docsearch",
             debug: false
+        });
+    </script>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetElement = document.querySelector(this.getAttribute('href'));
+
+                window.scrollTo({
+                    top: targetElement.offsetTop - document.querySelector('header').offsetHeight +
+                        60,
+                });
+
+                // Update the hash in the URL manually without jumping
+                history.pushState(null, null, this.getAttribute('href'));
+            });
         });
     </script>
 </body>
