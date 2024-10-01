@@ -76,6 +76,7 @@ class extends Component {
     <x-code-block title="Color variants">
         @verbatim('docs')
                 <x-range label="Default" />
+                <x-range label="Black" black />
                 <x-range label="Slate" slate />
                 <x-range label="Zinc" zinc />
                 <x-range label="Gray" gray />
@@ -98,7 +99,6 @@ class extends Component {
                 <x-range label="Fuchsia" fuchsia />
                 <x-range label="Pink" pink />
                 <x-range label="Rose" rose />
-                <x-range label="Black" black />
         @endverbatim
     </x-code-block>
 

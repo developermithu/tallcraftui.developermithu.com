@@ -1,3 +1,7 @@
+<div class="block lg:hidden">
+    <x-banner />
+</div>
+
 <header x-data="{ isSticky: false }" class="sticky top-0 z-50 px-4 py-5 transition duration-200 sm:px-6 lg:px-8"
     x-on:scroll.window="isSticky = window.scrollY > 60"
     :class="{ 'bg-white dark:bg-slate-900': isSticky, 'bg-transparent': !isSticky }">
@@ -19,6 +23,10 @@
                     TallCraftUI
                 </span>
             </a>
+        </div>
+
+        <div class="hidden lg:block">
+            <x-banner />
         </div>
 
         <div class="relative flex items-center justify-end gap-1 basis-0 md:flex-grow">
