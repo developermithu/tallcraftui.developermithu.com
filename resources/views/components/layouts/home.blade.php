@@ -14,12 +14,28 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <style>
-        [x-cloak] { display: none !important; }
+        [x-cloak] {
+            display: none !important;
+        }
     </style>
+
+    <!-- Google tag (gtag.js) -->
+    @if (config('app.env') === 'production')
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-RZY51979SH"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'G-RZY51979SH');
+        </script>
+    @endif
 </head>
 
-<body
-    class="min-h-full leading-7 font-lato site-gradient">
+<body class="min-h-full leading-7 font-lato site-gradient">
 
     {{-- Header --}}
     <header class="absolute inset-x-0 top-0 z-50">
