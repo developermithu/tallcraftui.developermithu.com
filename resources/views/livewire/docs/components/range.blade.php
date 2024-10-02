@@ -1,19 +1,19 @@
 <?php
 
 use Livewire\Volt\Component;
-use Livewire\Attributes\{Layout, Title, Rule};
+use Livewire\Attributes\{Layout, Title, Validate};
 
 new 
 #[Layout('components.layouts.app')] 
 #[Title('Range Slider components - Tallcraftui')] 
 class extends Component {
-    #[Rule('required|gt:0')]
+    #[Validate('required|gt:0')]
     public int $level = 25;
 
-    #[Rule('required|gt:20')]
+    #[Validate('required|gt:20')]
     public int $level2 = 30;
 
-    #[Rule('required|gt:200')]
+    #[Validate('required|gt:200')]
     public int $level3 = 250;
 }; ?>
 
@@ -31,7 +31,7 @@ class extends Component {
     <x-code-block title="Basic usage">
         @verbatim('docs')
                 @php
-                    // #[Rule('required|gt:0')]
+                    // #[Validate('required|gt:0')]
                     // public int $level = 25;
                 @endphp 
 
@@ -47,10 +47,10 @@ class extends Component {
 
         @verbatim('docs')
                 @php
-                    // #[Rule('required|gt:20')]
+                    // #[Validate('required|gt:20')]
                     // public int $level2 = 30;
 
-                    // #[Rule('required|gt:200')]
+                    // #[Validate('required|gt:200')]
                     // public int $level3 = 250;
                 @endphp 
 

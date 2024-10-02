@@ -24,7 +24,7 @@ class extends Component {
 
         <x-code-block title="Basic usage">
             @verbatim('docs')
-                <x-clipboard content="This is the text to be copied." />
+                <x-clipboard content="Copied text" />
             @endverbatim
         </x-code-block>
 
