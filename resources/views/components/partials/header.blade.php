@@ -25,9 +25,9 @@
             </a>
         </div>
 
-        <div class="hidden lg:block">
+        {{-- <div class="hidden lg:block">
             <x-banner />
-        </div>
+        </div> --}}
 
         <div class="relative flex items-center justify-end gap-1 basis-0 md:flex-grow">
             {{-- Algolia Docsearch --}}
