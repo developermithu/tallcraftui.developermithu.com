@@ -24,7 +24,7 @@ new #[Layout('components.layouts.app')] #[Title('Installation - Tallcraftui')] c
 
             <ul class="pl-4 space-y-1 text-teal-500 list-disc">
                 <li><a href="https://www.php.net/releases/8.2/en.php" target="_blank">PHP 8.1</a></li>
-                <li><a href="https://laravel.com/docs/11.x" target="_blank">Laravel 10 or above</a></li>
+                <li><a href="https://laravel.com/docs/11.x" target="_blank">Laravel 10 or 11</a></li>
                 <li><a href="https://livewire.laravel.com" target="_blank">Livewire 3.x</a></li>
                 <li><a href="https://tailwindcss.com" target="_blank">TailwindCSS 3.x</a></li>
             </ul>
@@ -44,7 +44,7 @@ new #[Layout('components.layouts.app')] #[Title('Installation - Tallcraftui')] c
     
         <p>Modify <code>tailwind.config.js</code> </p>
 
-        <x-code language="js">
+        <x-code language="js" space-none>
             @verbatim
                 export default {
                     theme: {
@@ -61,23 +61,15 @@ new #[Layout('components.layouts.app')] #[Title('Installation - Tallcraftui')] c
             @endverbatim
         </x-code>
 
-        <p>Then start the development server:</p>
+        <p>Start the development server, and you're all set to begin working:</p>
 
         <x-code language="bash">
             @verbatim
                 pnpm dev # or `npm run dev`
             @endverbatim
         </x-code>
-
-        <p>Now you can use <code>tallcraftui</code> like this:</p>
-
-        <x-code>
-            @verbatim
-                <x-button label="Button" />
-            @endverbatim
-        </x-code>
-
-        <x-code-block no-render title="Publish the configuration file" language="bash">
+        
+        <x-code-block no-render title="Publish the configuration file (optional)" language="bash">
             @slot('description')
                 To rename TallCraftUI or customize component settings, publish the configuration file:
             @endslot
@@ -87,10 +79,9 @@ new #[Layout('components.layouts.app')] #[Title('Installation - Tallcraftui')] c
             @endverbatim
         </x-code-block>
 
-        <x-code language="php">
+        <x-code language="php" space-none>
             @verbatim
                 return [
-
                     /**
                     * --------------------------------------------------------------------------
                     * Default Component Prefix
@@ -123,13 +114,24 @@ new #[Layout('components.layouts.app')] #[Title('Installation - Tallcraftui')] c
         <x-code language='bash'>
             php artisan view:clear
         </x-code>
+
+        <x-code-block title="Existing projects" no-render>
+            @slot('description')
+                When working with existing projects that utilize <strong>Jetstream</strong> or <strong>Breeze</strong>, the installer will automatically publish a <code>config/tallcraftui.php</code> file, applying a global <code>tc-</code> prefix on TallCraftUI components to prevent naming conflicts. Therefore, you'll need to use components like this: 
+            @endslot
+            
+            @verbatim('docs')
+                <x-tc-button /> 
+            @endverbatim
+        </x-code-block>
     </x-slot>
 
     @slot('aside')
         <x-on-this-page>
             <x-on-this-page.item title="Requirements" />
             <x-on-this-page.item title="Installation" />
-            <x-on-this-page.item title="Publish the configuration file" />
+            <x-on-this-page.item title="Publish the configuration file (optional)" />
+            <x-on-this-page.item title="Existing projects" />
         </x-on-this-page>
     @endslot
 </div>
