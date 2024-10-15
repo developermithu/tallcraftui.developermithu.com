@@ -48,6 +48,10 @@ return [
      *
      * Configure the appearance and behavior of ui components.
      */
+    'avatar' => [
+        'border-radius' => BorderRadius::RoundedFull->value,
+    ],
+
     'alert' => [
         'border-radius' => BorderRadius::Rounded->value,
     ],
@@ -99,6 +103,13 @@ return [
     'table' => [
         'shadow' => Shadow::ShadowNone->value,
         'border-radius' => BorderRadius::RoundedLg->value,
+    ],
+
+    'tooltip' => [
+        'position' => Position::TOP->value,
+        'gradient' => false,
+        'noArrow' => false,
+        'noTransition' => false,
     ],
 
     'menu' => [

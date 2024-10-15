@@ -48,7 +48,7 @@
         @if (!$noRender)
             <div x-show="!visible" x-cloak @class([
                 'p-5 border rounded-lg dark:border-slate-700 md:p-7 flex flex-col flex-wrap gap-4',
-                '!flex-row items-start' => $inline,
+                '!flex-row items-center ' => $inline,
             ])>
                 <?php echo Blade::render($code); ?>
             </div>

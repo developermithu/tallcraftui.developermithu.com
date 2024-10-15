@@ -30,6 +30,7 @@ Route::group(['prefix' => 'docs', 'as' => 'docs.'], function () {
     // UI Components
     Route::group(['prefix' => 'components', 'as' => 'components.'], function () {
         Volt::route('/alert', 'docs.components.alert')->name('alert');
+        Volt::route('/avatar', 'docs.components.avatar')->name('avatar');
         Volt::route('/badge', 'docs.components.badge')->name('badge');
         Volt::route('/button', 'docs.components.button')->name('button');
         Volt::route('/breadcrumb', 'docs.components.breadcrumb')->name('breadcrumb');
