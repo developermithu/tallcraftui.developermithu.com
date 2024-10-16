@@ -47,6 +47,8 @@ new #[Layout('components.layouts.app')] #[Title('Installation - Tallcraftui')] c
         <x-code language="js" space-none>
             @verbatim
                 export default {
+                    darkMode: "class",
+                    
                     theme: {
                         extend: {
                             // .....
