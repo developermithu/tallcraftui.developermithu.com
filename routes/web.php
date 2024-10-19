@@ -1,6 +1,7 @@
 <?php
 
 use App\Livewire\Docs\Components\Table;
+use App\Livewire\Pages\Analytics;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
@@ -8,6 +9,7 @@ use Livewire\Volt\Volt;
 
 Volt::route('/', 'index')->name('home');
 Volt::route('/docs', 'docs.installation')->name('docs');
+Route::get('/analytics', Analytics::class)->name('analytics');
 
 Route::group(['prefix' => 'docs', 'as' => 'docs.'], function () {
     Volt::route('/installation', 'docs.installation')->name('installation');
