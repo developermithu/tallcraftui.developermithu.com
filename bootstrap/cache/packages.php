@@ -80,6 +80,13 @@
       0 => 'Termwind\\Laravel\\TermwindServiceProvider',
     ),
   ),
+  'panphp/pan' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Pan\\Adapters\\Laravel\\Providers\\PanServiceProvider',
+    ),
+  ),
   'pestphp/pest-plugin-laravel' => 
   array (
     'providers' => 

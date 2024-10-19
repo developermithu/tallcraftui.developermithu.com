@@ -50,9 +50,9 @@ new #[Layout('components.layouts.home')] #[Title('TallCraftUI - Laravel Blade UI
                 </h4>
 
                 <div class="flex flex-col items-center gap-y-4 gap-x-5 sm:flex-row">
-                    <x-button :link="route('docs.installation')" label="Get Started"
+                    <x-button data-pan="get-started-button" :link="route('docs.installation')" label="Get Started"
                         class="w-full py-3 sm:w-fit sm:py-2.5" />
-                    <x-button external
+                    <x-button data-pan="view-github-button" external
                         link="https://github.com/developermithu/tallcraftui" outline
                         class="w-full py-3 sm:w-fit sm:py-2.5">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
