@@ -1,7 +1,7 @@
 <div>
-    <div wire:poll.10s class="max-w-2xl mx-auto">
+    <div data-pan="analytics-page" wire:poll.5s class="max-w-2xl mx-auto">
         <div class="flex justify-center pb-3">
-            <x-spinner wire:loading.class="!visible" class="invisible" bars sm />
+            <x-spinner wire:loading.delay.class="!visible" class="invisible" bars sm />
         </div>
 
         <x-table no-loading>
