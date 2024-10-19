@@ -58,6 +58,6 @@ Route::get('clear', function () {
 });
 
 Route::get('fresh', function () {
-    Artisan::call('migrate:fresh --seed');
+    Artisan::call('migrate:fresh --seed --force');
     return back();
 });

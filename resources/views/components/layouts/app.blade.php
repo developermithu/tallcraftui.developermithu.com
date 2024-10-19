@@ -100,7 +100,7 @@
                     @endisset
 
                     <div class="pt-5 text-sm text-gray-500">
-                        Code highlighting powered by <a href="https://torchlight.dev" target="_blank"
+                        Code highlighting powered by <a data-pan="torchlight-link" href="https://torchlight.dev" target="_blank"
                             class="hover:underline">Torchlight</a>
                     </div>
                 </main>
