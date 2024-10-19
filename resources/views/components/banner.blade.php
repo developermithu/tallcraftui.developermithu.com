@@ -6,8 +6,8 @@
         return Http::get('https://api.github.com/repos/developermithu/tallcraftui/releases/latest')->json();
     });
 
-    $tag = $latestRelease['tag_name'];
-    $url = $latestRelease['html_url'];
+    $tag = $latestRelease['tag_name'] ?? null;
+    $url = $latestRelease['html_url'] ?? null;
 @endphp
 
 <div x-data="{
@@ -24,7 +24,6 @@
     x-init="setTimeout(() => { bannerVisible = true }, bannerVisibleAfter);"
     class="py-3 text-white lg:shadow-md lg:rounded bg-gradient-to-r from-indigo-600 via-sky-600 to-teal-500" 
     x-cloak
-    data-pan="banner"
 >
     <div class="flex items-center justify-center gap-10 px-6 lg:justify-between">
         <a target="_blank" href="{{ $url }}" class="flex items-center gap-2 text-sm text-white">

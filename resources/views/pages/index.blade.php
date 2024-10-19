@@ -50,9 +50,9 @@ new #[Layout('components.layouts.home')] #[Title('TallCraftUI - Laravel Blade UI
                 </h4>
 
                 <div class="flex flex-col items-center gap-y-4 gap-x-5 sm:flex-row">
-                    <x-button data-pan="get-started-button" :link="route('docs.installation')" label="Get Started"
+                    <x-button :link="route('docs.installation')" label="Get Started"
                         class="w-full py-3 sm:w-fit sm:py-2.5" />
-                    <x-button data-pan="view-github-button" external
+                    <x-button external
                         link="https://github.com/developermithu/tallcraftui" outline
                         class="w-full py-3 sm:w-fit sm:py-2.5">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -69,7 +69,7 @@ new #[Layout('components.layouts.home')] #[Title('TallCraftUI - Laravel Blade UI
                 {{-- Form, Alert --}}
                 <div class="space-y-5 md:space-y-6 mt-14">
                     {{-- Form Components --}}
-                    <x-card data-pan="form-card">
+                    <x-card>
                         <x-card-header title="Form Components" />
                         <x-card-content>
                             @php
@@ -81,32 +81,32 @@ new #[Layout('components.layouts.home')] #[Title('TallCraftUI - Laravel Blade UI
                             @endif
 
                             <form wire:submit="createUser" class="space-y-4">
-                                <x-input data-pan="form-name-field" label='Name *' wire:model="name" placeholder="Name"
+                                <x-input label='Name *' wire:model="name" placeholder="Name"
                                     icon="user" />
-                                <x-input data-pan="form-email-field" label='Email *' wire:model="email"
+                                <x-input label='Email *' wire:model="email"
                                     placeholder="Email" suffix="@gmail.com" />
-                                <x-password data-pan="form-password-field" label="Password *" wire:model="password"
+                                <x-password label="Password *" wire:model="password"
                                     generate />
-                                <x-color-picker data-pan="form-color-picker-field" label="Color picker *"
+                                <x-color-picker label="Color picker *"
                                     wire:model="color" />
-                                <x-textarea data-pan="form-textarea-field" label="Textarea" wire:model="textarea"
+                                <x-textarea label="Textarea" wire:model="textarea"
                                     class="min-h-16" auto-resize />
-                                <x-select data-pan="form-select-field" label='Users *' wire:model="user_id"
+                                <x-select label='Users *' wire:model="user_id"
                                     :options="$users" />
                                 <div class="flex flex-wrap items-center gap-4">
-                                    <x-radio data-pan="form-radio-field" label="Radio" />
-                                    <x-checkbox data-pan="form-checkbox-field" label="Checkbox" />
-                                    <x-toggle data-pan="form-toggle-field" wire:model='terms' label="Toggle *" sm />
+                                    <x-radio label="Radio" />
+                                    <x-checkbox label="Checkbox" />
+                                    <x-toggle wire:model='terms' label="Toggle *" sm />
                                 </div>
                                 <div class="flex justify-end">
-                                    <x-button data-pan="form-submit-button" label="Submit" spinner="createUser" />
+                                    <x-button label="Submit" spinner="createUser" />
                                 </div>
                             </form>
                         </x-card-content>
                     </x-card>
 
                     {{-- Alert Components --}}
-                    <x-card data-pan="alert-card">
+                    <x-card>
                         <x-card-header title="Alert Components" />
                         <x-card-content>
                             <div class="space-y-2">
@@ -123,7 +123,7 @@ new #[Layout('components.layouts.home')] #[Title('TallCraftUI - Laravel Blade UI
                     </x-card>
 
                     {{-- Avatar Components --}}
-                    <x-card data-pan="avatar-card">
+                    <x-card>
                         <x-card-header title="Avatar Components" class="flex items-center gap-3">
                             <x-badge label="New" amber />
                         </x-card-header>
@@ -154,7 +154,7 @@ new #[Layout('components.layouts.home')] #[Title('TallCraftUI - Laravel Blade UI
                     </x-card>
 
                     {{-- Breadcrumb Components --}}
-                    <x-card data-pan="breadcrumb-card">
+                    <x-card>
                         <x-card-header title="Breadcrumb Components" />
                         <x-card-content>
                             <div class="flex flex-col gap-4">
@@ -195,7 +195,7 @@ new #[Layout('components.layouts.home')] #[Title('TallCraftUI - Laravel Blade UI
             <aside class="space-y-5 md:space-y-6 col-span-full lg:col-span-7">
                 <div class="grid items-start grid-cols-12 gap-4">
                     {{-- Accordion --}}
-                    <x-card data-pan="accordion-card" class="col-span-full lg:col-span-7">
+                    <x-card class="col-span-full lg:col-span-7">
                         <x-card-header title="Accordion Component" />
                         <x-card-content>
                             <x-accordion>
@@ -213,14 +213,14 @@ new #[Layout('components.layouts.home')] #[Title('TallCraftUI - Laravel Blade UI
                     </x-card>
 
                     {{-- Components --}}
-                    <x-card data-pan="components-card" class="col-span-full lg:col-span-5">
+                    <x-card class="col-span-full lg:col-span-5">
                         <x-card-header title="Components" />
                         <x-card-content>
                             <div class="flex flex-wrap items-center justify-between gap-2">
-                                <x-button data-pan="button" label="Button" sm />
+                                <x-button label="Button" sm />
                                 <x-dropdown title="Account settings">
                                     @slot('trigger')
-                                        <x-button data-pan="dropdown-button" label="Dropdown" outline sm />
+                                        <x-button label="Dropdown" outline sm />
                                     @endslot
 
                                     <x-dropdown-item label="Profile" icon="user" />
@@ -232,13 +232,13 @@ new #[Layout('components.layouts.home')] #[Title('TallCraftUI - Laravel Blade UI
                                     <x-dropdown-item label="Sign out" icon="arrow-right-end-on-rectangle" />
                                 </x-dropdown>
 
-                                <x-button data-pan="drawer-button" x-on:click="$wire.openDrawer = true" label="Drawer" sm />
+                                <x-button x-on:click="$wire.openDrawer = true" label="Drawer" sm />
                             </div>
 
-                            <x-button data-pan="modal-button" class="w-full" @click="$wire.openModal = true"
+                            <x-button class="w-full" @click="$wire.openModal = true"
                                 label="Open Modal" outline />
 
-                            <x-tab data-pan="tab" wire:model="activeTab" as="switch">
+                            <x-tab wire:model="activeTab" as="switch">
                                 <x-slot name="items">
                                     <x-tab-item id="tab1" label="Tab 1" as="switch" />
                                     <x-tab-item id="tab2" label="Tab 2" as="switch" />
@@ -251,13 +251,13 @@ new #[Layout('components.layouts.home')] #[Title('TallCraftUI - Laravel Blade UI
                     </x-card>
                 </div>
 
-                <x-range data-pan="range" value="58" teal />
+                <x-range value="58" teal />
 
                 {{-- Menu, Stat, Breadcrumb --}}
                 <div class="grid items-start grid-cols-12 gap-4">
                     <div class="space-y-3 col-span-full lg:col-span-4">
                         {{-- Spinner --}}
-                        <x-card data-pan="spinner-card">
+                        <x-card>
                             <x-card-header title="Spinners" />
                             <x-card-content>
                                 <div class="flex gap-5">
@@ -270,7 +270,7 @@ new #[Layout('components.layouts.home')] #[Title('TallCraftUI - Laravel Blade UI
                         </x-card>
 
                         {{-- Clipboard --}}
-                        <x-card data-pan="clipboard-card">
+                        <x-card>
                             <x-card-header title="Clipboards" />
                             <x-card-content>
                                 <div class="flex gap-5">
@@ -284,7 +284,7 @@ new #[Layout('components.layouts.home')] #[Title('TallCraftUI - Laravel Blade UI
                         </x-card>
 
                         {{-- Tooltip --}}
-                        <x-card data-pan="tooltip-card">
+                        <x-card>
                             <x-card-header title="Tooltips" />
                             <x-card-content>
                                 <div class="flex gap-4">
@@ -306,7 +306,7 @@ new #[Layout('components.layouts.home')] #[Title('TallCraftUI - Laravel Blade UI
 
                     <div class="space-y-3 col-span-full lg:col-span-8">
                         {{-- Icon --}}
-                        <x-card data-pan="icon-card">
+                        <x-card>
                             <x-card-header title="Icons" />
                             <x-card-content>
                                 <div class="flex flex-wrap gap-5">
@@ -327,7 +327,7 @@ new #[Layout('components.layouts.home')] #[Title('TallCraftUI - Laravel Blade UI
                         </x-card>
 
                         {{-- Badge --}}
-                        <x-card data-pan="badge-card">
+                        <x-card>
                             <x-card-header title="Badge" />
                             <x-card-content>
                                 <div class="flex flex-wrap gap-5">
@@ -340,7 +340,7 @@ new #[Layout('components.layouts.home')] #[Title('TallCraftUI - Laravel Blade UI
                         </x-card>
 
                         {{-- Button --}}
-                        <x-card data-pan="button-card">
+                        <x-card>
                             <x-card-header title="Buttons" />
                             <x-card-content>
                                 <div class="flex gap-5">
@@ -362,7 +362,7 @@ new #[Layout('components.layouts.home')] #[Title('TallCraftUI - Laravel Blade UI
                 </div>
 
                 {{-- Table --}}
-                <x-card data-pan="table-card">
+                <x-card>
                     <x-card-header title="Table Component" />
                     <x-card-content>
                         <x-table hoverable borderless>
@@ -388,7 +388,7 @@ new #[Layout('components.layouts.home')] #[Title('TallCraftUI - Laravel Blade UI
                 <div class="grid items-start grid-cols-12 gap-4">
                     {{-- Menu --}}
                     <div class="space-y-4 col-span-full xl:col-span-5 2xl:col-span-4">
-                        <x-card data-pan="menu-card">
+                        <x-card>
                             <x-card-header title="Menu" />
                             <x-card-content>
                                 <x-menu title="Menu Component">
@@ -410,7 +410,7 @@ new #[Layout('components.layouts.home')] #[Title('TallCraftUI - Laravel Blade UI
                         </x-card>
 
                         {{-- Separator --}}
-                        <x-card data-pan="separator-card">
+                        <x-card>
                             <x-card-header title="Separator" />
                             <x-card-content>
                                 <ul class="flex flex-col">
@@ -427,7 +427,7 @@ new #[Layout('components.layouts.home')] #[Title('TallCraftUI - Laravel Blade UI
                     {{-- Card --}}
                     <div class="space-y-4 col-span-full xl:col-span-7 2xl:col-span-8">
                         {{-- Stat Components --}}
-                        <x-card data-pan="stat-card">
+                        <x-card>
                             <x-card-header title="Stat Components" />
                             <x-card-content>
                                 <div class="flex flex-wrap gap-5">
@@ -439,7 +439,7 @@ new #[Layout('components.layouts.home')] #[Title('TallCraftUI - Laravel Blade UI
                         </x-card>
 
                         {{-- Card Component --}}
-                        <x-card data-pan="card-component">
+                        <x-card>
                             <x-card-header title="Card Component" />
                             <x-card-content>
                                 <x-card class="pb-5">
@@ -457,7 +457,7 @@ new #[Layout('components.layouts.home')] #[Title('TallCraftUI - Laravel Blade UI
             </aside>
         </div>
 
-        <section data-pan="breeze-vs-jetstream-vs-tallcraftui" class="max-w-4xl pb-20 m-auto">
+        <section class="max-w-4xl pb-20 m-auto">
             <h2 class="pb-3 text-2xl font-semibold text-center xxs:text-3xl sm:text-4xl">Breeze vs Jetstream vs
                 TallCraftUI
             </h2>
