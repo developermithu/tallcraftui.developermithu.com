@@ -48,7 +48,7 @@ new #[Layout('components.layouts.app')] #[Title('Drawer components - Tallcraftui
         <x-meta-tags title="Drawer components - Tallcraftui" />
     @endslot
 
-    <x-heading title="Drawer" subtitle="UI Components">
+    <x-heading title="Drawer" subtitle="Dialog Components">
         @slot('description')
         You can trigger the drawer to close from any PHP class by dispatching a close event <code>$this->dispatch('close');</code>.
         @endslot

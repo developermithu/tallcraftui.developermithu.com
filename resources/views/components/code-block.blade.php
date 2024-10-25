@@ -5,6 +5,7 @@
     'inline' => false,
     'new' => false,
     'noCopy' => false,
+    'hideButton' => false,
 ])
 
 @php
@@ -32,7 +33,7 @@
                 @endif
             </div>
 
-            @if (!$noRender)
+            @if (!$noRender && !$hideButton)
                 <x-button @click="visible = !visible" icon="code-bracket" flat sm />
             @endif
         </div>

@@ -79,7 +79,7 @@ new #[Layout('components.layouts.app')] #[Title('Modal components - Tallcraftui'
         <x-meta-tags title="Modal components - Tallcraftui" description="Modal components - Tallcraftui" />
     @endslot
 
-    <x-heading title="Modal" subtitle="UI Components">
+    <x-heading title="Modal" subtitle="Dialog Components">
         @slot('description')
         You can trigger the modal to close from any PHP class by dispatching a close event <code>$this->dispatch('close');</code>.
         @endslot

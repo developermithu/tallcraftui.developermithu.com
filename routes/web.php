@@ -1,6 +1,7 @@
 <?php
 
 use App\Livewire\Docs\Components\Table;
+use App\Livewire\Docs\Components\Toast;
 use App\Livewire\Pages\Analytics;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
@@ -51,6 +52,7 @@ Route::group(['prefix' => 'docs', 'as' => 'docs.'], function () {
         Volt::route('/tooltip', 'docs.components.tooltip')->name('tooltip');
         
         Route::get('/table', Table::class)->name('table');
+        Route::get('/toast', Toast::class)->name('toast');
     });
 });
 

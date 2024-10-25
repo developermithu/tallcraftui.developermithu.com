@@ -287,16 +287,16 @@
         },
         {
             "name": "developermithu/tallcraftui",
-            "version": "v1.3.3",
+            "version": "v1.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/developermithu/tallcraftui.git",
-                "reference": "37e0d2a688d4efa5852dcf8ff9f866fb1c16239d"
+                "reference": "2a28881129e5fefaf64b3d6340668f747317d9f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/developermithu/tallcraftui/zipball/37e0d2a688d4efa5852dcf8ff9f866fb1c16239d",
-                "reference": "37e0d2a688d4efa5852dcf8ff9f866fb1c16239d",
+                "url": "https://api.github.com/repos/developermithu/tallcraftui/zipball/2a28881129e5fefaf64b3d6340668f747317d9f0",
+                "reference": "2a28881129e5fefaf64b3d6340668f747317d9f0",
                 "shasum": ""
             },
             "require": {
@@ -351,9 +351,9 @@
             ],
             "support": {
                 "issues": "https://github.com/developermithu/tallcraftui/issues",
-                "source": "https://github.com/developermithu/tallcraftui/tree/v1.3.3"
+                "source": "https://github.com/developermithu/tallcraftui/tree/v1.3.5"
             },
-            "time": "2024-10-15T10:18:47+00:00"
+            "time": "2024-10-25T12:40:23+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
