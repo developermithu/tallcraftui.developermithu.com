@@ -90,7 +90,7 @@ class Toast extends Component
 
     public function showRedirectToast()
     {
-        $this->success(title: 'User created successfully', redirectTo: route('home'));
+        $this->success(title: 'User created successfully', redirectTo: route('docs.installation'));
     }
 
     public function showDescriptionToast()

@@ -126,7 +126,7 @@ $this->success(
         @verbatim
             $this->success(
                     title: 'User created successfully', 
-                    redirectTo: route('home')
+                    redirectTo: route('docs.installation')
                 );
         @endverbatim
     </x-code>
