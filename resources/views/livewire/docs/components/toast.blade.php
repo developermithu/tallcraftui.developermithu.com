@@ -180,10 +180,11 @@ $this->success(
 
     <x-code-block language="php" title="All available props" no-render space-1>
         @verbatim('docs')
-        $this->success( 
+        $this->toast( 
+                    type: 'success',
                     title: 'User created successfully',
                     description: 'Your changes have been saved permanently',
-                    position: 'top-right',
+                    position: 'bottom-right',
                     icon: 'check-circle',
                     showCloseIcon: false,
                     showProgress: false,
