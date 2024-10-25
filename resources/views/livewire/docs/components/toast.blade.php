@@ -131,6 +131,38 @@ $this->success(
         @endverbatim
     </x-code>
 
+    <x-code-block title="Duration" inline hide-button>
+        @slot('description')
+            By default, toasts disappear after <strong>3 seconds</strong>. To adjust this, specify a custom duration in <strong>milliseconds</strong> using the <code>timeout</code> prop.
+        @endslot
+        
+        @verbatim('docs')
+            <x-button wire:click="showDurationToast" label="Duration" />
+        @endverbatim
+    </x-code-block>
+
+    <x-code language="php" space-none>
+        @verbatim
+            $this->success(title: 'User created successfully', timeout: 5000); 
+        @endverbatim
+    </x-code>
+
+    <x-code-block title="Persist" inline hide-button>
+        @slot('description')
+            To keep the toast open indefinitely, set the <code>timeout</code> prop to <code>0</code>.
+        @endslot
+        
+        @verbatim('docs')
+            <x-button wire:click="showPersistToast" label="Persist" />
+        @endverbatim
+    </x-code-block>
+
+    <x-code language="php" space-none>
+        @verbatim
+            $this->success(title: 'User created successfully', timeout: 0);  
+        @endverbatim
+    </x-code>
+
     <x-code-block title="With description" inline hide-button>
         @verbatim('docs')
             <x-button wire:click="showDescriptionToast" label="Description" />
@@ -185,7 +217,8 @@ $this->success(
         <x-on-this-page.item title="Toast position" />
         <x-on-this-page.item title="With progress bar" />
         <x-on-this-page.item title="With redirecting" />
-        <x-on-this-page.item title="With description" />
+        <x-on-this-page.item title="Duration" />
+        <x-on-this-page.item title="Persist" />
         <x-on-this-page.item title="With description" />
         <x-on-this-page.item title="All available props" />
         <x-on-this-page.item title="Default settings" />

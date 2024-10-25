@@ -93,23 +93,20 @@ class Toast extends Component
         $this->success(title: 'User created successfully', redirectTo: route('docs.installation'));
     }
 
+    public function showDurationToast()
+    {
+        $this->success(title: 'User created successfully', timeout: 5000);
+    }
+
+    public function showPersistToast()
+    {
+        $this->success(title: 'User created successfully', timeout: 0);
+    }
+
     public function showDescriptionToast()
     {
         $this->success(title: 'User created successfully', description: 'Your changes have been saved permanently.');
     }
-
-
-    // public function showToast2()
-    // {
-    //     $this->success( 
-    //         title: 'User created successfully',
-    //         // showCloseIcon: false,
-    //         description: 'Your changes have been saved permanently',
-    //         // timeout: 1000,
-    //         // position: 'top-left',
-    //         // redirectTo: '/input'
-    //     );
-    // }
     
     public function render()
     {

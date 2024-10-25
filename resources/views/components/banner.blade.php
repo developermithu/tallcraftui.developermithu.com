@@ -22,7 +22,7 @@
     x-transition:leave-start="translate-y-0"
     x-transition:leave-end="-translate-y-10" 
     x-init="setTimeout(() => { bannerVisible = true }, bannerVisibleAfter);"
-    class="py-3 text-white lg:shadow-md lg:rounded bg-gradient-to-r from-indigo-600 via-sky-600 to-teal-500" 
+    class="py-3 text-white lg:shadow-md lg:rounded bg-gradient-to-r from-fuchsia-600 via-purple-600 to-teal-500" 
     x-cloak
     data-pan="banner"
 >
