@@ -26,10 +26,13 @@ class Toast extends Component
     
     public function save()
     {
-        $this->success(...);
+        $this->success(...); 
         $this->error(...);
         $this->warning(...);
         $this->info(...);
+
+        // OR
+        $this->toast(...);
     }
 }
         @endverbatim
@@ -45,8 +48,8 @@ class Toast extends Component
     <x-code language="php" space-none>
         @verbatim
 // Toast 1
-$this->success('User created successfully'); // OR
-// $this->toast('success', 'User created successfully'); 
+$this->toast('User created successfully'); // OR 
+$this->success('User created successfully'); 
 
 // Toast 2
 $this->success(
