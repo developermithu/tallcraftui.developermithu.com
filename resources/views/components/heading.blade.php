@@ -11,4 +11,6 @@
             <hr class="border-0 h-[1px] bg-teal-900/10 dark:bg-teal-500/20" />
         </div>
     @endif
+
+    <x-hostinger-promo class="relative block !mt-4 lg:hidden" />
 </header>
