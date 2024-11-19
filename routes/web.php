@@ -63,6 +63,12 @@ Route::get('clear', function () {
     return back();
 });
 
+Route::get('storage-link', function () {
+    Artisan::call('storage:link');
+    return back();
+});
+
+
 Route::get('fresh', function () {
     Artisan::call('migrate:fresh --seed --force');
     return back();
