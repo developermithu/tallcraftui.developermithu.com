@@ -36,10 +36,10 @@ new #[Layout('components.layouts.app')] #[Title('Markdown components - Tallcraft
 
     <x-code-block title="Setup" no-render>
         @verbatim('docs')
-            <head>
-                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/easymde/dist/easymde.min.css">
-                <script src="https://cdn.jsdelivr.net/npm/easymde/dist/easymde.min.js"></script>
-            </head>
+                <head>
+                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/easymde/dist/easymde.min.css">
+                    <script src="https://cdn.jsdelivr.net/npm/easymde/dist/easymde.min.js"></script>
+                </head>
         @endverbatim
     </x-code-block>
 
@@ -77,15 +77,15 @@ new #[Layout('components.layouts.app')] #[Title('Markdown components - Tallcraft
         @endslot
 
         @verbatim('docs')
-            @php
-                $config = [
-                    'spellChecker' => true,
-                    'toolbar' => ['heading', 'bold', 'italic', '|', 'preview'],
-                    'maxHeight' => '150px',
-                ];
-            @endphp
+                @php
+                    $config = [
+                        'spellChecker' => true,
+                        'toolbar' => ['heading', 'bold', 'italic', '|', 'preview'],
+                        'maxHeight' => '150px',
+                    ];
+                @endphp
 
-            <x-markdown wire:model="content2" :config="$config" />
+                <x-markdown wire:model="content2" :config="$config" />
         @endverbatim
     </x-code-block>
 
@@ -95,19 +95,19 @@ new #[Layout('components.layouts.app')] #[Title('Markdown components - Tallcraft
         @endslot
         
         @verbatim('docs')
-            use Developermithu\Tallcraftui\Traits\HasMarkdownImages;
+                use Developermithu\Tallcraftui\Traits\HasMarkdownImages;
 
-            class Post extends Model
-            {
-                use HasMarkdownImages;
-            
-                protected string $markdownColumn = 'description';
-                protected string $markdownImageDisk = 's3';
+                class Post extends Model
+                {
+                    use HasMarkdownImages;
+                
+                    protected string $markdownColumn = 'description';
+                    protected string $markdownImageDisk = 's3';
 
-                //
-            }   
+                    //
+                }   
 
-            // <x-markdown wire:model="description" disk="s3" />
+                // <x-markdown wire:model="description" disk="s3" />
         @endverbatim
     </x-code-block>
 

@@ -24,11 +24,11 @@ new #[Layout('components.layouts.app')] #[Title('Rating components - Tallcraftui
 
     <x-code-block title="Basic usage">
         @verbatim('docs')
-            @php
-                // public int $rating = 3;
-            @endphp
+                @php
+                    // public int $rating = 3;
+                @endphp
 
-            <x-rating wire:model="rating" />
+                <x-rating wire:model="rating" />
         @endverbatim
     </x-code-block>
 
@@ -46,11 +46,11 @@ new #[Layout('components.layouts.app')] #[Title('Rating components - Tallcraftui
 
     <x-code-block title="Size variants">
         @verbatim('docs')
-            <x-rating wire:model="rating4" sm />
-            <x-rating wire:model="rating5" md />
-            <x-rating wire:model="rating6" lg />
-            <x-rating wire:model="rating7" xl />
-            <x-rating wire:model="rating8" 2xl />
+                <x-rating wire:model="rating4" sm />
+                <x-rating wire:model="rating5" md />
+                <x-rating wire:model="rating6" lg />
+                <x-rating wire:model="rating7" xl />
+                <x-rating wire:model="rating8" 2xl />
         @endverbatim
     </x-code-block>
 

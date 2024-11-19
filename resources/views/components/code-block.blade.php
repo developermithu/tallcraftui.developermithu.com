@@ -16,6 +16,22 @@
         $code = Str::replace("('docs')", '', $code);
         $code = trim($code);
     }
+
+    $lines = explode("\n", $code);
+    $minIndent = PHP_INT_MAX;
+
+    foreach ($lines as $line) {
+        if (trim($line) === '') continue;
+        $indent = strlen($line) - strlen(ltrim($line));
+        $minIndent = min($minIndent, $indent);
+    }
+
+    $cleanedLines = array_map(function ($line) use ($minIndent) {
+        if (trim($line) === '') return '';
+        return substr($line, $minIndent);
+    }, $lines);
+
+    $code = trim(implode("\n", $cleanedLines));
 @endphp
 
 <div x-data="{ visible: {{ $noRender ? 'true' : 'false' }} }" @class(['space-y-3 code-container', 'pt-5' => $title])>
