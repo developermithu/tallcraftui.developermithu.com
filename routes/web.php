@@ -21,6 +21,7 @@ Route::group(['prefix' => 'docs', 'as' => 'docs.'], function () {
     Route::group(['prefix' => 'components', 'as' => 'components.'], function () {
         Volt::route('/input', 'docs.components.input')->name('input');
         Volt::route('/textarea', 'docs.components.textarea')->name('textarea');
+        Volt::route('/markdown', 'docs.components.markdown')->name('markdown');
         Volt::route('/radio', 'docs.components.radio')->name('radio');
         Volt::route('/checkbox', 'docs.components.checkbox')->name('checkbox');
         Volt::route('/toggle', 'docs.components.toggle')->name('toggle');
@@ -42,6 +43,7 @@ Route::group(['prefix' => 'docs', 'as' => 'docs.'], function () {
         Volt::route('/modal', 'docs.components.modal')->name('modal');
         Volt::route('/drawer', 'docs.components.drawer')->name('drawer');
         Volt::route('/icon', 'docs.components.icon')->name('icon');
+        Volt::route('/rating', 'docs.components.rating')->name('rating');
         Volt::route('/separator', 'docs.components.separator')->name('separator');
         Volt::route('/stat', 'docs.components.stat')->name('stat');
         Volt::route('/spinner', 'docs.components.spinner')->name('spinner');

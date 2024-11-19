@@ -16,6 +16,7 @@
                     <x-sidebar-menu.item title="password" :href="route('docs.components.password')" />
                     <x-sidebar-menu.item title="color picker" :href="route('docs.components.color-picker')" />
                     <x-sidebar-menu.item title="textarea" :href="route('docs.components.textarea')" />
+                    <x-sidebar-menu.item title="markdown" :href="route('docs.components.markdown')" new />
                     <x-sidebar-menu.item title="radio" :href="route('docs.components.radio')" />
                     <x-sidebar-menu.item title="checkbox" :href="route('docs.components.checkbox')" />
                     <x-sidebar-menu.item title="toggle" :href="route('docs.components.toggle')" />
@@ -33,10 +34,9 @@
                     <x-sidebar-menu.item title="card" :href="route('docs.components.card')" />
                     <x-sidebar-menu.item title="clipboard" :href="route('docs.components.clipboard')" />
                     <x-sidebar-menu.item title="dropdown" :href="route('docs.components.dropdown')" />
-                    {{-- <x-sidebar-menu.item title="drawer" :href="route('docs.components.drawer')" /> --}}
                     <x-sidebar-menu.item title="menu" :href="route('docs.components.menu')" />
-                    {{-- <x-sidebar-menu.item title="modal" :href="route('docs.components.modal')" /> --}}
                     <x-sidebar-menu.item title="icon" :href="route('docs.components.icon')" />
+                    <x-sidebar-menu.item title="rating" :href="route('docs.components.rating')" new />
                     <x-sidebar-menu.item title="separator" :href="route('docs.components.separator')" />
                     <x-sidebar-menu.item title="stat" :href="route('docs.components.stat')" />
                     <x-sidebar-menu.item title="spinner" :href="route('docs.components.spinner')" />
@@ -48,7 +48,7 @@
                 <x-sidebar-menu title="Dialog Components" >
                     <x-sidebar-menu.item title="drawer" :href="route('docs.components.drawer')" />
                     <x-sidebar-menu.item title="modal" :href="route('docs.components.modal')" />
-                    <x-sidebar-menu.item title="toast" :href="route('docs.components.toast')" new />
+                    <x-sidebar-menu.item title="toast" :href="route('docs.components.toast')" />
                 </x-sidebar-menu>
 
                 <x-sidebar-menu title="Contributing">

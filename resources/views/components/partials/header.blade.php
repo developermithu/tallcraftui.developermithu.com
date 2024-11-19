@@ -1,5 +1,5 @@
 <div class="block lg:hidden">
-    {{-- <x-banner /> --}}
+    <x-banner />
 </div>
 
 <header x-data="{ isSticky: false }" class="sticky top-0 z-50 px-4 py-5 transition duration-200 sm:px-6 lg:px-8"
@@ -26,7 +26,7 @@
         </div>
 
         <div class="hidden lg:block">
-            {{-- <x-banner /> --}}
+            <x-banner />
         </div>
 
         <div class="relative flex items-center justify-end gap-1 basis-0 md:flex-grow">
