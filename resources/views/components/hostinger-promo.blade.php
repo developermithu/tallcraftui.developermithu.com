@@ -1,8 +1,8 @@
 <div
-    {{ $attributes->twMerge('mt-4 absolute w-full max-w-[26rem] rounded-lg border bg-gradient-to-r from-indigo-600 to-teal-600 text-white shadow-sm') }}>
+    {{ $attributes->twMerge('mt-4 absolute w-full max-w-[26rem] rounded-lg bg-gradient-to-r from-indigo-600 to-teal-600 text-white shadow-sm') }}>
     <div class="p-3 px-6 lg:px-8 lg:p-4">
         <div class="flex flex-col items-center space-y-2 text-center xs:space-y-1 lg:space-y-4">
-            <h2 class="text-2xl font-bold text-white lg:text-3xl">Cyber Week Mega Offer!</h2>
+            <h2 class="text-2xl font-bold text-white lg:text-3xl">Hostinger</h2>
             <p class="text-lg lg:text-xl">Huge discounts on all Hostinger plans</p>
             <p class="font-semibold lg:text-lg">Use our referral link for an extra 20% off!</p>
 

@@ -394,6 +394,17 @@
         @endverbatim
     </x-code-block>
 
+    <x-code-block title="Without loading spinner" no-render>
+        @slot('description')
+            You can disable the <strong>loading spinner</strong> by using the <code>no-loading</code> prop. And if you want to disable only the <strong>spinner</strong>, you can use the <code>no-spinner</code> prop.
+        @endslot
+        
+        @verbatim('docs')
+                <x-table no-loading />
+                <x-table no-spinner />
+        @endverbatim
+    </x-code-block>
+
     @slot('aside')
         <x-on-this-page>
             <x-on-this-page.item title="Basic usage" />
@@ -407,6 +418,7 @@
             <x-on-this-page.item title="With pagination" />
             <x-on-this-page.item title="With per page" />
             <x-on-this-page.item title="With sorting" />
+            <x-on-this-page.item title="Without loading spinner" new />
         </x-on-this-page>
     @endslot
 </div>
