@@ -10,7 +10,7 @@ export default {
         "./resources/**/*.js",
         "./app/Livewire/**/**/*.php",
         "./app/View/Components/**/**/*.php",
-        "./vendor/developermithu/tallcraftui/src/View/Components/**/*.php",
+        "./vendor/developermithu/tallcraftui/src/**/*.php",
     ],
     theme: {
         container: {

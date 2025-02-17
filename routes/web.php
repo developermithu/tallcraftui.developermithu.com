@@ -52,6 +52,8 @@ Route::group(['prefix' => 'docs', 'as' => 'docs.'], function () {
         Volt::route('/card', 'docs.components.card')->name('card');
         Volt::route('/clipboard', 'docs.components.clipboard')->name('clipboard');
         Volt::route('/tooltip', 'docs.components.tooltip')->name('tooltip');
+        Volt::route('/progress', 'docs.components.progress')->name('progress');
+        Volt::route('/progress-radial', 'docs.components.progress-radial')->name('progress-radial');
         
         Route::get('/table', Table::class)->name('table');
         Route::get('/toast', Toast::class)->name('toast');

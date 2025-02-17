@@ -12,7 +12,7 @@
                 </x-sidebar-menu>
 
                 <x-sidebar-menu title="Form Components" >
-                    <x-sidebar-menu.item title="input" :href="route('docs.components.input')" />
+                    <x-sidebar-menu.item title="input" :href="route('docs.components.input')" update />
                     <x-sidebar-menu.item title="password" :href="route('docs.components.password')" />
                     <x-sidebar-menu.item title="color picker" :href="route('docs.components.color-picker')" />
                     <x-sidebar-menu.item title="textarea" :href="route('docs.components.textarea')" />
@@ -20,7 +20,7 @@
                     <x-sidebar-menu.item title="radio" :href="route('docs.components.radio')" />
                     <x-sidebar-menu.item title="checkbox" :href="route('docs.components.checkbox')" />
                     <x-sidebar-menu.item title="toggle" :href="route('docs.components.toggle')" />
-                    <x-sidebar-menu.item title="select" :href="route('docs.components.select')" />
+                    <x-sidebar-menu.item title="select" :href="route('docs.components.select')" update />
                     <x-sidebar-menu.item title="range" :href="route('docs.components.range')" />
                 </x-sidebar-menu>
 
@@ -35,6 +35,8 @@
                     <x-sidebar-menu.item title="clipboard" :href="route('docs.components.clipboard')" />
                     <x-sidebar-menu.item title="dropdown" :href="route('docs.components.dropdown')" />
                     <x-sidebar-menu.item title="menu" :href="route('docs.components.menu')" />
+                    <x-sidebar-menu.item title="progress" :href="route('docs.components.progress')" new />
+                    <x-sidebar-menu.item title="progress radial" :href="route('docs.components.progress-radial')" new />
                     <x-sidebar-menu.item title="icon" :href="route('docs.components.icon')" />
                     <x-sidebar-menu.item title="rating" :href="route('docs.components.rating')" />
                     <x-sidebar-menu.item title="separator" :href="route('docs.components.separator')" />

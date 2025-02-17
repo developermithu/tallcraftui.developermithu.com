@@ -83,6 +83,16 @@ class extends Component {
             @endverbatim
         </x-code-block>
 
+        <x-code-block title="Size variants">
+            @verbatim('docs')
+                <x-input placeholder="xs" xs />
+                <x-input placeholder="sm" sm />
+                <x-input placeholder="md" md />
+                <x-input placeholder="lg" lg />
+                <x-input placeholder="xl" xl />
+            @endverbatim
+        </x-code-block>
+
         <x-code-block title="Rounded corner">
             @verbatim('docs')
                 <x-input placeholder="default" />
@@ -116,6 +126,7 @@ class extends Component {
             <x-on-this-page.item title="Prefix suffix" />
             <x-on-this-page.item title="Prepend append" />
             <x-on-this-page.item title="Inline" />
+            <x-on-this-page.item title="Size variants" new />
             <x-on-this-page.item title="Rounded corner" />
             <x-on-this-page.item title="Customize input" />
         </x-on-this-page>
