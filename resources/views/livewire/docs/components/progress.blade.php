@@ -22,7 +22,13 @@ class extends Component {
 
     <x-code-block title="Basic usage">
         @verbatim('docs')
-            <x-progress value="50" label="Default" />
+            <x-progress value="50" />
+        @endverbatim
+    </x-code-block>
+
+    <x-code-block title="Divided format">
+        @verbatim('docs')
+            <x-progress value="50" divided-format />
         @endverbatim
     </x-code-block>
 
@@ -32,9 +38,10 @@ class extends Component {
         @endverbatim
     </x-code-block>
 
-    <x-code-block title="Divided format">
+    <x-code-block title="With label">
         @verbatim('docs')
-            <x-progress value="50" divided-format />
+                <x-progress value="50" label="Percentage" />
+                <x-progress value="50" label="Divided" divided-format />
         @endverbatim
     </x-code-block>
 
@@ -88,8 +95,9 @@ class extends Component {
     @slot('aside')
         <x-on-this-page>
             <x-on-this-page.item title="Basic usage" />
-            <x-on-this-page.item title="Without value" />
             <x-on-this-page.item title="Divided format" />
+            <x-on-this-page.item title="Without value" />
+            <x-on-this-page.item title="With label" />
             <x-on-this-page.item title="Label position" />
             <x-on-this-page.item title="Size variants" />
             <x-on-this-page.item title="Color variants" />

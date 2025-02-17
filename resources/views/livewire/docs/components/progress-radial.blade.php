@@ -22,7 +22,7 @@ class extends Component {
 
     <x-code-block title="Basic usage">
         @verbatim('docs')
-            <x-progress-radial value="50" label="Default" />
+            <x-progress-radial value="50" />
         @endverbatim
     </x-code-block>
 
@@ -35,6 +35,13 @@ class extends Component {
     <x-code-block title="Without value">
         @verbatim('docs')
             <x-progress-radial value="50" without-value />
+        @endverbatim
+    </x-code-block>
+
+    <x-code-block title="With label" inline>
+        @verbatim('docs')
+                <x-progress-radial value="50" label="Percentage" />
+                <x-progress-radial value="50" label="Divided" divided-format />
         @endverbatim
     </x-code-block>
 
@@ -83,6 +90,7 @@ class extends Component {
             <x-on-this-page.item title="Basic usage" />
             <x-on-this-page.item title="Divided format" />
             <x-on-this-page.item title="Without value" />
+            <x-on-this-page.item title="With label" />
             <x-on-this-page.item title="Size variants" />
             <x-on-this-page.item title="Color variants" />
         </x-on-this-page>
