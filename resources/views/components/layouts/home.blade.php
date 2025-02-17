@@ -43,6 +43,8 @@
             gtag('config', 'G-RZY51979SH');
         </script>
     @endif
+
+    @include('components.layouts.json-ld')
 </head>
 
 <body class="min-h-full leading-7 font-lato site-gradient" x-data="darkModeToggle()">
