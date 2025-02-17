@@ -13,8 +13,9 @@ class extends Component {
 <div>
     @slot('metaTags')
         <x-meta-tags 
-            title="Enhance Your UI with Meaningful Icons in Tallcraftui" 
-            description=" Discover a wide range of icons to improve user experience and visual appeal in your Tallcraftui projects." 
+            title="Icon Components for Laravel & TailwindCSS | Tallcraftui" 
+            description="Integrate beautiful, customizable icons into your Laravel applications with ease." 
+            keywords="Laravel icons, TailwindCSS icons, SVG icons, web icons, Laravel UI components, heroicons, customizable icons" 
         />
     @endslot
 

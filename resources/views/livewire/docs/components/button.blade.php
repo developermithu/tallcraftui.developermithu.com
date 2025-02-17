@@ -13,8 +13,8 @@ new #[Layout('components.layouts.app')] #[Title('Button components - Tallcraftui
 <div>
     @slot('metaTags')
         <x-meta-tags 
-            title="Button components - Tallcraftui" 
-            description="Explore our button component library to create interactive and visually appealing buttons for your users." 
+            title="Button Components for Laravel & TailwindCSS - TallCraftUI" 
+            description="Create stunning, customizable buttons with TallCraftUI. Features multiple styles, colors, sizes, and icon support." 
         />
     @endslot
 
@@ -126,12 +126,6 @@ new #[Layout('components.layouts.app')] #[Title('Button components - Tallcraftui
             @endverbatim
         </x-code-block>
 
-        <x-code-block title="Loading button" inline>
-            @verbatim('docs')
-                <x-button wire:click="delete" label="Delete" spinner />
-            @endverbatim
-        </x-code-block>
-
         <x-code-block title="Size variants" inline>
             @verbatim('docs')
                 <x-button label="Button" sm />
@@ -219,6 +213,20 @@ new #[Layout('components.layouts.app')] #[Title('Button components - Tallcraftui
                 <x-button icon="chat-bubble-left-ellipsis" fuschsia flat circle />
             @endverbatim
         </x-code-block>
+
+        <x-code-block title="With spinner" inline no-render>
+            @slot('description')
+                Add loading indicators to your buttons with the <code>spinner</code> attribute. For standalone buttons, simply add the <code>spinner</code> attribute to display a loading state during <strong>wire:click</strong> actions. In forms, you can specify which action triggers the spinner by passing the <strong>action name</strong> to the <code>spinner</code> attribute - this automatically shows the loading state during form submission.
+            @endslot
+
+            @verbatim('docs')
+                <x-button wire:click="delete" label="Delete" spinner />
+
+                <form wire:submit="create">
+                    <x-button label="submit" spinner="create" />
+                </form>
+            @endverbatim
+        </x-code-block>
     @endslot
 
     @slot('aside')
@@ -232,6 +240,7 @@ new #[Layout('components.layouts.app')] #[Title('Button components - Tallcraftui
             <x-on-this-page.item title="Circle buttons" />
             <x-on-this-page.item title="Circle buttons - outline" />
             <x-on-this-page.item title="Circle buttons - flat" />
+            <x-on-this-page.item title="With spinner" />
         </x-on-this-page>
     @endslot
 </div>

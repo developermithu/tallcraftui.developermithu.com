@@ -12,7 +12,11 @@ class extends Component {
 
 <div>
     @slot('metaTags')
-        <x-meta-tags title="Tailwind CSS Toggle Switch components - Tallcraftui" description="Tailwind CSS Toggle Switch components - Tallcraftui" />
+        <x-meta-tags 
+            title="Toggle Switch Components for Laravel & TailwindCSS | TallCraftUI" 
+            description="Implement intuitive toggle switches with customizable sizes, colors, and labels." 
+            keywords="Laravel toggle switches, TailwindCSS toggle, switch components, boolean inputs, form controls, Laravel UI components, interactive toggles"
+        />
     @endslot
 
     @slot('content')

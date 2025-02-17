@@ -10,8 +10,9 @@ new #[Layout('components.layouts.app')] #[Title('Spinner components - Tallcraftu
 <div>
     @slot('metaTags')
         <x-meta-tags 
-            title="Tailwind CSS Spinner / Loader components - Tallcraftui" 
-            description="Tailwind CSS Spinner / Loader components tall stack." 
+            title="Loading Spinner Components for Laravel & TailwindCSS | TallCraftUI" 
+            description="Beautiful and customizable loading spinners and loaders with multiple color variants." 
+            keywords="Laravel loading spinners, TailwindCSS loaders, loading indicators, progress spinners, loading animations, Laravel UI components"
         />
     @endslot
 

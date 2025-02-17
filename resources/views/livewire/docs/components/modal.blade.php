@@ -76,7 +76,11 @@ new #[Layout('components.layouts.app')] #[Title('Modal components - Tallcraftui'
 
 <div>
     @slot('metaTags')
-        <x-meta-tags title="Modal components - Tallcraftui" description="Modal components - Tallcraftui" />
+        <x-meta-tags 
+            title="Modal Components - Dynamic Dialog Windows for Laravel & TailwindCSS | Tallcraftui" 
+            description="Create responsive and accessible modal dialogs with customizable animations, sizes, and behaviors." 
+            keywords="Laravel modal, TailwindCSS dialog, popup windows, web components, Laravel UI components, responsive modals, accessible dialogs" 
+        />
     @endslot
 
     <x-heading title="Modal" subtitle="Dialog Components">

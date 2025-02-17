@@ -12,7 +12,9 @@ class extends Component {
 
 <div>
     @slot('metaTags')
-        <x-meta-tags title="Checkbox components - Tallcraftui" description="Checkbox components - Tallcraftui" />
+        <x-meta-tags
+            title="Checkbox Form Components for Laravel & TailwindCSS - TallCraftUI"
+            description="Create accessible and customizable checkbox components with TallCraftUI. Features multiple styles, colors, alignments, and hint support." />
     @endslot
 
     @slot('content')

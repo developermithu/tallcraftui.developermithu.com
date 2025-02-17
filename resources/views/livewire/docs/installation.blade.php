@@ -9,7 +9,9 @@ new #[Layout('components.layouts.app')] #[Title('Installation - Tallcraftui')] c
 
 <div>
     @slot('metaTags')
-        <x-meta-tags title="Installation - Tallcraftui" description="Installation of Tallcraftui library" />
+        <x-meta-tags
+            title="Quick Start Guide: Install TallCraftUI for Laravel Projects"
+            description="Learn how to easily integrate TallCraftUI into your Laravel project. Get started with our modern, responsive UI components in minutes with step-by-step installation instructions." />
     @endslot
 
     <x-slot name="content">

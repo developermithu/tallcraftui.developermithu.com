@@ -12,7 +12,9 @@ class extends Component {
 
 <div>
     @slot('metaTags')
-        <x-meta-tags title="Breadcrumb components - Tallcraftui" description="Breadcrumb components - Tallcraftui" />
+        <x-meta-tags
+            title="Breadcrumb Navigation Components for Laravel & TailwindCSS - TallCraftUI"
+            description="Implement intuitive navigation breadcrumbs with TallCraftUI. Create clear navigation paths with customizable icons and styles." />
     @endslot
 
     @slot('content')

@@ -13,8 +13,8 @@ class extends Component {
 <div>
     @slot('metaTags')
         <x-meta-tags 
-            title="TailwindCSS Avatar Components - TallCraftUI"
-            description="Create stunning avatar components with TailwindCSS and TallCraftUI." 
+            title="Avatar Components for Laravel & TailwindCSS - TallCraftUI"
+            description="Create professional user avatars with TallCraftUI. Features image support, text fallbacks, badges, rings, and multiple size variants for enhanced user interfaces." 
         />
     @endslot
 

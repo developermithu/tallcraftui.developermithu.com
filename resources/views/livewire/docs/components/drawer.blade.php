@@ -45,7 +45,9 @@ new #[Layout('components.layouts.app')] #[Title('Drawer components - Tallcraftui
 
 <div>
     @slot('metaTags')
-        <x-meta-tags title="Drawer components - Tallcraftui" />
+        <x-meta-tags
+            title="Drawer Components for Laravel & TailwindCSS - TallCraftUI"
+            description="Create smooth sliding panels and off-canvas menus with TallCraftUI's drawer component. Features customizable positions, transitions, and backdrop effects." />
     @endslot
 
     <x-heading title="Drawer" subtitle="Dialog Components">

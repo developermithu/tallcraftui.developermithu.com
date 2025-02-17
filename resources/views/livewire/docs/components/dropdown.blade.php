@@ -9,7 +9,11 @@ new #[Layout('components.layouts.app')] #[Title('Dropdown components - Tallcraft
 
 <div>
     @slot('metaTags')
-        <x-meta-tags title="Dropdown components - Tallcraftui" description="Dropdown components - Tallcraftui" />
+        <x-meta-tags 
+            title="Dropdown Components - Interactive UI Elements for Laravel & TailwindCSS | Tallcraftui" 
+            description="Implement customizable dropdown menus with various positions, animations, and styling options." 
+            keywords="Laravel dropdown, TailwindCSS dropdown menu, interactive UI components, web development, Laravel UI library, responsive dropdowns, customizable menus" 
+        />
     @endslot
 
     @slot('content')

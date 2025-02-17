@@ -9,8 +9,9 @@ new #[Layout('components.layouts.app')] #[Title('Accordion components - Tallcraf
 
 <div>
     @slot('metaTags')
-        <x-meta-tags title="Accordion components with TailwindCSS and Alpine.js - Tallcraftui"
-            description="Accordion components with TailwindCSS and Alpine.js - Tallcraftui" />
+        <x-meta-tags
+            title="Interactive Accordion Components for TailwindCSS & Alpine.js - TallCraftUI"
+            description="Build dynamic, accessible accordion components with TallCraftUI. Perfect for FAQs, collapsible content, and interactive UI elements." />
     @endslot
 
     <x-heading title="Accordion" subtitle="UI Components" />

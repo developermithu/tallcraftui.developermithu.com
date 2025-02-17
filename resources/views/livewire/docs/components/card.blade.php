@@ -9,8 +9,9 @@ new #[Layout('components.layouts.app')] #[Title('Card components - Tallcraftui')
 
 <div>
     @slot('metaTags')
-        <x-meta-tags title="Card components with TailwindCSS and Alpine.js - Tallcraftui"
-            description="Card components with TailwindCSS and Alpine.js - Tallcraftui" />
+        <x-meta-tags
+            title="Card Components for Laravel & TailwindCSS - TallCraftUI"
+            description="Build elegant and versatile card components with TallCraftUI. Features customizable headers, footers, and image support with hover effects." />
     @endslot
 
     <x-heading title="Card" subtitle="UI Components" />

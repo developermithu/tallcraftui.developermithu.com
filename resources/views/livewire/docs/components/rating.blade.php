@@ -16,7 +16,9 @@ new #[Layout('components.layouts.app')] #[Title('Rating components - Tallcraftui
 
 <div>
     @slot('metaTags')
-        <x-meta-tags title="Rating Component for Laravel & Tailwind CSS - TallCraftUI"
+        <x-meta-tags
+            title="Star Rating Component for Laravel & Tailwind CSS - TallCraftUI"
+            description="Implement beautiful, interactive star rating systems with TallCraftUI. Perfect for product reviews, user feedback, and rating interfaces in your Laravel applications."
             description="Explore the versatile and customizable rating component from TallCraftUI." />
     @endslot
 

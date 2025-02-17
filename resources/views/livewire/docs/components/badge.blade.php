@@ -9,7 +9,9 @@ new #[Layout('components.layouts.app')] #[Title('Badge components - Tallcraftui'
 
 <div>
     @slot('metaTags')
-        <x-meta-tags title="Badge components - Tallcraftui" description="Badge components - Tallcraftui" />
+        <x-meta-tags
+            title="Badge Components for Laravel & TailwindCSS - TallCraftUI"
+            description="Create eye-catching badge components with TallCraftUI. Features customizable styles, colors, icons, and sizes for status indicators, notifications, and labels." />
     @endslot
 
     @slot('content')

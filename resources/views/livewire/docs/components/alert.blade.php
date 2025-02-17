@@ -13,8 +13,8 @@ class extends Component {
 <div>
     @slot('metaTags')
         <x-meta-tags 
-            title="Alert Components: Create Stunning Alerts in Tallcraftui"
-            description="Learn how to build eye-catching and informative alert components with Tallcraftui." 
+            title="Alert Components for Laravel & TailwindCSS - TallCraftUI"
+            description="Create dynamic and accessible alert components with TallCraftUI. Features multiple styles, colors, dismissible options, and customizable designs for effective user notifications." 
         />
     @endslot
 

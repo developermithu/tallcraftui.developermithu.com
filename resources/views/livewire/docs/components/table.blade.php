@@ -1,6 +1,10 @@
 <div x-data="{ visibleFullExampleTableCode: false }">
     @slot('metaTags')
-        <x-meta-tags title="Table components - Tallcraftui" description="Table components - Tallcraftui" />
+        <x-meta-tags 
+            title="Dynamic Livewire Table Components for Laravel & TailwindCSS | TallCraftUI" 
+            description="Feature-rich table components with sorting, pagination, searching, and responsive design." 
+            keywords="Laravel table components, TailwindCSS tables, data tables, sortable tables, searchable tables, Laravel UI components, data grid"
+        />
     @endslot
     
     <x-heading title="Table" subtitle="UI Components" />

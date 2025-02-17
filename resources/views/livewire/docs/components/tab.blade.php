@@ -10,8 +10,11 @@ new #[Layout('components.layouts.app')] #[Title('Tab components - Tallcraftui')]
 
 <div>
     @slot('metaTags')
-        <x-meta-tags title="Tab components with TailwindCSS and Alpine.js - Tallcraftui"
-            description="Tab components with TailwindCSS and Alpine.js - Tallcraftui" />
+        <x-meta-tags 
+            title="Interactive Tab Components for Laravel & TailwindCSS | TallCraftUI" 
+            description="Create dynamic and accessible tab interfaces with smooth transitions and Alpine.js integration." 
+            keywords="Laravel tabs, TailwindCSS tabs, Alpine.js tabs, content organization, tab navigation, Laravel UI components, interactive tabs"
+        />
     @endslot
 
     <x-heading title="Tab" subtitle="UI Components" />

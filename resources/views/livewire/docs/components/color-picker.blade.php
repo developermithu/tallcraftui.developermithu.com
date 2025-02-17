@@ -14,7 +14,9 @@ class extends Component {
 
 <div>
     @slot('metaTags')
-        <x-meta-tags title="Color picker components - Tallcraftui" description="Tailwind CSS ALpine js Color Picker Components - Tallcraftui" />
+        <x-meta-tags
+            title="Color Picker Components for Laravel & TailwindCSS - TallCraftUI"
+            description="Implement intuitive color selection with TallCraftUI's color picker component. Features customizable color palettes, live preview, and seamless integration with Laravel applications." />
     @endslot
 
     <x-heading title="Color picker" subtitle="Form Components" />

@@ -12,7 +12,11 @@ class extends Component {
 
 <div>
     @slot('metaTags')
-        <x-meta-tags title="Input components - Tallcraftui" description="Input components - Tallcraftui" />
+        <x-meta-tags 
+            title="Input Components - Form Elements for Laravel & TailwindCSS | Tallcraftui" 
+            description="Build powerful, accessible form inputs with advanced features and validation. Designed for Laravel applications using TailwindCSS, offering seamless integration and customization options." 
+            keywords="Laravel form inputs, TailwindCSS form elements, web forms, Laravel UI components, form validation, input fields, form design" 
+        />
     @endslot
 
     @slot('content')
