@@ -1,23 +1,26 @@
-@props(['title', 'description' => null, 'keywords' => null, 'image' => null])
+@props([
+    'title',
+    'description' => 'TallCraftUI - A collection of beautiful UI components for Laravel TALL stack.',
+    'keywords' => 'laravel, livewire, alpine.js, tailwindcss, tall stack, ui components, livewire 3, ui library',
+])
 
 <!-- Meta Tags -->
-<meta name="description" content="{{ $description ?? 'TallCraftUI offers beautifully crafted UI components for the TALL stack (Tailwind CSS, Alpine.js, Laravel, Livewire).' }}">
-<meta name="keywords"
-    content="{{ $keywords ?? 'TallCraftUI, TALL stack, Tailwind CSS, Alpine.js, Laravel, Livewire, UI components, blade components, ui library, livewire 3 components' }}">
+<meta name="description" content="{{ $description }}">
+<meta name="keywords" content="{{ $keywords }}">
 <meta name="author" content="developermithu">
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="{{ url()->current() }}">
 <meta property="og:title" content="{{ $title }}">
-<meta property="og:description" content="{{ $description ?? 'TallCraftUI offers beautifully crafted UI components for the TALL stack (Tailwind CSS, Alpine.js, Laravel, Livewire).' }}">
+<meta property="og:description" content="{{ $description }}">
 <meta property="og:image" content="{{ $image ?? asset('assets/img/tallcraftui-website.png') }}">
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
 <meta name="twitter:creator" content="@DeveloperMithu">
 <meta name="twitter:title" content="{{ $title }}">
-<meta name="twitter:description" content="{{ $description ?? 'TallCraftUI offers beautifully crafted UI components for the TALL stack (Tailwind CSS, Alpine.js, Laravel, Livewire).' }}">
+<meta name="twitter:description" content="{{ $description }}">
 <meta name="twitter:image" content="{{ $image ?? asset('assets/img/tallcraftui-website.png') }}">
 
 {{-- Favicon --}}
