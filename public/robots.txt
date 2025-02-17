@@ -1,2 +1,14 @@
 User-agent: *
-Disallow:
+Disallow: /storage/
+Disallow: /bootstrap/
+Disallow: /config/
+Disallow: /database/
+Disallow: /resources/
+Disallow: /tests/
+Disallow: /vendor/
+Disallow: /app/
+Allow: /public/
+Allow: /public/assets/
+Allow: /public/build/
+
+Sitemap: /sitemap.xml
