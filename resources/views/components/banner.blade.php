@@ -17,14 +17,24 @@
     x-transition:enter-start="-translate-y-10" x-transition:enter-end="translate-y-0"
     x-transition:leave="transition ease-in duration-300" x-transition:leave-start="translate-y-0"
     x-transition:leave-end="-translate-y-10" x-init="setTimeout(() => { bannerVisible = true }, bannerVisibleAfter);"
-    class="py-3 text-white duration-500 lg:shadow-md lg:rounded bg-gradient-to-r from-purple-600 to-teal-500" x-cloak
+    class="py-3 text-white duration-500 lg:shadow-md lg:rounded bg-pink-600" x-cloak
     data-pan="discord-button">
     <div class="flex items-center justify-center gap-10 px-6 lg:justify-between">
-        <a target="_blank" href="{{ $url }}" class="flex items-center gap-2 text-sm text-white">
+        {{-- <a target="_blank" href="{{ $url }}" class="flex items-center gap-2 text-sm text-white">
             <x-icon name="gift" />
             <strong class="font-semibold">TallCraftUI {{ $tag }} is here</strong>
             <span class="hidden w-2 mt-0.5 h-px bg-gray-100 xxs:block"></span>
             <span class="hidden xxs:inline-block"> see what’s new! </span>
+        </a> --}}
+
+        <a target="_blank" href="https://github.com/developermithu/tallcraftui/releases/tag/v2.0-beta" class="flex items-center gap-2 text-sm text-white">
+            <x-icon name="gift" />
+            <strong class="font-semibold">TallCraftUI 
+                <span class="text-amber-400">v2.0-beta</span>
+                is out now
+            </strong>
+            <span class="hidden w-2 mt-0.5 h-px bg-gray-100 xxs:block"></span>
+            <span class="hidden xxs:inline-block"> check it! </span>
         </a>
     </div>
 </div>
