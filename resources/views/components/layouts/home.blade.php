@@ -47,7 +47,7 @@
     @include('components.layouts.json-ld')
 </head>
 
-<body class="min-h-full leading-7 font-lato site-gradient" x-data="darkModeToggle()">
+<body class="min-h-full leading-7 font-lato site-gradient" x-data="darkModeToggle()" x-init="initializeTheme()">
     {{-- Header --}}
     <header>
         <nav class="container flex items-center justify-between pt-6">

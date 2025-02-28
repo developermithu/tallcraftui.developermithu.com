@@ -48,7 +48,7 @@
     @endif
 </head>
 
-<body class="flex min-h-full leading-7 font-lato site-gradient" x-data="darkModeToggle()">
+<body class="flex min-h-full leading-7 font-lato site-gradient" x-data="darkModeToggle()" x-init="initializeTheme()">
     <div class="w-full">
         <x-partials.header />
 
