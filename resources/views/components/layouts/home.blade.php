@@ -48,6 +48,9 @@
 </head>
 
 <body class="min-h-full leading-7 font-lato site-gradient" x-data="darkModeToggle()" x-init="initializeTheme()">
+
+    <x-toast />
+    
     {{-- Header --}}
     <header>
         <nav class="container flex items-center justify-between pt-6">

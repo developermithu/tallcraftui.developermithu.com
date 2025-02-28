@@ -4,8 +4,11 @@ use Livewire\Volt\Component;
 use Livewire\Attributes\{Layout, Title};
 use App\Models\User;
 use Illuminate\Validation\Rules\Password;
+use Developermithu\Tallcraftui\Traits\WithTcToast;
 
 new #[Layout('components.layouts.home')] #[Title('TallCraftUI - Laravel Blade UI Components Library for TALL Stack')] class extends Component {
+    use WithTcToast;
+
     public string $name = '';
     public string $email = '';
     public string $user_id = '';
@@ -17,6 +20,17 @@ new #[Layout('components.layouts.home')] #[Title('TallCraftUI - Laravel Blade UI
     public string $activeTab = 'tab1';
     public bool $openModal = false;
     public bool $openDrawer = false;
+
+    public function showToast()
+    {
+        $this->success(
+            title: 'User created successfully',
+            description: 'Your changes have been saved permanently.',
+            showCloseIcon: true,
+            showProgress: true,
+            position: 'top-right',
+        );
+    }
 
     public function createUser()
     {
@@ -118,6 +132,32 @@ new #[Layout('components.layouts.home')] #[Title('TallCraftUI - Laravel Blade UI
                                 <x-alert icon="rocket-launch" title="Alert with description"
                                     description="Lorem, ipsum dolor sit amet consectetur adipisicing." purple
                                     dismissible />
+                            </div>
+                        </x-card-content>
+                    </x-card>
+
+                    {{-- Progress Components --}}
+                    <x-card data-pan="progress-card">
+                        <x-card-header title="Progress Components" />
+                        <x-card-content>
+                            <div class="space-y-2">
+                                <x-progress value="50" without-value lg />
+                                <x-progress value="50" lg />
+                                <x-progress value="50" divided-format lg />
+                                <x-progress value="50" label="Percentage" lg />
+                            </div>
+                        </x-card-content>
+                    </x-card>
+
+                    {{-- Progress Radial --}}
+                    <x-card data-pan="progress-radial-card">
+                        <x-card-header title="Progress Radial" />
+                        <x-card-content>
+                            <div class="flex flex-wrap gap-4 pb-5 itmes-center">
+                                <x-progress-radial value="50" without-value sm />
+                                <x-progress-radial value="50" sm />
+                                <x-progress-radial value="50" divided-format sm />
+                                <x-progress-radial value="50" label="Percentage" sm />
                             </div>
                         </x-card-content>
                     </x-card>
@@ -236,8 +276,17 @@ new #[Layout('components.layouts.home')] #[Title('TallCraftUI - Laravel Blade UI
                                     sm />
                             </div>
 
-                            <x-button data-pan="modal-button" class="w-full" @click="$wire.openModal = true"
-                                label="Open Modal" outline />
+                            <div class="flex flex-wrap items-center justify-between gap-2">
+                                <x-button data-pan="toast-button" wire:click="showToast()" label="Toast"
+                                sm />
+
+                                <x-button data-pan="modal-button" @click="$wire.openModal = true"
+                                label="Open Modal" outline sm />
+
+                                <x-tooltip text="Default tooltip" no-transition>
+                                    <x-button data-pan="tooltip-button" label="Tooltip" sm />
+                                </x-tooltip>
+                            </div>
 
                             <x-tab data-pan="tab" wire:model="activeTab" as="switch">
                                 <x-slot name="items">
