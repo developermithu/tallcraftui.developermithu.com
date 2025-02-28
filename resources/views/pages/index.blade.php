@@ -9,6 +9,8 @@ use Developermithu\Tallcraftui\Traits\WithTcToast;
 new #[Layout('components.layouts.home')] #[Title('TallCraftUI - Laravel Blade UI Components Library for TALL Stack')] class extends Component {
     use WithTcToast;
 
+    public string $content = 'Hello **world**!';
+    
     public string $name = '';
     public string $email = '';
     public string $user_id = '';
@@ -43,7 +45,7 @@ new #[Layout('components.layouts.home')] #[Title('TallCraftUI - Laravel Blade UI
             'terms' => ['required', 'boolean'],
         ]);
 
-        dd('fr');
+        dd('dd');
     }
 }; ?>
 
@@ -504,6 +506,19 @@ new #[Layout('components.layouts.home')] #[Title('TallCraftUI - Laravel Blade UI
                         </x-card>
                     </div>
                 </div>
+
+                <x-card data-pan="markdown-card">
+                    <x-card-header title="Markdown Component" />
+                    <x-card-content>
+                        @php
+                            $config = [
+                                'maxHeight' => '180px',
+                            ];
+                        @endphp
+
+                        <x-markdown wire:model="content" :config="$config" />
+                    </x-card-content>
+                </x-card>
             </aside>
         </div>
 
@@ -555,4 +570,9 @@ new #[Layout('components.layouts.home')] #[Title('TallCraftUI - Laravel Blade UI
             </div>
         </x-modal>
     </div>
+
+    @assets
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/easymde/dist/easymde.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/easymde/dist/easymde.min.js"></script>
+    @endassets
 </div>
