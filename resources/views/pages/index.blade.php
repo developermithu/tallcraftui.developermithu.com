@@ -46,7 +46,7 @@ new #[Layout('components.layouts.home')] #[Title('TallCraftUI - Laravel Blade UI
 <div>
     @slot('metaTags')
         <x-meta-tags title="TallCraftUI - Laravel Blade UI Components Library for TALL Stack"
-            description="TallCraftUI is a Laravel blade UI components library for TALL stack, offering 20+ customizable components that seamlessly integrate with Livewire applications." />
+            description="TallCraftUI is a Laravel blade UI components library for TALL stack, offering 30+ customizable components that seamlessly integrate with Livewire applications." />
     @endslot
 
     <div class="container relative isolate">

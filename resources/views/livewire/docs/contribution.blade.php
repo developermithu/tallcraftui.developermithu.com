@@ -71,7 +71,7 @@ new #[Layout('components.layouts.app')] #[Title('How to contribute - Tallcraftui
                     content: [
                         // ...
                         
-                        "./vendor/developermithu/tallcraftui/src/View/Components/**/*.php",
+                        "./vendor/developermithu/tallcraftui/src/**/*.php",
                     ],
                 };
                     @endverbatim
@@ -83,7 +83,7 @@ new #[Layout('components.layouts.app')] #[Title('How to contribute - Tallcraftui
 
                 <x-code language="bash">
                     @verbatim
-                        pnpm dev
+                        bun dev
                     @endverbatim
                 </x-code>
             </li>

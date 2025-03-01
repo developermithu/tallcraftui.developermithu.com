@@ -2,7 +2,7 @@
     <h1 class="mb-4 text-4xl font-bold sm:text-5xl">A TALL Stack UI Library</h1>
     <h4 class="mb-6 text-lg text-gray-600 dark:text-gray-300 sm:text-xl">
         TallCraftUI is a Laravel blade UI components library for the TALL Stack (TailwindCSS, Alpine.js,
-        Laravel, Livewire) projects, offering <span class="border-b-2 pb-0.5 border-primary">25+ beautifully
+        Laravel, Livewire) projects, offering <span class="border-b-2 pb-0.5 border-primary">30+ beautifully
             crafted</span>, customizable components.
     </h4>
 
