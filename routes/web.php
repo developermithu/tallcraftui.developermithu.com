@@ -65,6 +65,11 @@ Route::get('clear', function () {
     return back();
 });
 
+Route::get('optimize', function () {
+    Artisan::call('optimize');
+    return back();
+});
+
 Route::get('storage-link', function () {
     Artisan::call('storage:link');
     return back();
