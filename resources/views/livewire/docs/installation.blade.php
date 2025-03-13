@@ -15,7 +15,13 @@ new #[Layout('components.layouts.app')] #[Title('Installation - Tallcraftui')] c
     @endslot
 
     <x-slot name="content">
-        <x-heading title="Installation" subtitle="Introduction" />
+        <x-heading title="Installation" subtitle="Introduction">
+            @slot('description')
+                For <a href="https://laravel.com/docs/12.x" target="_blank" rel="noopener">Laravel 12</a> new applications, 
+                we recommend using <a href="https://github.com/developermithu/tallcraftui/releases/tag/v2.0-beta" target="_blank" rel="noopener">TallCraftUI v2 beta</a>. 
+                This version comes with built-in support for <strong>Tailwind 4</strong>.
+            @endslot
+        </x-heading>
 
         <div class="space-y-5">
             <h2 id="requirements" class="pt-5 group">
@@ -72,6 +78,17 @@ new #[Layout('components.layouts.app')] #[Title('Installation - Tallcraftui')] c
                 pnpm dev # or `npm run dev`
             @endverbatim
         </x-code>
+
+        {{-- Upgrade to tailwind 4 guide --}}
+        <x-code-block title="Upgrade to Tailwind 4" language="bash" no-render>
+            @slot('description')
+                If you're using <strong>TailwindCSS 3</strong>, you can upgrade to <strong>TailwindCSS 4</strong> by running the following single command. For more information, refer to the official <a href="https://tailwindcss.com/docs/upgrade-guide" target="_blank">TailwindCSS Upgrade Guide</a>.
+            @endslot
+
+            @verbatim('docs')
+                npx @tailwindcss/upgrade
+            @endverbatim
+        </x-code-block>
         
         <x-code-block no-render title="Publish the configuration file (optional)" language="bash">
             @slot('description')
@@ -134,6 +151,7 @@ new #[Layout('components.layouts.app')] #[Title('Installation - Tallcraftui')] c
         <x-on-this-page>
             <x-on-this-page.item title="Requirements" />
             <x-on-this-page.item title="Installation" />
+            <x-on-this-page.item title="Upgrade to Tailwind 4" new />
             <x-on-this-page.item title="Publish the configuration file (optional)" />
             <x-on-this-page.item title="Existing projects" />
         </x-on-this-page>
