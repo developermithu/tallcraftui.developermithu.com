@@ -58,18 +58,18 @@
                 <a wire:navigate href="{{ route('home') }}" class="-m-1.5 p-1.5 flex items-center gap-x-2">
                     <span class="sr-only">Your Company</span>
                     <span
-                        class="text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r to-teal-500 from-indigo-500 sm:text-3xl">TallCraftUI</span>
+                        class="text-2xl font-semibold text-transparent bg-clip-text bg-linear-to-r to-teal-500 from-indigo-500 sm:text-3xl">TallCraftUI</span>
                 </a>
             </div>
 
-            <div class="relative flex items-center justify-end gap-1 basis-0 md:flex-grow">
+            <div class="relative flex items-center justify-end gap-1 basis-0 md:grow">
                 <div class="relative z-10">
                     <label class="sr-only">Theme</label>
                     <button data-pan="toggle-theme-switch" @click="toggleDarkMode"
                         class="flex items-center justify-center w-6 h-6 p-1 xxs:w-10 xxs:h-10 xxs:p-1.5 bg-transparent rounded-full hover:bg-gray-100 dark:hover:bg-slate-700 dark:ring-inset dark:ring-white/5"
                         aria-label="Theme">
-                        <x-icon name="sun" class="text-teal-500 dark:!text-teal-500" x-show="!isDarkMode" x-cloak />
-                        <x-icon name="moon" class="text-teal-500 dark:!text-teal-500" x-show="isDarkMode" x-cloak />
+                        <x-icon name="sun" class="text-teal-500 dark:text-teal-500!" x-show="!isDarkMode" x-cloak />
+                        <x-icon name="moon" class="text-teal-500 dark:text-teal-500!" x-show="isDarkMode" x-cloak />
                     </button>
                 </div>
 

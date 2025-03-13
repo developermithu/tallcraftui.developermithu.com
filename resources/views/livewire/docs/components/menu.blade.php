@@ -51,7 +51,7 @@ new #[Layout('components.layouts.app')] #[Title('Menu components - Tallcraftui')
                     <x-menu-item label="Move" icon="arrow-right-circle" />
 
                     <x-separator title="Actions" />
-                    <x-menu-item label="Share" icon="user-plus" badge="New"  />
+                    <x-menu-item label="Share" icon="user-plus" badge="New" />
                     <x-menu-item label="Add to Favorites" icon="heart" />
 
                     <x-separator />
@@ -72,12 +72,17 @@ new #[Layout('components.layouts.app')] #[Title('Menu components - Tallcraftui')
 
         <x-code-block title="Customization" inline>
             @verbatim('docs')
-                <x-menu class="rounded shadow-md ring-primary/20 dark:ring-primary/20 shadow-primary/20">
-                    <x-menu-item label="Edit" icon="pencil-square" class="hover:bg-primary/10 dark:hover:bg-primary/10 hover:text-primary dark:hover:text-primary" class:icon="group-hover:text-primary dark:group-hover:text-primary" />
+                <x-menu class="rounded-sm shadow-md ring-primary/20 dark:ring-primary/20 shadow-primary/20">
+                    <x-menu-item label="Edit" icon="pencil-square"
+                        class="hover:bg-primary/10 dark:hover:bg-primary/10 hover:text-primary dark:hover:text-primary"
+                        class:icon="group-hover:text-primary dark:group-hover:text-primary" />
 
                     <x-separator class="bg-primary/20 dark:bg-primary/20" />
-                    
-                    <x-menu-item label="Archive" icon="archive-box" badge="25" badge-end class="hover:bg-primary/10 dark:hover:bg-primary/10 hover:text-primary dark:hover:text-primary" class:icon="group-hover:text-primary dark:group-hover:text-primary" class:badge="bg-primary dark:bg-primary text-white dark:text-white" />
+
+                    <x-menu-item label="Archive" icon="archive-box" badge="25" badge-end
+                        class="hover:bg-primary/10 dark:hover:bg-primary/10 hover:text-primary dark:hover:text-primary"
+                        class:icon="group-hover:text-primary dark:group-hover:text-primary"
+                        class:badge="bg-primary dark:bg-primary text-white dark:text-white" />
                 </x-menu>
             @endverbatim
         </x-code-block>
@@ -89,11 +94,11 @@ new #[Layout('components.layouts.app')] #[Title('Menu components - Tallcraftui')
         <x-code language="php">
             @verbatim
                 return [
-                    'menu' => [
-                        'width' => Width::W56->value,
-                        'shadow' => Shadow::Shadow->value,
-                        'border-radius' => BorderRadius::RoundedMd->value,
-                    ],
+                'menu' => [
+                'width' => Width::W56->value,
+                'shadow' => Shadow::Shadow->value,
+                'border-radius' => BorderRadius::RoundedMd->value,
+                ],
                 ];
             @endverbatim
         </x-code>

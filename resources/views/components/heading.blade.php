@@ -12,5 +12,5 @@
         </div>
     @endif
 
-    {{-- <x-hostinger-promo class="relative block !mt-4 lg:hidden" /> --}}
+    {{-- <x-hostinger-promo class="relative block mt-4! lg:hidden" /> --}}
 </header>

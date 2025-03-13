@@ -15,10 +15,10 @@
     </a>
 
     @if ($new)
-        <span class="px-1 text-xs rounded text-rose-500 animate-pulse bg-rose-100 dark:bg-rose-200">New</span>
+        <span class="px-1 text-xs rounded-sm text-rose-500 animate-pulse bg-rose-100 dark:bg-rose-200">New</span>
     @endif
 
     @if ($update)
-        <span class="px-1 text-xs rounded text-amber-500 animate-pulse bg-amber-100 dark:bg-amber-200">Update</span>
+        <span class="px-1 text-xs rounded-sm text-amber-500 animate-pulse bg-amber-100 dark:bg-amber-200">Update</span>
     @endif
 </li>

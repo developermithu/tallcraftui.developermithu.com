@@ -1,6 +1,6 @@
-@import "@docsearch/css/dist/style.css";
-@import "@docsearch/css/dist/_variables.css";
-@import "@docsearch/css/dist/modal.css";
+@import '@docsearch/css/dist/style.css';
+@import '@docsearch/css/dist/_variables.css';
+@import '@docsearch/css/dist/modal.css';
 
 :root {
     /* --docsearch-container-background: rgba(0, 0, 0, 0.5); */
@@ -8,15 +8,15 @@
 }
 
 .DocSearch-Button .DocSearch-Search-Icon {
-    @apply !text-gray-400;
+    @apply text-gray-400!;
 }
 
 .DocSearch-Input {
-    @apply !bg-transparent;
+    @apply bg-transparent!;
 }
 
 .DocSearch-Input:focus {
-    @apply !ring-0;
+    @apply ring-0!;
 }
 
 @media screen and (max-width: 375px) {

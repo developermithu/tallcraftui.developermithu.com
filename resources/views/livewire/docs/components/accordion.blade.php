@@ -116,7 +116,7 @@ new #[Layout('components.layouts.app')] #[Title('Accordion components - Tallcraf
         @endslot
 
         @verbatim('docs')
-                <x-accordion class="shadow-sm">
+                <x-accordion class="shadow-xs">
                     <x-accordion-item id="item1" title="Accordion Item 1" class:title="text-base group-hover:no-underline">
                         Lorem ipsum dolor sit amet consectetur.
                     </x-accordion-item>

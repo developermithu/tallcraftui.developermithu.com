@@ -11,7 +11,7 @@
                 <x-avatar image="{{ asset('assets/img/avatar.jpg') }}" badge lg />
                 <x-avatar image="{{ asset('assets/img/avatar.jpg') }}" ring lg />
                 <x-avatar image="{{ asset('assets/img/avatar.jpg') }}" ring badge lg />
-                <x-avatar image="{{ asset('assets/img/avatar.jpg') }}" rounded ring badge badge-position="bottom" lg />
+                <x-avatar image="{{ asset('assets/img/avatar.jpg') }}" rounded-sm ring-3 badge badge-position="bottom" lg />
             </div>
 
             <div class="flex flex-wrap items-start gap-x-3 gap-y-2">

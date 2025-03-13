@@ -15,7 +15,7 @@
         </h2>
 
         @if (!$noRender)
-            <x-button @click="visible = !visible" icon="code-bracket" flat sm />
+            <x-button @click="visible = visible!" icon="code-bracket" flat sm />
         @endif
     </div>
 

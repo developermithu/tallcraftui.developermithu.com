@@ -1,6 +1,6 @@
 <div 
     class="lg:relative lg:block lg:flex-none"
-    :class="{ 'fixed inset-0 z-[99] h-screen bg-white dark:bg-slate-900 w-fit pl-6 shadow': sidebarVisible, 'hidden': !sidebarVisible }"
+    :class="{ 'fixed inset-0 z-99 h-screen bg-white dark:bg-slate-900 w-fit pl-6 shadow-sm': sidebarVisible, 'hidden': !sidebarVisible }"
     >
     <div class="sticky -ml-0.5 h-[calc(100vh-4.75rem)] w-56 xxs:w-64 overflow-y-auto custom-scrollbar overflow-x-hidden py-16 pl-0.5 pr-8 xl:w-72 xl:pr-16"
         :class="{ '': sidebarVisible, 'top-[4.75rem]': !sidebarVisible }">

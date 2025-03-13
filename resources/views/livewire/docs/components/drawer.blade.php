@@ -167,7 +167,7 @@ new #[Layout('components.layouts.app')] #[Title('Drawer components - Tallcraftui
         @verbatim('docs')
                 <x-button x-on:click="$wire.openBlur = true" label="Blur" />
                 
-                <x-drawer wire:model="openBlur" title="Background blur" blur>
+                <x-drawer wire:model="openBlur" title="Background blur-sm" blur>
                     Drawer content..
                 </x-drawer>
         @endverbatim
@@ -214,7 +214,7 @@ new #[Layout('components.layouts.app')] #[Title('Drawer components - Tallcraftui
                 ];
         @endverbatim
     </x-code>
-
+ 
     @slot('aside')
         <x-on-this-page>
             <x-on-this-page.item title="Basic usage" />

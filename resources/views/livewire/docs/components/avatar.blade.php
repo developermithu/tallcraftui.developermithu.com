@@ -29,7 +29,7 @@ class extends Component {
                 <x-avatar :image="$this->imageUrl" badge />
                 <x-avatar :image="$this->imageUrl" ring />
                 <x-avatar :image="$this->imageUrl" ring badge />
-                <x-avatar :image="$this->imageUrl" rounded ring badge badge-position="bottom" />
+                <x-avatar :image="$this->imageUrl" rounded-sm ring-3 badge badge-position="bottom" />
             @endverbatim
         </x-code-block>
 
@@ -49,7 +49,7 @@ class extends Component {
                 <x-avatar text="tallcraftui" badge />
                 <x-avatar text="tallcraftui" ring />
                 <x-avatar text="tallcraftui" ring badge />
-                <x-avatar text="tallcraftui" ring badge badge-position="bottom"/>
+                <x-avatar text="tallcraftui" ring-3 badge badge-position="bottom"/>
             @endverbatim
         </x-code-block>
 
@@ -90,28 +90,28 @@ class extends Component {
             @endverbatim
         </x-code-block>
 
-        <x-code-block title="Avatar with ring" inline>
+        <x-code-block title="Avatar with ring-3" inline>
             @verbatim('docs')
                 <x-avatar :image="$this->imageUrl" ring />
-                <x-avatar :image="$this->imageUrl" ring ring-color="black" />
-                <x-avatar :image="$this->imageUrl" ring ring-color="white" />
-                <x-avatar :image="$this->imageUrl" ring ring-color="slate" />
-                <x-avatar :image="$this->imageUrl" ring ring-color="gray" />
-                <x-avatar :image="$this->imageUrl" ring ring-color="zinc" />
-                <x-avatar :image="$this->imageUrl" ring ring-color="neutral" />
-                <x-avatar :image="$this->imageUrl" ring ring-color="stone" />
-                <x-avatar :image="$this->imageUrl" ring ring-color="red" />
-                <x-avatar :image="$this->imageUrl" ring ring-color="orange" />
-                <x-avatar :image="$this->imageUrl" ring ring-color="amber" />
-                <x-avatar :image="$this->imageUrl" ring ring-color="yellow" />
-                <x-avatar :image="$this->imageUrl" ring ring-color="lime" />
-                <x-avatar :image="$this->imageUrl" ring ring-color="green" />
-                <x-avatar :image="$this->imageUrl" ring ring-color="cyan" />
-                <x-avatar :image="$this->imageUrl" ring ring-color="sky" />
-                <x-avatar :image="$this->imageUrl" ring ring-color="purple" />
-                <x-avatar :image="$this->imageUrl" ring ring-color="fuchsia" />
-                <x-avatar :image="$this->imageUrl" ring ring-color="pink" />
-                <x-avatar :image="$this->imageUrl" ring ring-color="rose" />
+                <x-avatar :image="$this->imageUrl" ring-3 ring-color="black" />
+                <x-avatar :image="$this->imageUrl" ring-3 ring-color="white" />
+                <x-avatar :image="$this->imageUrl" ring-3 ring-color="slate" />
+                <x-avatar :image="$this->imageUrl" ring-3 ring-color="gray" />
+                <x-avatar :image="$this->imageUrl" ring-3 ring-color="zinc" />
+                <x-avatar :image="$this->imageUrl" ring-3 ring-color="neutral" />
+                <x-avatar :image="$this->imageUrl" ring-3 ring-color="stone" />
+                <x-avatar :image="$this->imageUrl" ring-3 ring-color="red" />
+                <x-avatar :image="$this->imageUrl" ring-3 ring-color="orange" />
+                <x-avatar :image="$this->imageUrl" ring-3 ring-color="amber" />
+                <x-avatar :image="$this->imageUrl" ring-3 ring-color="yellow" />
+                <x-avatar :image="$this->imageUrl" ring-3 ring-color="lime" />
+                <x-avatar :image="$this->imageUrl" ring-3 ring-color="green" />
+                <x-avatar :image="$this->imageUrl" ring-3 ring-color="cyan" />
+                <x-avatar :image="$this->imageUrl" ring-3 ring-color="sky" />
+                <x-avatar :image="$this->imageUrl" ring-3 ring-color="purple" />
+                <x-avatar :image="$this->imageUrl" ring-3 ring-color="fuchsia" />
+                <x-avatar :image="$this->imageUrl" ring-3 ring-color="pink" />
+                <x-avatar :image="$this->imageUrl" ring-3 ring-color="rose" />
             @endverbatim
         </x-code-block>
 
@@ -143,25 +143,25 @@ class extends Component {
         <x-code-block title="Badge with Ring" inline>
             @verbatim('docs')
                 <x-avatar :image="$this->imageUrl" ring badge />
-                <x-avatar :image="$this->imageUrl" ring ring-color="black" badge badge-color="black" />
-                <x-avatar :image="$this->imageUrl" ring ring-color="white" badge badge-color="white" />
-                <x-avatar :image="$this->imageUrl" ring ring-color="slate" badge badge-color="slate" />
-                <x-avatar :image="$this->imageUrl" ring ring-color="gray" badge badge-color="gray" />
-                <x-avatar :image="$this->imageUrl" ring ring-color="zinc" badge badge-color="zinc" />
-                <x-avatar :image="$this->imageUrl" ring ring-color="neutral" badge badge-color="neutral" />
-                <x-avatar :image="$this->imageUrl" ring ring-color="stone" badge badge-color="stone" />
-                <x-avatar :image="$this->imageUrl" ring ring-color="red" badge badge-color="red" />
-                <x-avatar :image="$this->imageUrl" ring ring-color="orange" badge badge-color="orange" />
-                <x-avatar :image="$this->imageUrl" ring ring-color="amber" badge badge-color="amber" />
-                <x-avatar :image="$this->imageUrl" ring ring-color="yellow" badge badge-color="yellow" />
-                <x-avatar :image="$this->imageUrl" ring ring-color="lime" badge badge-color="lime" />
-                <x-avatar :image="$this->imageUrl" ring ring-color="green" badge badge-color="green" />
-                <x-avatar :image="$this->imageUrl" ring ring-color="cyan" badge badge-color="cyan" />
-                <x-avatar :image="$this->imageUrl" ring ring-color="sky" badge badge-color="sky" />
-                <x-avatar :image="$this->imageUrl" ring ring-color="purple" badge badge-color="purple" />
-                <x-avatar :image="$this->imageUrl" ring ring-color="fuchsia" badge badge-color="fuchsia" />
-                <x-avatar :image="$this->imageUrl" ring ring-color="pink" badge badge-color="pink" />
-                <x-avatar :image="$this->imageUrl" ring ring-color="rose" badge badge-color="rose" />
+                <x-avatar :image="$this->imageUrl" ring-3 ring-color="black" badge badge-color="black" />
+                <x-avatar :image="$this->imageUrl" ring-3 ring-color="white" badge badge-color="white" />
+                <x-avatar :image="$this->imageUrl" ring-3 ring-color="slate" badge badge-color="slate" />
+                <x-avatar :image="$this->imageUrl" ring-3 ring-color="gray" badge badge-color="gray" />
+                <x-avatar :image="$this->imageUrl" ring-3 ring-color="zinc" badge badge-color="zinc" />
+                <x-avatar :image="$this->imageUrl" ring-3 ring-color="neutral" badge badge-color="neutral" />
+                <x-avatar :image="$this->imageUrl" ring-3 ring-color="stone" badge badge-color="stone" />
+                <x-avatar :image="$this->imageUrl" ring-3 ring-color="red" badge badge-color="red" />
+                <x-avatar :image="$this->imageUrl" ring-3 ring-color="orange" badge badge-color="orange" />
+                <x-avatar :image="$this->imageUrl" ring-3 ring-color="amber" badge badge-color="amber" />
+                <x-avatar :image="$this->imageUrl" ring-3 ring-color="yellow" badge badge-color="yellow" />
+                <x-avatar :image="$this->imageUrl" ring-3 ring-color="lime" badge badge-color="lime" />
+                <x-avatar :image="$this->imageUrl" ring-3 ring-color="green" badge badge-color="green" />
+                <x-avatar :image="$this->imageUrl" ring-3 ring-color="cyan" badge badge-color="cyan" />
+                <x-avatar :image="$this->imageUrl" ring-3 ring-color="sky" badge badge-color="sky" />
+                <x-avatar :image="$this->imageUrl" ring-3 ring-color="purple" badge badge-color="purple" />
+                <x-avatar :image="$this->imageUrl" ring-3 ring-color="fuchsia" badge badge-color="fuchsia" />
+                <x-avatar :image="$this->imageUrl" ring-3 ring-color="pink" badge badge-color="pink" />
+                <x-avatar :image="$this->imageUrl" ring-3 ring-color="rose" badge badge-color="rose" />
             @endverbatim
         </x-code-block>
 
@@ -187,7 +187,7 @@ class extends Component {
             <x-on-this-page.item title="Avatar with text" />
             <x-on-this-page.item title="Size variants" />
             <x-on-this-page.item title="Stacked" />
-            <x-on-this-page.item title="Avatar with ring" />
+            <x-on-this-page.item title="Avatar with ring-3" />
             <x-on-this-page.item title="Avatar with badge" />
             <x-on-this-page.item title="Badge with Ring" />
             <x-on-this-page.item title="Rounded corner" />

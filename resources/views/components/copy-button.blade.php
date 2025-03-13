@@ -22,7 +22,7 @@
 }" {{ $attributes->class(['absolute z-30 top-3 right-4 hidden sm:block']) }}>
     <div class="flex gap-1.5">
         <span class="hidden text-sm text-teal-500 copied">Copied!</span>
-        <x-icon name="clipboard-document-check" class="text-teal-500 !size-5 hidden copiedIcon" />
-        <x-icon @click="copyCode" name="clipboard" class="text-slate-200 !size-5 cursor-pointer icon" />
+        <x-icon name="clipboard-document-check" class="text-teal-500 size-5! hidden copiedIcon" />
+        <x-icon @click="copyCode" name="clipboard" class="text-slate-200 size-5! cursor-pointer icon" />
     </div>
 </div>

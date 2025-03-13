@@ -52,7 +52,7 @@ new #[Layout('components.layouts.app')] #[Title('Tab components - Tallcraftui')]
                     </x-slot>
                     
                     <x-tab-content id="account">
-                        <x-card class="rounded">
+                        <x-card class="rounded-sm">
                             <x-card-header title="Account" subtitle="Create an account and manage your profile." />
                             
                             <x-card-content>
@@ -67,7 +67,7 @@ new #[Layout('components.layouts.app')] #[Title('Tab components - Tallcraftui')]
                     </x-tab-content>
                     
                     <x-tab-content id="password">
-                        <x-card class="rounded">
+                        <x-card class="rounded-sm">
                             <x-card-header title="Password" subtitle="Change your password for security purposes." />
                             
                             <x-card-content>
