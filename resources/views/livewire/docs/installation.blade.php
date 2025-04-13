@@ -3,7 +3,7 @@
 use Livewire\Volt\Component;
 use Livewire\Attributes\{Layout, Title};
 
-new #[Layout('components.layouts.app')] #[Title('Installation - Tallcraftui')] class extends Component {
+new #[Layout('components.layouts.app')] #[Title('Installation - Tallcraftui V1')] class extends Component {
     //
 }; ?>
 
@@ -18,7 +18,7 @@ new #[Layout('components.layouts.app')] #[Title('Installation - Tallcraftui')] c
         <x-heading title="Installation" subtitle="Introduction">
             @slot('description')
                 For <a href="https://laravel.com/docs/12.x" target="_blank" rel="noopener">Laravel 12</a> new applications, 
-                we recommend using <a href="https://github.com/developermithu/tallcraftui/releases/tag/v2.0-beta" target="_blank" rel="noopener">TallCraftUI v2 beta</a>. 
+                we recommend using <a href="https://tallcraftui.developermithu.com">TallCraftUI V2</a>. 
                 This version comes with built-in support for <strong>Tailwind 4</strong>.
             @endslot
         </x-heading>

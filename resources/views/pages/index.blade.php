@@ -6,7 +6,7 @@ use App\Models\User;
 use Illuminate\Validation\Rules\Password;
 use Developermithu\Tallcraftui\Traits\WithTcToast;
 
-new #[Layout('components.layouts.home')] #[Title('TallCraftUI - Laravel Blade UI Components Library for TALL Stack')] class extends Component {
+new #[Layout('components.layouts.home')] #[Title('TallCraftUI V1 - Laravel Blade UI Components Library for TALL Stack')] class extends Component {
     use WithTcToast;
 
     public string $content = 'Hello **world**!';

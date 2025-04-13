@@ -25,7 +25,7 @@
             </a>
         </div>
 
-        <div class="hidden lg:block">
+        <div class="hidden lg:w-1/2 lg:block">
             <x-banner />
         </div>
 
