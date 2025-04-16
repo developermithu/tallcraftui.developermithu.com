@@ -1,7 +1,6 @@
-<div 
-    class="lg:relative lg:block lg:flex-none"
-    :class="{ 'fixed inset-0 z-99 h-screen bg-white dark:bg-slate-900 w-fit pl-6 shadow-sm': sidebarVisible, 'hidden': !sidebarVisible }"
-    >
+<div class="lg:relative lg:block lg:flex-none"
+    :class="{ 'fixed inset-0 z-99 h-screen bg-white dark:bg-slate-900 w-fit pl-6 shadow-sm': sidebarVisible, 'hidden': !
+            sidebarVisible }">
     <div class="sticky -ml-0.5 h-[calc(100vh-4.75rem)] w-56 xxs:w-64 overflow-y-auto custom-scrollbar overflow-x-hidden py-16 pl-0.5 pr-8 xl:w-72 xl:pr-16"
         :class="{ '': sidebarVisible, 'top-[4.75rem]': !sidebarVisible }">
         <nav class="text-base lg:text-sm">
@@ -9,9 +8,10 @@
                 <x-sidebar-menu title="Getting Started">
                     <x-sidebar-menu.item title="Installation" :href="route('docs.installation')" />
                     <x-sidebar-menu.item title="Configuration" :href="route('docs.configuration')" />
+                    <x-sidebar-menu.item title="Upgrading to v2" :href="route('docs.upgrading')" new />
                 </x-sidebar-menu>
 
-                <x-sidebar-menu title="Form Components" >
+                <x-sidebar-menu title="Form Components">
                     <x-sidebar-menu.item title="input" :href="route('docs.components.input')" />
                     <x-sidebar-menu.item title="password" :href="route('docs.components.password')" />
                     <x-sidebar-menu.item title="color picker" :href="route('docs.components.color-picker')" />
@@ -20,11 +20,12 @@
                     <x-sidebar-menu.item title="radio" :href="route('docs.components.radio')" />
                     <x-sidebar-menu.item title="checkbox" :href="route('docs.components.checkbox')" />
                     <x-sidebar-menu.item title="toggle" :href="route('docs.components.toggle')" />
-                    <x-sidebar-menu.item title="select" :href="route('docs.components.select')" />
+                    <x-sidebar-menu.item title="native select" :href="route('docs.components.native-select')" update />
+                    <x-sidebar-menu.item title="select" :href="route('docs.components.select')" new />
                     <x-sidebar-menu.item title="range" :href="route('docs.components.range')" />
                 </x-sidebar-menu>
 
-                <x-sidebar-menu title="UI Components" >
+                <x-sidebar-menu title="UI Components">
                     <x-sidebar-menu.item title="accordion" :href="route('docs.components.accordion')" />
                     <x-sidebar-menu.item title="alert" :href="route('docs.components.alert')" />
                     <x-sidebar-menu.item title="avatar" :href="route('docs.components.avatar')" />
@@ -47,7 +48,7 @@
                     <x-sidebar-menu.item title="tooltip" :href="route('docs.components.tooltip')" />
                 </x-sidebar-menu>
 
-                <x-sidebar-menu title="Dialog Components" >
+                <x-sidebar-menu title="Dialog Components">
                     <x-sidebar-menu.item title="drawer" :href="route('docs.components.drawer')" />
                     <x-sidebar-menu.item title="modal" :href="route('docs.components.modal')" />
                     <x-sidebar-menu.item title="toast" :href="route('docs.components.toast')" />

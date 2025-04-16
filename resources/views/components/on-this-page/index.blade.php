@@ -10,5 +10,5 @@
         </ol>
     </nav>
 
-    <x-hostinger-promo />
+    {{-- <x-hostinger-promo /> --}}
 </aside>

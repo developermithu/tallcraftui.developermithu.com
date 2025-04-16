@@ -3,27 +3,7 @@
 use Livewire\Volt\Component;
 use Livewire\Attributes\{Layout, Title};
 
-new 
-#[Layout('components.layouts.app')] 
-#[Title('Select components - Tallcraftui')] 
-class extends Component {
-    public $countries;
-
-    public function with(): array
-    {
-        $this->countries = collect([
-            ['id' => 1, 'name' => 'Nigeria'], 
-            ['id' => 2, 'name' => 'Ghana'],
-            ['id' => 3, 'name' => 'Togo'], 
-            ['id' => 4, 'name' => 'Benin'], 
-            ['id' => 5, 'name' => 'Niger']
-        ])->pluck('name', 'id');
-
-        return [
-            'countries' => $this->countries,
-        ];
-    }
-}; ?>
+new #[Layout('components.layouts.app')] #[Title('Select components - Tallcraftui')] class extends Component {}; ?>
 
 <div>
     @slot('metaTags')
@@ -31,87 +11,202 @@ class extends Component {
     @endslot
 
     @slot('content')
-        <x-heading title="Select" subtitle="Form Components" />
+        <x-heading title="Select" subtitle="Form Components">
+            @slot('description')
+                By default, selection will look up for:
 
-        <x-code-block title="Basic usage">
+                <ul class="pb-5">
+                    <li><code>$object->id</code> for option <strong>value</strong>.</li>
+                    <li><code>$object->name</code> or <code>$object->title</code> for option <strong>label</strong>.</li>
+                    <li><code>$object->avatar</code> or <code>$object->image</code> for option <strong>picture</strong>.</li>
+                    <li><code>$object->description</code> for option <strong>description</strong>.</li>
+                </ul>
+            @endslot
+        </x-heading>
+
+        <x-code-block title="Basic usage" space-0.5>
             @verbatim('docs')
                 @php
-                    $users = App\Models\User::pluck('name', 'id');
+                    $users = App\Models\User::get(); // OR
+                    // $users = App\Models\User::pluck('name', 'id');
                 @endphp
 
-                <x-select label="Users" wire:model="user_id" :options="$users" />
+                <x-select wire:model="user_id" :options="$users" />
+                <x-select wire:model="skills" :options="['PHP', 'Laravel', 'Livewire']" multiple clearable />
             @endverbatim
         </x-code-block>
 
-        <x-code-block title="Custom placeholder">
+        <x-code-block title="Multiple select" space-0.5>
             @verbatim('docs')
                 @php
-                    $countries = collect([
-                        ['id' => 1, 'name' => 'BD'], 
-                        ['id' => 2, 'name' => 'USA'],
-                        ['id' => 3, 'name' => 'UK'], 
-                        ['id' => 4, 'name' => 'RA'],
-                        ['id' => 5, 'name' => 'IN']
-                    ])->pluck('name', 'id');
+                    $languages = [
+                        ['id' => 1, 'name' => 'PHP'],
+                        ['id' => 2, 'name' => 'Laravel'],
+                        ['id' => 3, 'name' => 'Livewire'],
+                    ];
                 @endphp
 
-                <x-select 
-                    label="Countries" 
-                    wire:model="country_id" 
-                    :options="$countries" 
-                    placeholder="Select country" 
-                />
+                <x-select wire:model="language_id" :options="$languages" multiple />
             @endverbatim
         </x-code-block>
 
-        <x-code-block title="Custom slot">
+        <x-code-block title="Clearable" space-0.5>
             @verbatim('docs')
                 @php
-                    $users = App\Models\User::pluck('name', 'id');
+                    $languages = [
+                        ['id' => 1, 'name' => 'PHP'],
+                        ['id' => 2, 'name' => 'Laravel'],
+                        ['id' => 3, 'name' => 'Livewire'],
+                    ];
                 @endphp
 
-                <x-select label="Select user">
-                    <option value="">Choose user</option>
-                    
-                    @foreach ($users as $key => $name)
-                        <option value="{{ $key }}"> {{ $name }} </option>
-                    @endforeach
-                </x-select>
+                <x-select wire:model="language_id" :options="$languages" multiple clearable />
             @endverbatim
         </x-code-block>
 
-        <x-code-block title="With hint">
+        <x-code-block title="Searchable" space-0.5>
             @verbatim('docs')
                 @php
-                    $users = App\Models\User::pluck('name', 'id');
+                    $languages = [
+                        ['id' => 1, 'name' => 'PHP'],
+                        ['id' => 2, 'name' => 'Laravel'],
+                        ['id' => 3, 'name' => 'Livewire'],
+                    ];
                 @endphp
 
-                <x-select label="Users" wire:model="user_id" :options="$users" hint="Only one user can be select" />
+                <x-select wire:model="language_id" :options="$languages" multiple searchable />
             @endverbatim
         </x-code-block>
 
-      <x-code-block title="Size variants">
+        <x-code-block title="Limit selection" space-0.5>
             @verbatim('docs')
                 @php
-                    $users = App\Models\User::pluck('name', 'id');
+                    $languages = [
+                        ['id' => 1, 'name' => 'PHP'],
+                        ['id' => 2, 'name' => 'Laravel'],
+                        ['id' => 3, 'name' => 'Livewire'],
+                    ];
                 @endphp
 
-                <x-select label="Default" :options="$users" xs />
-                <x-select label="Small" :options="$users" sm />
-                <x-select label="Medium" :options="$users" md />
-                <x-select label="Large" :options="$users" lg />
-                <x-select label="Extra large" :options="$users" xl />
+                <x-select wire:model="language_id" :options="$languages" limit="2" multiple />
             @endverbatim
-        </x-code-block> 
+        </x-code-block>
+
+        <x-code-block title="With image" space-0.5>
+            @verbatim('docs')
+                @php
+                    $languages = [
+                        [
+                            'id' => 1,
+                            'name' => 'PHP',
+                            'avatar' => 'https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg',
+                        ],
+                        [
+                            'id' => 2,
+                            'name' => 'Laravel',
+                            'avatar' => 'https://avatars.githubusercontent.com/u/958072?s=280&v=4',
+                        ],
+                        ['id' => 3, 'name' => 'Livewire', 'avatar' => 'https://laravel-livewire.com/img/twitter.png'],
+                    ];
+                @endphp
+
+                <x-select wire:model="language_id" :options="$languages" multiple />
+            @endverbatim
+        </x-code-block>
+
+        <x-code-block title="With description" space-0.5>
+            @verbatim('docs')
+                @php
+                    $languages = [
+                        ['id' => 1, 'name' => 'PHP', 'description' => 'PHP is a programming language'],
+                        ['id' => 2, 'name' => 'Laravel', 'description' => 'Laravel is a framework'],
+                        ['id' => 3, 'name' => 'Livewire', 'description' => 'Livewire is a full stack frmaework'],
+                    ];
+                @endphp
+
+                <x-select wire:model="language_id" :options="$languages" multiple />
+            @endverbatim
+        </x-code-block>
+
+        <x-code-block title="With enum class" space-0.5>
+            @verbatim('docs')
+                @php
+                    // enum UserRolesEnum: string
+                    // {
+                    //     case Admin = 'admin';
+                    //     case User = 'user';
+                    //     case Moderator = 'moderator';
+
+                    //     public static function options(): array
+                    //     {
+                    //         return array_column(self::cases(), 'name', 'value');
+                    //     }
+                    // }
+                @endphp
+
+                <x-select wire:model="role" :options="App\Enums\UserRolesEnum::options()" />
+            @endverbatim
+        </x-code-block>
+
+        <x-code-block title="All property">
+            @verbatim('docs')
+                @php
+                    $options = [
+                        [
+                            'id' => 1,
+                            'name' => 'Taylor Otwell',
+                            'avatar' => 'https://avatars.githubusercontent.com/u/463230?s=160&v=4',
+                            'description' => 'Creator of Laravel',
+                        ],
+                        [
+                            'id' => 2,
+                            'name' => 'Caleb Porzio',
+                            'avatar' => 'https://pbs.twimg.com/profile_images/1748020965995335681/WTNy9HSl_400x400.jpg',
+                            'description' => 'Creator of Livewire and Alpine.js',
+                        ],
+                        [
+                            'id' => 3,
+                            'name' => 'Nuno Maduro',
+                            'avatar' => 'https://avatars.githubusercontent.com/u/5457236?v=4',
+                            'description' => 'Creator of Pest PHP',
+                        ],
+                        [
+                            'id' => 4,
+                            'name' => 'Jeffrey Way',
+                            'avatar' => 'https://pbs.twimg.com/profile_images/1863195807303778304/1Ka0l26C_400x400.jpg',
+                            'description' => 'Creator of Laracast',
+                        ],
+                    ];
+                @endphp
+
+                <x-select label="Users" :options="$options" limit="3" placeholder="Select user"
+                    hint="Only 3 user can be select" multiple searchable clearable />
+            @endverbatim
+        </x-code-block>
+
+        <x-code-block no-render title="Size variants">
+            @verbatim('docs')
+                <x-select xs />
+                <x-select sm />
+                <x-select md />
+                <x-select lg />
+                <x-select xl />
+            @endverbatim
+        </x-code-block>
     @endslot
 
     @slot('aside')
         <x-on-this-page>
             <x-on-this-page.item title="Basic usage" />
-            <x-on-this-page.item title="Custom placeholder" />
-            <x-on-this-page.item title="Custom slot" />
-            <x-on-this-page.item title="With hint" />
-            <x-on-this-page.item title="Size variants" new />
+            <x-on-this-page.item title="Multiple select" />
+            <x-on-this-page.item title="Clearable" />
+            <x-on-this-page.item title="Searchable" />
+            <x-on-this-page.item title="Limit selection" />
+            <x-on-this-page.item title="With image" />
+            <x-on-this-page.item title="With description" />
+            <x-on-this-page.item title="With enum class" />
+            <x-on-this-page.item title="All property" />
+            <x-on-this-page.item title="Size variants" />
         </x-on-this-page>
     @endslot
 </div>

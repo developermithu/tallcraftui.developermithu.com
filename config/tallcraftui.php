@@ -61,33 +61,33 @@ return [
     ],
 
     'alert' => [
-        'border-radius' => BorderRadius::Rounded->value,
+        'border-radius' => BorderRadius::RoundedSm->value,
     ],
 
     'badge' => [
-        'border-radius' => BorderRadius::Rounded->value,
+        'border-radius' => BorderRadius::RoundedSm->value,
     ],
 
     'breadcrumb' => [
-        'border-radius' => BorderRadius::Rounded->value,
+        'border-radius' => BorderRadius::RoundedSm->value,
     ],
 
     'button' => [
         'size' => Size::MD->value,
-        'border-radius' => BorderRadius::Rounded->value,
+        'border-radius' => BorderRadius::RoundedSm->value,
     ],
 
     'card' => [
-        'shadow' => Shadow::ShadowSm->value,
+        'shadow' => Shadow::ShadowXs->value,
         'border-radius' => BorderRadius::RoundedLg->value,
     ],
 
     'dropdown' => [
         'width' => Width::W48->value,
-        'shadow' => Shadow::Shadow->value,
+        'shadow' => Shadow::ShadowSm->value,
         'position' => DropdownPosition::BOTTOM_END->value,
         'animation' => DropdownAnimation::FADE->value,
-        'border-radius' => BorderRadius::Rounded->value,
+        'border-radius' => BorderRadius::RoundedSm->value,
     ],
 
     'drawer' => [
@@ -102,6 +102,10 @@ return [
         'trap-focus' => true, // Allowed: true, false
         'position' => Position::TOP->value,
         'border-radius' => BorderRadius::RoundedLg->value,
+    ],
+
+    'progress' => [
+        'size' => Size::MD->value,
     ],
 
     'stat' => [
@@ -129,7 +133,7 @@ return [
 
     'menu' => [
         'width' => Width::W56->value,
-        'shadow' => Shadow::Shadow->value,
+        'shadow' => Shadow::ShadowSm->value,
         'border-radius' => BorderRadius::RoundedMd->value,
     ],
 
@@ -142,11 +146,21 @@ return [
      */
     'checkbox' => [
         'size' => Size::MD->value,
-        'border-radius' => BorderRadius::Rounded->value,
+        'border-radius' => BorderRadius::RoundedSm->value,
     ],
 
     'input' => [
-        'border-radius' => BorderRadius::Rounded->value,
+        'size' => Size::MD->value,
+        'border-radius' => BorderRadius::RoundedSm->value,
+    ],
+
+    'native-select' => [
+        'size' => Size::MD->value,
+        'border-radius' => BorderRadius::RoundedSm->value,
+    ],
+
+    'select' => [
+        'size' => Size::MD->value,
     ],
 
     'radio' => [
@@ -157,16 +171,12 @@ return [
         'size' => Size::MD->value,
     ],
 
-    'select' => [
-        'border-radius' => BorderRadius::Rounded->value,
-    ],
-
     'textarea' => [
-        'border-radius' => BorderRadius::Rounded->value,
+        'border-radius' => BorderRadius::RoundedSm->value,
     ],
 
     'toggle' => [
-        'border-radius' => BorderRadius::Rounded->value,
+        'border-radius' => BorderRadius::RoundedSm->value,
     ],
 
     'markdown' => [

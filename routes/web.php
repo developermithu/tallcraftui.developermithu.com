@@ -15,6 +15,7 @@ Route::get('/analytics', Analytics::class)->name('analytics');
 Route::group(['prefix' => 'docs', 'as' => 'docs.'], function () {
     Volt::route('/installation', 'docs.installation')->name('installation');
     Volt::route('/configuration', 'docs.configuration')->name('configuration');
+    Volt::route('/upgrading', 'docs.upgrading')->name('upgrading');
     Volt::route('/how-to-contribute', 'docs.contribution')->name('contribution');
 
     // Form Components
@@ -25,6 +26,7 @@ Route::group(['prefix' => 'docs', 'as' => 'docs.'], function () {
         Volt::route('/radio', 'docs.components.radio')->name('radio');
         Volt::route('/checkbox', 'docs.components.checkbox')->name('checkbox');
         Volt::route('/toggle', 'docs.components.toggle')->name('toggle');
+        Volt::route('/native-select', 'docs.components.native-select')->name('native-select');
         Volt::route('/select', 'docs.components.select')->name('select');
         Volt::route('/password', 'docs.components.password')->name('password');
         Volt::route('/color-picker', 'docs.components.color-picker')->name('color-picker');
@@ -54,7 +56,7 @@ Route::group(['prefix' => 'docs', 'as' => 'docs.'], function () {
         Volt::route('/tooltip', 'docs.components.tooltip')->name('tooltip');
         Volt::route('/progress', 'docs.components.progress')->name('progress');
         Volt::route('/progress-radial', 'docs.components.progress-radial')->name('progress-radial');
-        
+
         Route::get('/table', Table::class)->name('table');
         Route::get('/toast', Toast::class)->name('toast');
     });

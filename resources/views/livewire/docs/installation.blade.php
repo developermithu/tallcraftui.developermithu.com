@@ -25,16 +25,16 @@ new #[Layout('components.layouts.app')] #[Title('Installation - Tallcraftui')] c
             </h2>
 
             <ul class="pl-4 space-y-1 text-teal-500 list-disc">
-                <li><a href="https://www.php.net/releases/8.2/en.php" target="_blank">PHP 8.1 or above</a></li>
+                <li><a href="https://www.php.net/releases/8.2/en.php" target="_blank">PHP 8.2 or above</a></li>
                 <li><a href="https://laravel.com/docs/11.x" target="_blank">Laravel 10, 11 or 12</a></li>
                 <li><a href="https://livewire.laravel.com" target="_blank">Livewire 3.x</a></li>
-                <li><a href="https://tailwindcss.com" target="_blank">TailwindCSS 3.x</a></li>
+                <li><a href="https://tailwindcss.com" target="_blank">TailwindCSS 4.x</a></li>
             </ul>
         </div>
 
         <x-code-block title="Installation" language="bash" no-render>
             @verbatim('docs')
-                composer require developermithu/tallcraftui
+                composer require developermithu/tallcraftui:^2.0
             @endverbatim
         </x-code-block>
 
@@ -44,7 +44,18 @@ new #[Layout('components.layouts.app')] #[Title('Installation - Tallcraftui')] c
             @endverbatim
         </x-code>
     
-        <p>Modify <code>tailwind.config.js</code> </p>
+        <p>Add <strong>primary</strong> and <strong>secondary</strong> color in <code>app.css</code> </p>
+
+        <x-code language="css" space-none>
+            @verbatim
+                @theme {
+                    --color-primary: #6d28d9;
+                    --color-secondary: #a21caf;
+                }
+            @endverbatim
+        </x-code>
+        
+        <p> If you are still using <code>tailwind.config.js</code> in <strong>Tailwind 4</strong> then modify it accordingly. </p>
 
         <x-code language="js" space-none>
             @verbatim
@@ -69,7 +80,7 @@ new #[Layout('components.layouts.app')] #[Title('Installation - Tallcraftui')] c
 
         <x-code language="bash">
             @verbatim
-                pnpm dev # or `npm run dev`
+                bun dev # or `npm run dev`
             @endverbatim
         </x-code>
         
