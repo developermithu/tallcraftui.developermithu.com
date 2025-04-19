@@ -14,11 +14,41 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $users = [
-            ['name' => 'Taylor Otwell', 'email' => 'Taylor@gmail.com', 'password' => 'password', 'is_active' => true],
-            ['name' => 'Caleb Porzio', 'email' => 'Caleb@gmail.com', 'password' => 'password', 'is_active' => true],
-            ['name' => 'Nuno Maduro', 'email' => 'Nuno@gmail.com', 'password' => 'password', 'is_active' => true],
-            ['name' => 'Jeffrey Way', 'email' => 'Jeffrey@gmail.com', 'password' => 'password', 'is_active' => true],
-            ['name' => 'Developer Mithu', 'email' => 'Mithu@gmail.com', 'password' => 'password', 'is_active' => true],
+            [
+                'name' => 'Taylor Otwell',
+                'email' => 'taylor@laravel.com',
+                'password' => 'password',
+                'is_active' => true,
+                'bio' => 'Creator of Laravel.'
+            ],
+            [
+                'name' => 'Caleb Porzio',
+                'email' => 'calebporzio@gmail.com',
+                'password' => 'password',
+                'is_active' => true,
+                'bio' => 'Creator of Alpine.js and Laravel Livewire.'
+            ],
+            [
+                'name' => 'Nuno Maduro',
+                'email' => 'nunomaduro@gmail.com',
+                'password' => 'password',
+                'is_active' => true,
+                'bio' => 'Creator of Pest PHP.'
+            ],
+            [
+                'name' => 'Povilas Korop',
+                'email' => 'povilas@laraveldaily.com',
+                'password' => 'password',
+                'is_active' => true,
+                'bio' => 'Creator of Laravel Daily.'
+            ],
+            [
+                'name' => 'Developer Mithu',
+                'email' => 'developermithu@gmail.com',
+                'password' => 'password',
+                'is_active' => true,
+                'bio' => 'Creator of TallCraftUI.'
+            ],
         ];
 
         foreach ($users as $user) {
