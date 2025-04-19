@@ -39,92 +39,60 @@ new #[Layout('components.layouts.app')] #[Title('Select components - Tallcraftui
         <x-code-block title="Multiple select" space-0.5>
             @verbatim('docs')
                 @php
-                    $languages = [
-                        ['id' => 1, 'name' => 'PHP'],
-                        ['id' => 2, 'name' => 'Laravel'],
-                        ['id' => 3, 'name' => 'Livewire'],
-                    ];
+                    $users = App\Models\User::all('id', 'name');
                 @endphp
 
-                <x-select wire:model="language_id" :options="$languages" multiple />
+                <x-select wire:model="user_id" :options="$users" multiple />
             @endverbatim
         </x-code-block>
 
         <x-code-block title="Clearable" space-0.5>
             @verbatim('docs')
                 @php
-                    $languages = [
-                        ['id' => 1, 'name' => 'PHP'],
-                        ['id' => 2, 'name' => 'Laravel'],
-                        ['id' => 3, 'name' => 'Livewire'],
-                    ];
+                    $users = App\Models\User::all('id', 'name');
                 @endphp
 
-                <x-select wire:model="language_id" :options="$languages" multiple clearable />
+                <x-select wire:model="user_id" :options="$users" multiple clearable />
             @endverbatim
         </x-code-block>
 
         <x-code-block title="Searchable" space-0.5>
             @verbatim('docs')
                 @php
-                    $languages = [
-                        ['id' => 1, 'name' => 'PHP'],
-                        ['id' => 2, 'name' => 'Laravel'],
-                        ['id' => 3, 'name' => 'Livewire'],
-                    ];
+                    $users = App\Models\User::all('id', 'name');
                 @endphp
 
-                <x-select wire:model="language_id" :options="$languages" multiple searchable />
+                <x-select wire:model="user_id" :options="$users" multiple searchable />
             @endverbatim
         </x-code-block>
 
         <x-code-block title="Limit selection" space-0.5>
             @verbatim('docs')
                 @php
-                    $languages = [
-                        ['id' => 1, 'name' => 'PHP'],
-                        ['id' => 2, 'name' => 'Laravel'],
-                        ['id' => 3, 'name' => 'Livewire'],
-                    ];
+                    $users = App\Models\User::all('id', 'name');
                 @endphp
 
-                <x-select wire:model="language_id" :options="$languages" limit="2" multiple />
+                <x-select wire:model="user_id" :options="$users" limit="2" multiple />
             @endverbatim
         </x-code-block>
 
         <x-code-block title="With image" space-0.5>
             @verbatim('docs')
                 @php
-                    $languages = [
-                        [
-                            'id' => 1,
-                            'name' => 'PHP',
-                            'avatar' => 'https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg',
-                        ],
-                        [
-                            'id' => 2,
-                            'name' => 'Laravel',
-                            'avatar' => 'https://avatars.githubusercontent.com/u/958072?s=280&v=4',
-                        ],
-                        ['id' => 3, 'name' => 'Livewire', 'avatar' => 'https://laravel-livewire.com/img/twitter.png'],
-                    ];
+                    $users = App\Models\User::all('id', 'name', 'email', 'avatar');
                 @endphp
 
-                <x-select wire:model="language_id" :options="$languages" multiple />
+                <x-select wire:model="user_id" :options="$users" multiple />
             @endverbatim
         </x-code-block>
 
         <x-code-block title="With description" space-0.5>
             @verbatim('docs')
                 @php
-                    $languages = [
-                        ['id' => 1, 'name' => 'PHP', 'description' => 'PHP is a programming language'],
-                        ['id' => 2, 'name' => 'Laravel', 'description' => 'Laravel is a framework'],
-                        ['id' => 3, 'name' => 'Livewire', 'description' => 'Livewire is a full stack frmaework'],
-                    ];
+                    $users = App\Models\User::all('id', 'name', 'bio as description');
                 @endphp
 
-                <x-select wire:model="language_id" :options="$languages" multiple />
+                <x-select wire:model="user_id" :options="$users" multiple />
             @endverbatim
         </x-code-block>
 

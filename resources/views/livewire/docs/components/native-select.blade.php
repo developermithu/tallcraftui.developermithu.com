@@ -6,24 +6,7 @@ use Livewire\Attributes\{Layout, Title};
 new 
 #[Layout('components.layouts.app')] 
 #[Title('Native Select components - Tallcraftui')] 
-class extends Component {
-    public $countries;
-
-    public function with(): array
-    {
-        $this->countries = collect([
-            ['id' => 1, 'name' => 'Nigeria'], 
-            ['id' => 2, 'name' => 'Ghana'],
-            ['id' => 3, 'name' => 'Togo'], 
-            ['id' => 4, 'name' => 'Benin'], 
-            ['id' => 5, 'name' => 'Niger']
-        ])->pluck('name', 'id');
-
-        return [
-            'countries' => $this->countries,
-        ];
-    }
-}; ?>
+class extends Component {}; ?>
 
 <div>
     @slot('metaTags')
@@ -36,7 +19,8 @@ class extends Component {
         <x-code-block title="Basic usage">
             @verbatim('docs')
                 @php
-                    $users = App\Models\User::pluck('name', 'id');
+                    $users = App\Models\User::all('id', 'name'); // OR
+                    // $users = App\Models\User::pluck('name', 'id');
                 @endphp
 
                 <x-native-select label="Users" wire:model="user_id" :options="$users" />
@@ -46,20 +30,14 @@ class extends Component {
         <x-code-block title="Custom placeholder">
             @verbatim('docs')
                 @php
-                    $countries = collect([
-                        ['id' => 1, 'name' => 'BD'], 
-                        ['id' => 2, 'name' => 'USA'],
-                        ['id' => 3, 'name' => 'UK'], 
-                        ['id' => 4, 'name' => 'RA'],
-                        ['id' => 5, 'name' => 'IN']
-                    ])->pluck('name', 'id');
+                    $users = App\Models\User::all('id', 'name');
                 @endphp
 
                 <x-native-select 
-                    label="Countries" 
-                    wire:model="country_id" 
-                    :options="$countries" 
-                    placeholder="Select country" 
+                    label="users" 
+                    wire:model="user_id" 
+                    :options="$users" 
+                    placeholder="Select user" 
                 />
             @endverbatim
         </x-code-block>
@@ -67,14 +45,14 @@ class extends Component {
         <x-code-block title="Custom slot">
             @verbatim('docs')
                 @php
-                    $users = App\Models\User::pluck('name', 'id');
+                    $users = App\Models\User::all('id', 'name');
                 @endphp
 
                 <x-native-select label="Select user">
                     <option value="">Choose user</option>
                     
-                    @foreach ($users as $key => $name)
-                        <option value="{{ $key }}"> {{ $name }} </option>
+                    @foreach ($users as $user)
+                        <option value="{{ $user->id }}"> {{ $user->name }} </option>
                     @endforeach
                 </x-native-select>
             @endverbatim
@@ -83,7 +61,7 @@ class extends Component {
         <x-code-block title="With hint">
             @verbatim('docs')
                 @php
-                    $users = App\Models\User::pluck('name', 'id');
+                    $users = App\Models\User::all('id', 'name');
                 @endphp
 
                 <x-native-select label="Users" wire:model="user_id" :options="$users" hint="Only one user can be select" />
@@ -93,7 +71,7 @@ class extends Component {
       <x-code-block title="Size variants">
             @verbatim('docs')
                 @php
-                    $users = App\Models\User::pluck('name', 'id');
+                    $users = App\Models\User::all('id', 'name');
                 @endphp
 
                 <x-native-select label="Default" :options="$users" xs />

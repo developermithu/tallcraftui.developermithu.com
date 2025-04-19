@@ -15,7 +15,7 @@ new #[Layout('components.layouts.app')] #[Title('Installation - Tallcraftui')] c
     @endslot
 
     <x-slot name="content">
-        <x-heading title="Installation" subtitle="Introduction" />
+        <x-heading title="Installation" subtitle="Introduction"/>
 
         <div class="space-y-5">
             <h2 id="requirements" class="pt-5 group">

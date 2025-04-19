@@ -16,7 +16,7 @@ new #[Layout('components.layouts.app')] #[Title('Upgrading to V2 - Tallcraftui')
     <x-slot name="content">
         <x-heading title="Upgrading to V2" subtitle="TallCraftUI">
             @slot('description')
-                This guide will help you upgrade from TallCraftUI v1 to v2.
+                This guide will help you upgrade from <a href="https://v1-tallcraftui.developermithu.com" target="_blank" class="text-primary hover:underline">TallCraftUI v1</a> to v2.
                 <br>
                 <strong>Tip:</strong> Use <strong>git</strong> to track your changes during the upgrade.
                 <br>

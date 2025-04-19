@@ -33,8 +33,8 @@
                 <span class="text-amber-400">v2.0</span>
                 documentation
             </strong>
-            <span class="hidden w-2 mt-0.5 h-px bg-gray-100 xxs:block"></span>
-            <span class="hidden xxs:inline-block"> upgrade guide! </span>
+            {{-- <span class="hidden w-2 mt-0.5 h-px bg-gray-100 xxs:block"></span>
+            <span class="hidden xxs:inline-block"> upgrade guide! </span> --}}
         </a>
     </div>
 </div>
