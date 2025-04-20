@@ -34,7 +34,7 @@ new #[Layout('components.layouts.app')] #[Title('Installation - Tallcraftui')] c
 
         <x-code-block title="Installation" language="bash" no-render>
             @verbatim('docs')
-                composer require developermithu/tallcraftui:^2.0
+                composer require developermithu/tallcraftui
             @endverbatim
         </x-code-block>
 

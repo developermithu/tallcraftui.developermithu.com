@@ -19,6 +19,6 @@
     @endif
 
     @if ($update)
-        <span class="px-1 text-xs rounded-sm text-amber-500 animate-pulse bg-amber-100 dark:bg-amber-200">Update</span>
+        <span class="px-1 text-xs rounded-sm text-amber-500 animate-pulse bg-amber-100 dark:bg-amber-200">Updated</span>
     @endif
 </li>

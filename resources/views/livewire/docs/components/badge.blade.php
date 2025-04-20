@@ -93,6 +93,14 @@ new #[Layout('components.layouts.app')] #[Title('Badge components - Tallcraftui'
             @endverbatim
         </x-code-block>
 
+        <x-code-block title="Custom slot" new>
+            @verbatim('docs')
+                <x-badge>
+                    Custom slot
+                </x-badge>
+            @endverbatim
+        </x-code-block>
+
         <x-code-block title="Badge size" inline>
             @verbatim('docs')
                 <x-badge label="Badge" sm />
@@ -123,6 +131,7 @@ new #[Layout('components.layouts.app')] #[Title('Badge components - Tallcraftui'
             <x-on-this-page.item title="Basic usage" />
             <x-on-this-page.item title="Outline badges" />
             <x-on-this-page.item title="Badge with icon" />
+            <x-on-this-page.item title="Custom slot" new />
             <x-on-this-page.item title="Size variants" />
             <x-on-this-page.item title="Rounded corner" />
         </x-on-this-page>

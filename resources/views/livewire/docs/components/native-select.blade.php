@@ -14,7 +14,16 @@ class extends Component {}; ?>
     @endslot
 
     @slot('content')
-        <x-heading title="Native Select" subtitle="Form Components" />
+        <x-heading title="Native Select" subtitle="Form Components">
+            @slot('description')
+                By default, selection will look up for:
+
+                <ul class="pb-5">
+                    <li><code>$object->id</code> for option <strong>value</strong>.</li>
+                    <li><code>$object->name</code> for option <strong>label</strong>.</li>
+                </ul>
+            @endslot
+        </x-heading>
 
         <x-code-block title="Basic usage">
             @verbatim('docs')
@@ -27,6 +36,21 @@ class extends Component {}; ?>
             @endverbatim
         </x-code-block>
 
+        <x-code-block title="Customize option attributes" new>
+            @verbatim('docs')
+                @php
+                    $users = App\Models\User::all('id', 'bio')->take(5); 
+                @endphp
+
+                <x-native-select 
+                    wire:model="user_id" 
+                    :options="$users" 
+                    option-value="id" 
+                    option-label="bio"
+                />
+            @endverbatim
+        </x-code-block>
+
         <x-code-block title="Custom placeholder">
             @verbatim('docs')
                 @php
@@ -34,10 +58,23 @@ class extends Component {}; ?>
                 @endphp
 
                 <x-native-select 
-                    label="users" 
                     wire:model="user_id" 
                     :options="$users" 
                     placeholder="Select user" 
+                />
+            @endverbatim
+        </x-code-block>
+
+        <x-code-block title="Without placeholder" new>
+            @verbatim('docs')
+                @php
+                    $users = App\Models\User::all('id', 'name');
+                @endphp
+
+                <x-native-select 
+                    wire:model="user_id" 
+                    :options="$users" 
+                    without-placeholder
                 />
             @endverbatim
         </x-code-block>
@@ -64,7 +101,7 @@ class extends Component {}; ?>
                     $users = App\Models\User::all('id', 'name');
                 @endphp
 
-                <x-native-select label="Users" wire:model="user_id" :options="$users" hint="Only one user can be select" />
+                <x-native-select wire:model="user_id" :options="$users" hint="Only one user can be select" />
             @endverbatim
         </x-code-block>
 
@@ -74,15 +111,15 @@ class extends Component {}; ?>
                     $users = App\Models\User::all('id', 'name');
                 @endphp
 
-                <x-native-select label="Default" :options="$users" xs />
-                <x-native-select label="Small" :options="$users" sm />
-                <x-native-select label="Medium" :options="$users" md />
-                <x-native-select label="Large" :options="$users" lg />
-                <x-native-select label="Extra large" :options="$users" xl />
+                <x-native-select placeholder="Default" :options="$users" xs />
+                <x-native-select placeholder="Small" :options="$users" sm />
+                <x-native-select placeholder="Medium" :options="$users" md />
+                <x-native-select placeholder="Large" :options="$users" lg />
+                <x-native-select placeholder="Extra large" :options="$users" xl />
             @endverbatim
         </x-code-block> 
 
-        <x-code-block title="With enum class">
+        <x-code-block title="With enum class" new>
             @verbatim('docs')
                 @php
                     // enum UserRolesEnum: string
@@ -98,7 +135,7 @@ class extends Component {}; ?>
                     // }
                 @endphp
 
-                <x-select wire:model="role" :options="App\Enums\UserRolesEnum::options()" />
+                <x-native-select wire:model="role" :options="App\Enums\UserRolesEnum::options()" />
             @endverbatim
         </x-code-block>
     @endslot
@@ -106,7 +143,9 @@ class extends Component {}; ?>
     @slot('aside')
         <x-on-this-page>
             <x-on-this-page.item title="Basic usage" />
+            <x-on-this-page.item title="Customize option attributes" new />
             <x-on-this-page.item title="Custom placeholder" />
+            <x-on-this-page.item title="Without placeholder" new />
             <x-on-this-page.item title="Custom slot" />
             <x-on-this-page.item title="With hint" />
             <x-on-this-page.item title="Size variants" />

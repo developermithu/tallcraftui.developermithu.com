@@ -29,7 +29,7 @@
                     <x-sidebar-menu.item title="accordion" :href="route('docs.components.accordion')" />
                     <x-sidebar-menu.item title="alert" :href="route('docs.components.alert')" />
                     <x-sidebar-menu.item title="avatar" :href="route('docs.components.avatar')" />
-                    <x-sidebar-menu.item title="badge" :href="route('docs.components.badge')" />
+                    <x-sidebar-menu.item title="badge" :href="route('docs.components.badge')" update />
                     <x-sidebar-menu.item title="button" :href="route('docs.components.button')" />
                     <x-sidebar-menu.item title="breadcrumb" :href="route('docs.components.breadcrumb')" />
                     <x-sidebar-menu.item title="card" :href="route('docs.components.card')" />
