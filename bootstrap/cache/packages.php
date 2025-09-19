@@ -94,6 +94,13 @@
       0 => 'Pest\\Laravel\\PestServiceProvider',
     ),
   ),
+  'phiki/phiki' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Phiki\\Adapters\\Laravel\\PhikiServiceProvider',
+    ),
+  ),
   'torchlight/torchlight-laravel' => 
   array (
     'providers' => 
