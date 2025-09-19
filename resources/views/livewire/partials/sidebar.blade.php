@@ -8,7 +8,7 @@
                 <x-sidebar-menu title="Getting Started">
                     <x-sidebar-menu.item title="Installation" :href="route('docs.installation')" />
                     <x-sidebar-menu.item title="Configuration" :href="route('docs.configuration')" />
-                    <x-sidebar-menu.item title="Upgrading to v2" :href="route('docs.upgrading')" new />
+                    <x-sidebar-menu.item title="Upgrading to v2" :href="route('docs.upgrading')" />
                 </x-sidebar-menu>
 
                 <x-sidebar-menu title="Form Components">
@@ -20,8 +20,8 @@
                     <x-sidebar-menu.item title="radio" :href="route('docs.components.radio')" />
                     <x-sidebar-menu.item title="checkbox" :href="route('docs.components.checkbox')" />
                     <x-sidebar-menu.item title="toggle" :href="route('docs.components.toggle')" />
-                    <x-sidebar-menu.item title="native select" :href="route('docs.components.native-select')" update />
-                    <x-sidebar-menu.item title="select" :href="route('docs.components.select')" new />
+                    <x-sidebar-menu.item title="native select" :href="route('docs.components.native-select')" />
+                    <x-sidebar-menu.item title="select" :href="route('docs.components.select')" />
                     <x-sidebar-menu.item title="range" :href="route('docs.components.range')" />
                 </x-sidebar-menu>
 
@@ -29,7 +29,7 @@
                     <x-sidebar-menu.item title="accordion" :href="route('docs.components.accordion')" />
                     <x-sidebar-menu.item title="alert" :href="route('docs.components.alert')" />
                     <x-sidebar-menu.item title="avatar" :href="route('docs.components.avatar')" />
-                    <x-sidebar-menu.item title="badge" :href="route('docs.components.badge')" update />
+                    <x-sidebar-menu.item title="badge" :href="route('docs.components.badge')" />
                     <x-sidebar-menu.item title="button" :href="route('docs.components.button')" />
                     <x-sidebar-menu.item title="breadcrumb" :href="route('docs.components.breadcrumb')" />
                     <x-sidebar-menu.item title="card" :href="route('docs.components.card')" />
